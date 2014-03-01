@@ -1,0 +1,12 @@
+{
+    "latitude": 39.9777,
+    "longitude": -75.166667,
+    "day": {
+        "color_scheme": "Packages/Solarized Color Scheme/Solarized (light).tmTheme",
+        "theme": "Spacegray Light.sublime-theme"
+    },
+    "night": {
+        "color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+        "theme": "Spacegray.sublime-theme"
+    }
+}
