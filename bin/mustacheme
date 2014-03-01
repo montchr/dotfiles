@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# mustacheme 
+# mustacheme
 #   expanded from an idea from Rick Olson (@technoweenie)
 #
 # Takes a .gif, splits it into constituent frames, mustaches each, restitches
@@ -23,7 +23,7 @@
 #   - ImageMagick. If you're on a Mac, run:
 #       brew install imagemagick
 #   - wget
-#   - cloudapp: https://github.com/holman/dotfiles/blob/master/bin/cloudapp
+#   - cloudapp: https://github.com/montchr/dotfiles/blob/master/bin/cloudapp
 #   - gifme:    https://github.com/holman/gifme
 
 set -e
