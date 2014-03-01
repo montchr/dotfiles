@@ -1,13 +1,7 @@
 #!/bin/sh
 
-if test ! $(which rbenv)
+if test ! $(which rvm)
 then
-  echo "  Installing rbenv for you."
-  brew install rbenv > /tmp/rbenv-install.log
-fi
-
-if test ! $(which ruby-build)
-then
-  echo "  Installing ruby-build for you."
-  brew install ruby-build > /tmp/ruby-build-install.log
+  echo "  Installing rvm for you."
+  \curl -sSL https://get.rvm.io | bash -s stable --ruby=1.9.3 > /tmp/rvm-install.log
 fi
