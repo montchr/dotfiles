@@ -1,8 +1,7 @@
 # Ignore useless or sensitive ST3 stuff
 sublime3/User/*.cache
-sublime3/User/Package\ Control.sublime-settings
-sublime3/User/Package\ Control.last-run
-sublime3/User/Package\ Control.system-ca-bundle
+sublime3/User/Package\ Control.*
+!sublime3/User/Package\ Control.sublime-settings
 sublime3/User/SFTP.*
 
 # Ignore themes modified by SublimeLinter
