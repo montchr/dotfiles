@@ -28,7 +28,7 @@ run_brew() {
   local -a missing_formulae
   local -a desired_formulae=(
     'coreutils' # GNU core utilities (those that come with OS X are outdated)
-    'grc',
+    'grc'
     'spark'
     'git'
     'hub'
@@ -40,6 +40,7 @@ run_brew() {
     'jpeg'
     'node'
     'optipng'
+    'python'
     'phantomjs'
     'tree'
     'wget'
@@ -78,8 +79,8 @@ if test ! $(which brew)
 then
   echo "  Installing Homebrew for you."
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
-else
-  run_brew
 fi
+
+run_brew
 
 exit 0
