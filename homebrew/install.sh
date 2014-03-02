@@ -8,6 +8,9 @@
 # Much of this is taken from @necolas' dotfiles:
 # https://github.com/necolas/dotfiles
 
+# Include utilities
+source $HOME/.dotfiles/lib/utils.zsh
+
 run_brew() {
 
   e_header "Updating Homebrew..."

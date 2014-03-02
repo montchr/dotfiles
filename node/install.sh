@@ -1,10 +1,7 @@
 #!/bin/sh
 
-if test ! $(which node)
-then
-  echo "  Installing node for you."
-  brew install node > /tmp/node-install.log
-fi
+# Include utilities
+source $HOME/.dotfiles/lib/utils.zsh
 
 e_header "Installing Node.js packages..."
 
