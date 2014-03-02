@@ -1,3 +1,5 @@
+#!/bin/sh
+#
 # Sets reasonable OS X defaults.
 #
 # Or, in other words, set shit how I like in OS X.
@@ -55,17 +57,12 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+
 # Dock
 # ----------------------------------------------------------------------
 
 # Dock: enable the 2D Dock
 defaults write com.apple.dock no-glass -bool true
-
-# Dock: position the Dock on the left
-# defaults write com.apple.dock orientation left
-
-# Dock: set the icon size of Dock items to 36 pixels
-# defaults write com.apple.dock tilesize -int 36
 
 # Dock: show indicator lights for open applications
 defaults write com.apple.dock show-process-indicators -bool true
@@ -126,13 +123,6 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Screen
 # ----------------------------------------------------------------------
-
-# Screen: require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-# Screen: save screenshots to the desktop
-# defaults write com.apple.screencapture location -string "$HOME/Desktop"
 
 # Screen: disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
