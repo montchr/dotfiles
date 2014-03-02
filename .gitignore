@@ -5,4 +5,8 @@ sublime3/User/Package\ Control.last-run
 sublime3/User/Package\ Control.system-ca-bundle
 sublime3/User/SFTP.*
 
+# Ignore themes modified by SublimeLinter
+# http://sublimelinter.readthedocs.org/en/latest/usage.html
+sublime3/User/*(SL).tmTheme
+
 git/gitconfig.symlink
