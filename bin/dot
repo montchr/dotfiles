@@ -4,10 +4,22 @@
 #
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
+
+# Include utilities
+source $HOME/.dotfiles/lib/utils.zsh
+
 export ZSH=$HOME/.dotfiles
 
 # Set OS X defaults
-$ZSH/osx/set-defaults.sh
+# Ask before potentially overwriting OS X defaults
+seek_confirmation "Warning: This step may modify your OS X system defaults."
+
+if is_confirmed; then
+  $ZSH/osx/set-defaults.sh
+  e_success "OS X settings updated! You may need to restart."
+else
+  printf "Skipped OS X settings update.\n"
+fi
 
 # Upgrade homebrew
 brew update
