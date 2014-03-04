@@ -8,14 +8,14 @@
 # Include utilities
 source $HOME/.dotfiles/lib/utils.zsh
 
-export ZSH=$HOME/.dotfiles
+export DOTFILES=$HOME/.dotfiles
 
 # Set OS X defaults
 # Ask before potentially overwriting OS X defaults
 seek_confirmation "Warning: This step may modify your OS X system defaults."
 
 if is_confirmed; then
-  $ZSH/osx/set-defaults.sh
+  $DOTFILES/osx/set-defaults.sh
   e_success "OS X settings updated! You may need to restart."
 else
   printf "Skipped OS X settings update.\n"
@@ -25,4 +25,4 @@ fi
 brew update
 
 # Install homebrew packages
-$ZSH/homebrew/install.sh 2>&1
+$DOTFILES/homebrew/install.sh 2>&1
