@@ -9,3 +9,4 @@ sublime3/User/SFTP.*
 sublime3/User/*(SL).tmTheme
 
 git/gitconfig.symlink
+lib/powerline-fonts
