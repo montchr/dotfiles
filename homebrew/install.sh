@@ -28,20 +28,20 @@ run_brew() {
   local -a missing_formulae
   local -a desired_formulae=(
     'coreutils' # GNU core utilities (those that come with OS X are outdated)
-    'grc'
-    'spark'
-    'git'
-    'hub'
     'ack'
     'bash'
     'bash-completion'
     'ffmpeg'
+    'git'
     'graphicsmagick'
+    'grc'
+    'hub'
     'jpeg'
     'node'
     'optipng'
-    'python'
     'phantomjs'
+    'python'
+    'spark'
     'tree'
     'wget'
   )
