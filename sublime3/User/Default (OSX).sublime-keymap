@@ -1,0 +1,8 @@
+[
+  { "keys": ["ctrl+shift+d"], "command": "toggle_trailing_spaces" },
+  { "keys": ["ctrl+shift+t"], "command": "delete_trailing_spaces" },
+  { "keys": ["super+ctrl+c","super+ctrl+i"], "command": "expand_tabs" },
+  { "keys": ["super+ctrl+a"], "command": "alignment" },
+  { "keys": ["super+ctrl+shift+a"], "command": "sublimelinter_show_all_errors" },
+  { "keys": ["super+ctrl+t","super+ctrl+m"], "command": "toggle_minimap" }
+]

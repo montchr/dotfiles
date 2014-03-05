@@ -4,7 +4,18 @@
 
 set -e
 
+DOTFILES_ROOT="`pwd`"
+
 cd "$(dirname $0)"/..
+
+# Include utilities
+source $HOME/.dotfiles/lib/utils.zsh
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+
+# Install patched common fixed-width fonts from Powerline
+cd $DOTFILES_ROOT/lib/powerline-fonts
+echo "   Installing Fonts"
+cp -f **/*.ttf ~/Library/Fonts/
+cp -f **/*.otf ~/Library/Fonts/

@@ -1,0 +1,19 @@
+{
+  "name": "dotfiles",
+  "version": "0.2.0",
+  "homepage": "https://github.com/montchr/dotfiles",
+  "authors": [
+    "Chris Montgomery <chris@montchr.io>"
+  ],
+  "description": "Chris Montgomery's dotfiles, based off of @holman's and @necolas' dotfiles and oh-my-zsh.",
+  "main": "script/bootstrap",
+  "keywords": [
+    "dotfiles",
+    "zsh",
+    "homebrew"
+  ],
+  "license": "GPLv3",
+  "dependencies": {
+    "powerline-fonts": "https://github.com/Lokaltog/powerline-fonts.git"
+  }
+}

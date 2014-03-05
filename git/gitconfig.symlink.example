@@ -1,6 +1,45 @@
 # Sample gitconfig
 #
 
+[alias]
+        # `git remote prune origin`: remove remote-tracking branches that were deleted from the remote repo
+        # `git gc`: cleanup unnecessary files and optimize the local repository
+        # `git clean -df`: remove untracked files and directories from the working tree
+        # `git stash clear`: remove all stashed states
+        trim = !git remote prune origin && git gc
+        cleanup = !git clean -df && git stash clear
+
+        # Add untracked, remove deleted, and show status
+        adda = !git add -A && git status
+
+        # Diff what is staged for the next commit
+        diffc = diff --cached
+        # Diff overview
+        diffst = diff --stat
+
+        # Custom graph log (append any tree-ish)
+        lg = log --pretty=nice --date-order --graph
+        # Custom graph log for all branches
+        lga = log --pretty=nice --date-order --graph --all
+
+        # Extended custom graph log
+        # lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset' --abbrev-commit --date-order
+        # Extended custom graph log for all branches
+        # lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset' --abbrev-commit --date-order --all
+
+        # Diffstat log
+        logst = log --stat
+        # Short format diffstat log
+        logsf = log --stat --format=oneline --abbrev-commit
+
+        # Unstage all files in index
+        unstage = reset HEAD --
+
+        co = checkout
+        promote = !$DOTFILES/bin/git-promote
+        wtf     = !$DOTFILES/bin/git-wtf
+        rank-contributors = !$DOTFILES/bin/git-rank-contributors
+        count   = !git shortlog -sn
 [hub]
         protocol = https
 [user]
@@ -8,26 +47,37 @@
         email = AUTHOREMAIL
 [credential]
         helper = GIT_CREDENTIAL_HELPER
-[alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
-        count   = !git shortlog -sn
 [color]
         diff = auto
         status = auto
         branch = auto
         ui = true
+        interactive = auto
 [core]
         excludesfile = ~/.gitignore
         editor = vim
 [apply]
         whitespace = nowarn
-[mergetool]
-        keepBackup = false
+[difftool "Kaleidoscope"]
+        cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[diff]
+        tool = Kaleidoscope
+
 [difftool]
         prompt = false
+
+[mergetool "Kaleidoscope"]
+        cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+        trustExitCode = true
+        keepBackup = false
+[merge]
+        tool = Kaleidoscope
+[pretty]
+        # tut: http://gitimmersion.com/lab_10.html
+        # ref: http://linux.die.net/man/1/git-log
+        # Result: <short-sha> <commit-message> (<pointer-names>) -- <commit-author-name>; <relative-time>
+        nice = "%C(yellow)%h%C(reset) %C(white)%s%C(cyan)%d%C(reset) -- %an; %ar"
 [help]
         autocorrect = 1
 [push]

@@ -1,3 +1,12 @@
-sublime2/User/Package\ Control.sublime-settings
-sublime2/User/Package Control.last-run
+# Ignore useless or sensitive ST3 stuff
+sublime3/User/*.cache
+sublime3/User/Package\ Control.*
+!sublime3/User/Package\ Control.sublime-settings
+sublime3/User/SFTP.*
+
+# Ignore themes modified by SublimeLinter
+# http://sublimelinter.readthedocs.org/en/latest/usage.html
+sublime3/User/*(SL).tmTheme
+
 git/gitconfig.symlink
+lib/powerline-fonts
