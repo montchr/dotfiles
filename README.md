@@ -64,6 +64,8 @@ If there are any files that often end up bugging you – `.DS-Store`, for exampl
 
 Don't have Homebrew installed yet? No problem! `homebrew/install.sh` will take care of you.
 
+Wondering what the hell is Homebrew? [Check out this article on Tuts+](http://computers.tutsplus.com/tutorials/homebrew-demystified-os-xs-ultimate-package-manager--mac-44884) for a solid, plain-English explanation.
+
 Do you have MacPorts installed? If so, now might be a great time to consider switching to using Homebrew...
 
 Add any things you'll always need installed first and foremost. Or just run `brew install` as needed later on.
