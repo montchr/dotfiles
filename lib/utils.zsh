@@ -24,7 +24,7 @@ e_warning() {
 seek_confirmation() {
     printf "\n"
     e_warning "$@"
-    read -p "Continue? (y/n) " -n 1
+    printf "Continue? (y/n) " && read -n 1
     printf "\n"
 }
 

@@ -16,6 +16,6 @@ find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
 # Install patched common fixed-width fonts from Powerline
 cd $DOTFILES_ROOT/lib/powerline-fonts
-echo "   Installing Fonts"
+e_header "Installing Powerline fonts"
 cp -f **/*.ttf ~/Library/Fonts/
 cp -f **/*.otf ~/Library/Fonts/

@@ -8,25 +8,25 @@
 # Include utilities
 source $HOME/.dotfiles/lib/utils.zsh
 
-export DOTFILES=$HOME/.dotfiles
-
 # Set OS X defaults
 # Ask before potentially overwriting OS X defaults
+printf "\n"
 seek_confirmation "Warning: This step may modify your OS X system defaults."
 
 if is_confirmed; then
   $DOTFILES/osx/set-defaults.sh
   e_success "OS X settings updated! You may need to restart."
 else
-  printf "Skipped OS X settings update.\n"
+  e_warning "Skipped OS X settings update."
 fi
-
-# Upgrade homebrew
-brew update
 
 # Install homebrew packages
 $DOTFILES/homebrew/install.sh 2>&1
 
 # Install bower packages
 cd $DOTFILES
+e_header "Installing Bower packages"
 bower install
+[[ $? ]] && e_success "Done"
+
+printf "\n"
