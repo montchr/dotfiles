@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Include utilities
+source $HOME/.dotfiles/lib/utils.zsh
+
 # Install oh-my-zsh if it's not already installed
 if ! [ -d $HOME/.oh-my-zsh ]
   then
