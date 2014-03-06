@@ -8,6 +8,8 @@
 # Include utilities
 source $HOME/.dotfiles/lib/utils.zsh
 
+export DOTFILES=$HOME/.dotfiles
+
 # Set OS X defaults
 # Ask before potentially overwriting OS X defaults
 printf "\n"
