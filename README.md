@@ -138,7 +138,13 @@ this script in `bin/`.
 
 ## caveats
 
-- If you use ClamXav, you may need to change owner and group on `/usr/local`, as ClamXav uses this directory as well – it's primarily used by Homebrew. When installed, ClamXav will change the owner of `/usr/local` to `root` and the group to `wheel`. It should be owned by your user and group `admin`. Still, you should change `/usr/local/clamXav` to owner `root` and group `wheel`. [Read more here](http://www.yihangho.com/homebrew-and-clamxav/). Thanks to @yihangho for the tip.
+- If you use ClamXav, you may need to change owner and group on `/usr/local`, as
+ ClamXav uses this directory as well – it's primarily used by Homebrew. When
+ installed, ClamXav will change the owner of `/usr/local` to `root` and the
+ group to `wheel`. It should be owned by your user and group `admin`. Still,
+ you should change `/usr/local/clamXav` to owner `root` and group `wheel`.
+ [Read more here](http://www.yihangho.com/homebrew-and-clamxav/). Thanks to
+ @yihangho for the tip.
 
 ## bugs
 
