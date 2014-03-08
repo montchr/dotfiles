@@ -104,6 +104,18 @@ If there are any super secret things you want to include in your shell profile, 
 
 `zsh/zshrc.symlink` symlinks to `~/.zshrc`
 
+### goodies
+
+#### xkcd password generator
+
+[![](http://imgs.xkcd.com/comics/password_strength.png)](http://xkcd.com/936/)
+
+I'm a big fan of xkcd. Inside these dotfiles, you will find a Python-based xkcd
+password generator, based on the idea set forth in the above comic.
+
+Run `xkcdp` from anywhere. Check out [the generator's home on GitHub](https://github.com/redacted/XKCD-password-generator)
+for a bunch of config options. All props to @redacted.
+
 ## go
 
 If you're all ready, run this from `~/.dotfiles`:
