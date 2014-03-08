@@ -33,6 +33,7 @@
 		"SublimeLinter",
 		"SublimeLinter-jshint",
 		"SublimeLinter-php",
+		"SublimeLinter-shellcheck",
 		"SunCycle",
 		"Susy Snippets",
 		"Theme - Spacegray",

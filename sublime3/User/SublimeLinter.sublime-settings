@@ -16,6 +16,12 @@
                 "@disable": false,
                 "args": [],
                 "excludes": []
+            },
+            "shellcheck": {
+                "@disable": false,
+                "args": [],
+                "exclude": "",
+                "excludes": []
             }
         },
         "mark_style": "outline",
@@ -24,7 +30,8 @@
             "linux": [],
             "osx": [
                 "/usr/bin",
-                "/usr/local/bin"
+                "/usr/local/bin",
+                "~/.cabal/bin"
             ],
             "windows": []
         },

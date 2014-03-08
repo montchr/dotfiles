@@ -101,9 +101,9 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
-		"Markdown",
 		"Dayle Rees Color Schemes",
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
 	"indent_guide_options":
 	[
