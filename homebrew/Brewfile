@@ -1,0 +1,39 @@
+update
+
+upgrade
+
+# Install GNU core utilities
+#
+# http://www.gnu.org/software/coreutils/
+#
+# This installs all of the basic command-line utilities for the GNU/Linux
+# operating system. Your Mac will be supercharged with the power of GNU.
+install coreutils
+
+# Install Homebrew Cask
+#
+# http://caskroom.io/
+#
+# Cask allows us to install thousands of Mac apps from the command line.
+install phinze/cask/brew-cask
+
+# Install formulae
+install ack
+install bash
+install bash-completion
+install cabal-install
+install ffmpeg
+install git
+install graphicsmagick
+install grc
+install hub
+install jpeg
+install node
+install optipng
+install phantomjs
+install python
+install spark
+install tree
+install wget
+
+cleanup
