@@ -35,5 +35,6 @@ install python
 install spark
 install tree
 install wget
+install zsh
 
 cleanup
