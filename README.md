@@ -4,9 +4,8 @@
 
 Your dotfiles are how you personalize your system. These are mine.
 
-Zach Holman (@holman) [has a lot to say][intro.01] about why you might benefit from
-forking someone's dotfiles and building upon them (or tearing them down) to
-suit your own needs. He also explains what the hell dotfiles are:
+Zach Holman (@holman) [has a lot to say][intro.01] about why you might benefit from forking someone's dotfiles and building upon them (or tearing them down)
+to suit your own needs. He also explains what the hell dotfiles are:
 
 > I'm a big fan of customizing your dotfiles. "Dotfiles" are the funky little
 > files in your *nix-based home directory that allow you to customize your
@@ -29,10 +28,7 @@ files is building a toolkit that can be forked and used to provision other
 people's machines for development with little modification to the original (or
 ideally with user input).
 
-[intro.01]: http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/
-
-
-
+[has a lot to say]: http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/
 
 
 ## topical
@@ -44,30 +40,35 @@ included into your shell. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
 
-
-
-
 ## what's inside
 
 A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
-above and see what components may mesh up with you. [Fork it][whats-inside.01],
+above and see what components may mesh up with you. [Fork it][],
 remove what you don't use, and build on what you do use.
 
 Here's a brief list of some of the more interesting features:
 
-- Installs zsh shell
-- Integration with oh-my-zsh for easy customizations
-- Installs some fixed-width fonts
-- Installs Homebrew, Node, RVM, Sublime Text 3
-- Sets up basic configuration for Git, Vim, and of course ZSH
+- Installs [zsh shell][], sets it as default (replacing bash).
+- Integration with [oh-my-zsh][] for easy customizations
+- Installs [some fixed-width fonts][]
+- Installs [Homebrew][], [Node.js][], [RVM][], [Sublime Text 3][]
+- Sets up basic configuration for [Git][], [Vim][], and of course ZSH
 - Sets some OS X default settings
-- Includes Beets, the command-line music library manager for the OCD
-- Includes xkcd Password Generator
+- Includes [Beets][], the command-line music library manager for the OCD
+- Includes [xkcd Password Generator][]
 
-[whats-inside.01]: https://github.com/montchr/dotfiles/fork
-
-
-
+[Fork it]: https://github.com/montchr/dotfiles/fork
+[zsh shell]: http://fendrich.se/blog/2012/09/28/no/
+[oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
+[some fixed-width fonts]: https://github.com/Lokaltog/powerline-fonts
+[Homebrew]: http://brew.sh/
+[Node.js]: http://nodejs.org/
+[RVM]: http://sirupsen.com/get-started-right-with-rvm/
+[Sublime Text 3]: http://www.sublimetext.com/3
+[Git]: http://www.git-scm.com/
+[Vim]: http://en.wikipedia.org/wiki/Vim_(text_editor)
+[Beets]: http://beets.radbox.org/
+[xkcd Password Generator]: https://github.com/redacted/XKCD-password-generator
 
 
 ## components
@@ -86,9 +87,6 @@ There's a few special files in the hierarchy.
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
-
-
-
 
 
 ## install
@@ -113,8 +111,10 @@ customize.
 └── install.sh
 ```
 
-Homebrew Cask is Homebrew for your GUI Mac apps. Take a look through the
+[Homebrew Cask][] is Homebrew for your GUI Mac apps. Take a look through the
 various Caskfiles to see what comes bundled in each.
+
+[Homebrew Cask]: http://caskroom.io/
 
 #### git
 
@@ -146,7 +146,7 @@ example – now's a good time to add them to your shit list, AKA
 Don't have Homebrew installed yet? No problem! `homebrew/install.sh` will take
 care of you.
 
-Wondering what the hell is Homebrew? [Check out this article on Tuts+][homebrew.01]
+Wondering what the hell is Homebrew? [Check out this article on Tuts+][]
 for a solid, plain-English explanation.
 
 __Do you have MacPorts installed? Stop right there.__ If you run any of the
@@ -156,9 +156,14 @@ Homebrew-MacPorts collision is time-consuming and the effects will linger.
 Now might be a great time to consider switching to using Homebrew and sticking
 to it. It's simpler, it's well-supported, it's growing, and it has beer jargon.
 
+Removing MacPorts is not as hard as it sounds, but make sure you take note of
+all the packages you'd like to tell Homebrew to grab. `script/bootstrap` can
+remove MacPorts for you, or [you can do it yourself][].
+
 Add any things you'll always need installed first and foremost.
 
-[homebrew.01]: http://computers.tutsplus.com/tutorials/homebrew-demystified-os-xs-ultimate-package-manager--mac-44884
+[Check out this article on Tuts+]: http://computers.tutsplus.com/tutorials/homebrew-demystified-os-xs-ultimate-package-manager--mac-44884
+[you can do it yourself]: http://apple.stackexchange.com/questions/82806/how-to-cleanly-remove-macports
 
 #### node
 
@@ -168,8 +173,8 @@ Add any things you'll always need installed first and foremost.
 ```
 
 Even if you aren't a Node.JS developer (I'm not), there's a strong chance you
-will still be using something powered by Node (I still am). Like [Bower][node.01].
-Or [Grunt][node.02].
+will still be using something powered by Node (I still am). Like [Bower][].
+Or [Grunt][].
 
 The `node/install.sh` script will install Node for you if it's not already
 installed.
@@ -183,8 +188,8 @@ stick with Homebrew because:
 As with Homebrew, add any additional `npm` packages you'd like installed off
 the bat.
 
-[node.01]: http://bower.io/
-[node.02]: http://gruntjs.com/
+[Bower]: http://bower.io/
+[Grunt]: http://gruntjs.com/
 
 #### osx defaults
 
@@ -196,6 +201,11 @@ the bat.
 Definitely take a close look here. Everything's pretty straightforward and
 self-explanatory. None of these settings should be too earth-shattering, but 
 you should definitely consider whether any of them will piss you off.
+
+If you'd like to add any more of these defaults to this file, check out
+[@mathiasbynens' comprehensive dotfiles][].
+
+[@mathiasbynens' comprehensive dotfiles]: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
 #### sublime
 
@@ -234,8 +244,10 @@ __N.B. Some of the plugins currently in use may break if you switch back to
 ST2.__
 
 Make sure the symlink settings are correct in `sublime3/setup`. Also, install
-any alternative theme (like Soda) using the same format as in the file
+any alternative theme (like [Soda][]) using the same format as in the file
 currently.
+
+[Soda]: http://buymeasoda.github.io/soda-theme/
 
 #### system
 
@@ -258,37 +270,35 @@ As mentioned above, you'll want to change some of the special directories
 specified in `zsh/zshrc.symlink`, as these will probably differ in your setup.
 
 If there are any super secret things you want to include in your shell profile,
-but you don't want to commit them, throm them in `~/.localrc` and they'll be
+but you don't want to commit them, throw them in `~/.localrc` and they'll be
 picked up automagically.
 
 `zsh/zshrc.symlink` symlinks to `~/.zshrc`
-
-
 
 ### goodies
 
 #### xkcd password generator
 
-[![](http://imgs.xkcd.com/comics/password_strength.png)][goodies.01]
+[![](http://imgs.xkcd.com/comics/password_strength.png)][password strength]
 
-I'm a big fan of xkcd. Inside these dotfiles, you will find a Python-based xkcd
+I'm a big fan of [xkcd][]. Inside these dotfiles, you will find a Python-based xkcd
 password generator, based on the idea set forth in the above comic.
 
-Run `xkcdp` from anywhere. Check out [the generator's home on GitHub][goodies.02]
+Run `xkcdp` from anywhere. Check out [the generator's home on GitHub][]
 for a bunch of config options. All props to @redacted.
 
-[goodies.01]: http://xkcd.com/936/
-[goodies.02]: https://github.com/redacted/XKCD-password-generator
-
-
-
+[password strength]: http://xkcd.com/936/
+[xkcd]: http://xkcd.com/
+[the generator's home on GitHub]: https://github.com/redacted/XKCD-password-generator
 
 
 ## go
 
-If you're all ready, run this from `~/.dotfiles`:
+If you're all ready, run this:
 
 ```sh
+git clone https://github.com/montchr/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 ./script/bootstrap
 ./script/install
 ```
@@ -297,9 +307,9 @@ If you're all ready, run this from `~/.dotfiles`:
 
 #### ./script/bootstrap
 
-`./script/bootstrap` will symlink the appropriate files in `.dotfiles` to your
-home directory. Everything is configured and tweaked within `~/.dotfiles`. It
-will also install your Homebrew dependencies and oh-my-zsh for the first time.
+`./script/bootstrap` will symlink the appropriate files in `~/.dotfiles` to
+your home directory. Everything is configured and tweaked within
+`~/.dotfiles`. It will also install your Homebrew dependencies and oh-my-zsh for the first time.
 
 1. If `git/gitconfig.symlink` doesn't exist, create it with your provided
    GitHub author name and email.
@@ -329,8 +339,6 @@ will also install your Homebrew dependencies and oh-my-zsh for the first time.
 7. __`ruby/install.sh`:__ Installs RVM for safely managing Ruby and its gems.
    Compiles Ruby 2.1.0 from source. Takes a while. Just let it do its thing.
 
-
-
 ### sublime
 
 Sublime Text 3 settings are not set up automatically. You'll have to do that
@@ -341,9 +349,6 @@ __If you've already been comfortably working with Sublime Text:__ you can run
 immediately afterwards.
 
 __If you just want to load my suggested configuration:__ only run `sublime3/setup`. This will back up your current ST3 preferences before installing mine.
-
-
-
 
 
 ## everyday
@@ -359,26 +364,26 @@ consider adding it to the list of formulae in `homebrew/Brewfile`, then run
 record of it in your dotfiles and updating all your other brewed things.
 
 
-
-
-
 ## caveats
 
-- If you use ClamXav, you may need to change owner and group on `/usr/local`, as ClamXav uses this directory as well – it's primarily used by Homebrew. When installed, ClamXav will change the owner of `/usr/local` to `root` and the group to `wheel`. It should be owned by your user and group `admin`. Still, you should change `/usr/local/clamXav` to owner `root` and group `wheel`. [Read more here](http://www.yihangho.com/homebrew-and-clamxav/). Thanks to @yihangho for the tip.
+- If you use [ClamXav][], you may need to change owner and group on `/usr/local`, as ClamXav uses this directory as well – it's primarily used by Homebrew. When installed, ClamXav will change the owner of `/usr/local` to `root` and the group to `wheel`. It should be owned by your user and group `admin`. Still, you should change `/usr/local/clamXav` to owner `root` and group
+`wheel`. [Thanks to @yihangho for the tip][].
 
 - You may notice, after working with these dotfiles for some time, that `sublime3/User/Preferences.sublime-settings` changes very often without your input. This is because of two plugins:
 
-    - SunCycle changes the color scheme and theme at sunrise and sunset. I
+    - [SunCycle][] changes the color scheme and theme at sunrise and sunset. I
     originally committed the file after dark, so during the day, Git sees the file has changed. You can commit those changes if you like, but you'll be
     committing those same changes over and over again, forever...
 
-    - SublimeLinter is constantly forcing the file to adhere to a certain syntax. It enforces tab indentation and it automatically adds every available setting and alphabetizes the keys. This gets annoying, especially while you're in there editing and you're told the file has changed on disk. In that case, just hit cancel and save when you're ready. Sometimes you'll also notice the "Ignored Packages" are mysteriously being re-ordered for no apparent reason...
+    - [SublimeLinter][] is constantly forcing the file to adhere to a certain syntax. It enforces tab indentation and it automatically adds every available setting and alphabetizes the keys. This gets annoying, especially while you're in there editing and you're told the file has changed on disk. In that case, just hit cancel and save when you're ready. Sometimes you'll also notice the "Ignored Packages" are mysteriously being re-ordered for no apparent reason...
 
     If these issues are too aggravating for you, definitely consider adding
     `sublime3/Preferences.sublime-settings` to `.gitignore`. But, of course, you'll lose the ability to track any future changes you make to the file yourself.
 
-
-
+[ClamXav]: http://www.clamxav.com/
+[Thanks to @yihangho for the tip]: http://www.yihangho.com/homebrew-and-clamxav/
+[SunCycle]: https://github.com/smhg/sublime-suncycle
+[SublimeLinter]: https://github.com/SublimeLinter/SublimeLinter3
 
 
 ## bugs
@@ -389,33 +394,31 @@ said, I do use this as *my* dotfiles, so there's a good chance I may break
 something if I forget to make a check for a dependency.
 
 If you're brand-new to the project and run into any blockers, please
-[open an issue](https://github.com/montchr/dotfiles/issues) on this repository
-and I'd love to get it fixed for you!
+[open an issue][] on this repository and I'd love to get it fixed for you!
 
-
-
+[open an issue]: https://github.com/montchr/dotfiles/issues
 
 
 ## thanks
 
-Most heavily based on the structure set out in [@holman's dotfiles][thanks.01].
+Most heavily based on the structure set out in [@holman's dotfiles][].
 
-I was originally using a fork of [@necolas' dotfiles][thanks.02] before I
+I was originally using a fork of [@necolas' dotfiles][] before I
 decided to go the zsh route. I did like the way he set some things up, so I've
-borrowed a lot of those functions.
+borrowed some of those things.
 
 @aniketpant, for his implementation of `oh-my-zsh` with @holman's dotfile
 structure.
 
 @holman:
 
-> I forked [Ryan Bates][(thanks.03]' excellent [dotfiles][thanks.04] for a
+> I forked [Ryan Bates][]' [excellent dotfiles][] for a
 > couple years before the weight of my changes and tweaks inspired me to finally
 > roll my own. But Ryan's dotfiles were an easy way to get into bash
 > customization, and then to jump ship to zsh a bit later. A decent amount of
 > the code in these dotfiles stem or are inspired from Ryan's original project.
 
-[thanks.01]: https://github.com/holman/dotfiles
-[thanks.02]: https://github.com/necolas/dotfiles
-[thanks.03]: http://github.com/ryanb
-[thanks.04]: https://github.com/ryanb/dotfiles
+[@holman's dotfiles]: https://github.com/holman/dotfiles
+[@necolas' dotfiles]: https://github.com/necolas/dotfiles
+[Ryan Bates]: http://github.com/ryanb
+[excellent dotfiles]: https://github.com/ryanb/dotfiles
