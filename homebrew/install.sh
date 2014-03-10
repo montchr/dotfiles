@@ -7,11 +7,57 @@
 
 export DOTFILES=$HOME/.dotfiles
 
+# Include utilities
+source $HOME/.dotfiles/lib/utils.zsh
+
+macports_check () {
+  if [ -a /opt/local ||
+      -a /Applications/DarwinPorts ||
+      -a /Applications/MacPorts ||
+      -a /Library/LaunchDaemons/org.macports.* ||
+      -a /Library/Receipts/DarwinPorts*.pkg ||
+      -a /Library/Receipts/MacPorts*.pkg ||
+      -a /Library/StartupItems/DarwinPortsStartup ||
+      -a /Library/Tcl/darwinports1.0 ||
+      -a /Library/Tcl/macports1.0 ||
+      -a ~/.macports
+    ]
+    then
+    # stuff
+    return 1
+  else
+    return 0
+  fi
+}
+
 # Check for Homebrew
 if test ! $(which brew)
 then
-  echo "  Installing Homebrew for you."
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
+  if ! [ macports_check ]; then
+    e_header "Installing Homebrew for you."
+    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
+  else
+    seek_confirmation "Detected MacPorts. You can continue by removing MacPorts automatically [y], or by aborting now [n]."
+    if is_confirmed; then
+      seek_confirmation "N.B. If you accept, all of your MacPorts things will disappear."
+      if is_confirmed; then
+        sudo port -fp uninstall installed
+
+        sudo rm -rf /opt/local \
+          /Applications/DarwinPorts \
+          /Applications/MacPorts \
+          /Library/LaunchDaemons/org.macports.* \
+          /Library/Receipts/DarwinPorts*.pkg \
+          /Library/Receipts/MacPorts*.pkg \
+          /Library/StartupItems/DarwinPortsStartup \
+          /Library/Tcl/darwinports1.0 \
+          /Library/Tcl/macports1.0 \
+          ~/.macports
+      else
+        exit 1
+      fi
+    fi
+  fi
 fi
 
 # Excecute the `brew` operations specified in ./homebrew/Brewfile
