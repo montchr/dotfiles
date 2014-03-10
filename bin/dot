@@ -31,7 +31,4 @@ e_header "Installing Bower packages"
 bower install
 [[ $? ]] && e_success "Done"
 
-# Install oh-my-zsh
-$DOTFILES/zsh/install.sh 2>&1
-
 printf "\n"
