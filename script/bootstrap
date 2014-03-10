@@ -138,6 +138,14 @@ change_shell () {
   fi
 }
 
+copy_fonts () {
+  # Install patched common fixed-width fonts from Powerline
+  cd $DOTFILES_ROOT/lib/powerline-fonts
+  e_header "Installing Powerline fonts"
+  cp -f **/*.ttf ~/Library/Fonts/
+  cp -f **/*.otf ~/Library/Fonts/
+}
+
 setup_gitconfig
 install_dotfiles
 
@@ -156,6 +164,7 @@ fi
 
 install_ohmyzsh
 change_shell
+copy_fonts
 
 echo ''
 echo '  All installed!'

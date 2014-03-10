@@ -13,9 +13,3 @@ source $HOME/.dotfiles/lib/utils.zsh
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
-
-# Install patched common fixed-width fonts from Powerline
-cd $DOTFILES_ROOT/lib/powerline-fonts
-e_header "Installing Powerline fonts"
-cp -f **/*.ttf ~/Library/Fonts/
-cp -f **/*.otf ~/Library/Fonts/
