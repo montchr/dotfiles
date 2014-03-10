@@ -1,4 +1,4 @@
-# montchr does dotfiles
+# dotfiles by montchr
 
 ## dotfiles
 
