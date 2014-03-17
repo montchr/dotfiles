@@ -24,6 +24,7 @@ install bash-completion
 install cabal-install
 install ffmpeg
 install git
+install git-flow
 install graphicsmagick
 install grc
 install hub

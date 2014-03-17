@@ -61,6 +61,6 @@ then
 fi
 
 # Excecute the `brew` operations specified in ./homebrew/Brewfile
-brew bundle homebrew/Brewfile
+brew bundle $DOTFILES/homebrew/Brewfile
 
 exit 0

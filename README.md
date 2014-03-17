@@ -98,6 +98,11 @@ necessary changes.
 
 Make sure you have at least a vague sense of what's going on here. You don't need to understand all the intricacies – they'll become clearer as you continue to work with this stuff. Trust me. ;)
 
+Do keep in mind that your `~/.dotfiles` directory is a working Git repo! So if
+you make changes, try to make them in logical chunks and commit them. Remember:
+
+> Commit early and commit often.
+
 Starting from the top, here's a general overview of which files you may want to
 customize.
 
