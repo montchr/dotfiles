@@ -23,7 +23,7 @@ install bash
 install bash-completion
 install cabal-install
 install ffmpeg
-install git
+install git --without-completions # Completions break oh-my-zsh (because it installs its own completions)
 install git-flow
 install graphicsmagick
 install grc
