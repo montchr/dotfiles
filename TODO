@@ -5,3 +5,4 @@ Inbox:
  [ ] submit PR to \@necolas' dotfiles fixing [`read -p` from within `seek_confirmation`](https://github.com/necolas/dotfiles/blob/master/lib/utils#L27)
  [ ] get a goddamn good working cli for taskpaper- or similar-format todo lists... one that works with zsh.
  [x] test for macports: if exists, then die @done (14-03-10 15:44)
+ [ ] fix `cask/install.sh`
