@@ -22,9 +22,10 @@ plugins=(bower brew colorize composer copydir copyfile cp git git-flow gnu-utils
 
 # ZSH_THEME="agnoster"
 # ZSH_THEME="pygmalion"
-ZSH_THEME="terminalparty"
+# ZSH_THEME="terminalparty"
 # ZSH_THEME="theunraveler"
 # ZSH_THEME="ys"
+ZSH_THEME="ys-custom"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
