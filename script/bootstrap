@@ -146,6 +146,21 @@ copy_fonts () {
   cp -f **/*.otf ~/Library/Fonts/
 }
 
+vim_go () {
+  # Install much Vim
+  #
+  # From @necolas' dotfiles
+  #
+  # Note that the `.symlink` files will still (needlessly) exist in the
+  # symlinked `~/.vim` directory, but they won't do anyone any harm there.
+  e_header "Installing Vim things"
+  if ! [ -L "$HOME/.vim" ]; then
+    mv "$HOME/.vim" "$HOME/.vim.backup"
+  fi
+  ln -fs "$DOTFILES/vim" "$HOME/.vim"
+  e_success "You now has much Vim things"
+}
+
 setup_gitconfig
 install_dotfiles
 
@@ -165,6 +180,7 @@ fi
 install_ohmyzsh
 change_shell
 copy_fonts
+vim_go
 
 echo ''
 echo '  All installed!'
