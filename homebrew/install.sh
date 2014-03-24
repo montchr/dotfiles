@@ -79,7 +79,15 @@ then
   fi
 fi
 
-# Excecute the `brew` operations specified in ./homebrew/Brewfile
+# If `brew doctor` fails, then warn the user
+if ! [[ $(brew doctor) = *"Your system is ready to brew."* ]]; then
+  seek_confirmation "Homebrew is sick. Proceed with caution [y], or fix the problems [n]."
+  if ! is_confirmed; then
+    exit 1
+  fi
+fi
+
+# Execute the `brew` operations specified in ./homebrew/Brewfile
 brew bundle "$DOTFILES/homebrew/Brewfile"
 
 exit 0
