@@ -29,12 +29,16 @@ macports_check () {
   fi
 }
 
+install_homebrew () {
+  e_header "Installing Homebrew for you."
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
+}
+
 # Check for Homebrew
 if test ! "$(which brew)"
 then
   if ! [ macports_check ]; then
-    e_header "Installing Homebrew for you."
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
+    install_homebrew
   else
     seek_confirmation "Detected MacPorts. You can continue by removing MacPorts automatically [y], or by aborting now [n]."
     if is_confirmed; then
@@ -52,6 +56,9 @@ then
           /Library/Tcl/darwinports1.0 \
           /Library/Tcl/macports1.0 \
           ~/.macports
+
+        # Now finally install Homebrew
+        install_homebrew
       else
         exit 1
       fi
