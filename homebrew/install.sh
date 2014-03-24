@@ -37,9 +37,7 @@ install_homebrew () {
 # Check for Homebrew
 if test ! "$(which brew)"
 then
-  if ! [ macports_check ]; then
-    install_homebrew
-  else
+  if macports_check; then
     seek_confirmation "Detected MacPorts. You can continue by removing MacPorts automatically [y], or by aborting now [n]."
     if is_confirmed; then
       seek_confirmation "N.B. If you accept, all of your MacPorts things will disappear."
@@ -65,6 +63,8 @@ then
     else
       exit 1
     fi
+  else
+    install_homebrew
   fi
 fi
 
