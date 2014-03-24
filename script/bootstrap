@@ -11,16 +11,6 @@ echo ''
 # Include utilities
 source $HOME/.dotfiles/lib/utils.zsh
 
-success () {
-  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
-}
-
-fail () {
-  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
-  echo ''
-  exit
-}
-
 setup_gitconfig () {
   if ! [ -f git/gitconfig.symlink ]
   then
@@ -39,13 +29,13 @@ setup_gitconfig () {
 
     sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink
 
-    success 'gitconfig'
+    e_success 'gitconfig'
   fi
 }
 
 link_files () {
   ln -s $1 $2
-  success "linked $1 to $2"
+  e_success "linked $1 to $2"
 }
 
 install_dotfiles () {
@@ -92,20 +82,20 @@ install_dotfiles () {
       if [ "$overwrite" == "true" ] || [ "$overwrite_all" == "true" ]
       then
         rm -rf $dest
-        success "removed $dest"
+        e_success "removed $dest"
       fi
 
       if [ "$backup" == "true" ] || [ "$backup_all" == "true" ]
       then
         mv $dest $dest\.backup
-        success "moved $dest to $dest.backup"
+        e_success "moved $dest to $dest.backup"
       fi
 
       if [ "$skip" == "false" ] && [ "$skip_all" == "false" ]
       then
         link_files $source $dest
       else
-        success "skipped $source"
+        e_success "skipped $source"
       fi
 
     else
@@ -121,7 +111,7 @@ install_ohmyzsh () {
     then
     e_header "Installing oh-my-zsh"
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-    [[ $? ]] && e_success "Done"
+    [[ $? ]] && e_e_success "Done"
   fi
 }
 
@@ -167,9 +157,9 @@ then
   source bin/dot 2> /tmp/dotfiles-dot
   if [[ $? ]]
   then
-    success "dependencies installed"
+    e_success "dependencies installed"
   else
-    fail "error installing dependencies"
+    e_fail "error installing dependencies"
   fi
 fi
 
