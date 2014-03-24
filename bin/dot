@@ -5,6 +5,8 @@
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
 
+set -e
+
 # Include utilities
 source $HOME/.dotfiles/lib/utils.zsh
 
