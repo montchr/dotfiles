@@ -278,6 +278,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.
 # Kill the afflicted
 # ----------------------------------------------------------------------
 
-for app in "cfprefsd" "Dock" "Finder" "Messages" "SystemUIServer" "Terminal"; do
+for app in "cfprefsd" "Dock" "Finder" "Messages" "SystemUIServer"; do
   killall "${app}" > /dev/null 2>&1
 done
