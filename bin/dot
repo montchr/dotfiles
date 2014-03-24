@@ -16,7 +16,7 @@ printf "\n"
 seek_confirmation "Warning: This step may modify your OS X system defaults."
 
 if is_confirmed; then
-  $DOTFILES/osx/set-defaults.sh
+  $DOTFILES/osx/set-defaults.sh 2>&1
   e_success "OS X settings updated! You may need to restart."
 else
   e_warning "Skipped OS X settings update."
