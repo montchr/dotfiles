@@ -5,6 +5,8 @@
 # This installs some of the common dependencies needed (or at least desired)
 # using Homebrew.
 
+set -e
+
 export DOTFILES=$HOME/.dotfiles
 
 # Include utilities
