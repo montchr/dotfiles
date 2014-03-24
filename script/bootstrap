@@ -111,7 +111,7 @@ install_ohmyzsh () {
     then
     e_header "Installing oh-my-zsh"
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-    [[ $? ]] && e_e_success "Done"
+    [[ $? ]] && e_success "Done"
   fi
 }
 
