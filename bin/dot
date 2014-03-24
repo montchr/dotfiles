@@ -25,10 +25,22 @@ fi
 # Install homebrew packages
 $DOTFILES/homebrew/install.sh 2>&1
 
+# Install npm packages
+$DOTFILES/node/install.sh 2>&1
+
 # Install bower packages
 cd $DOTFILES
 e_header "Installing Bower packages"
 bower install
 [[ $? ]] && e_success "Done"
+# Update bower packages
+if type_exists bower; then
+  bower update
+fi
+
+# If RVM is installed, update it
+if type_exists rvm; then
+  rvm get stable
+fi
 
 printf "\n"
