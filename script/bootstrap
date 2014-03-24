@@ -165,6 +165,7 @@ vim_go () {
 
 setup_gitconfig
 install_dotfiles
+vim_go
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
@@ -182,7 +183,6 @@ fi
 install_ohmyzsh
 change_shell
 copy_fonts
-vim_go
 
 echo ''
 echo '  All installed!'
