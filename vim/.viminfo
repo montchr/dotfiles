@@ -8,6 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:wq
 :q
 
 # Search String History (newest to oldest):
@@ -21,12 +22,22 @@
 # Registers:
 
 # File marks:
-'0  1  0  ~/.dotfiles/zsh/zshrc.symlink
+'0  2  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+'1  1  0  ~/.dotfiles/zsh/zshrc.symlink
 
 # Jumplist (newest first):
+-'  2  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+-'  1  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+-'  1  0  ~/.dotfiles/zsh/zshrc.symlink
 -'  1  0  ~/.dotfiles/zsh/zshrc.symlink
 
 # History of marks within files (newest to oldest):
+
+> ~/.dotfiles/.git/COMMIT_EDITMSG
+	"	2	0
+	^	2	0
+	.	1	11
+	+	1	11
 
 > ~/.dotfiles/zsh/zshrc.symlink
 	"	1	0
