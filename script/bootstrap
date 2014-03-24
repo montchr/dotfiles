@@ -112,6 +112,9 @@ install_ohmyzsh () {
     e_header "Installing oh-my-zsh"
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
     [[ $? ]] && e_success "Done"
+
+    # Move our `.zshrc` back into place after oh-my-zsh setup
+    mv "$HOME/.zshrc.pre-oh-my-zsh" "$HOME/.zshrc"
   fi
 }
 
