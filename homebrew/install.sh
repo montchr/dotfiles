@@ -42,6 +42,8 @@ then
     if is_confirmed; then
       seek_confirmation "N.B. If you accept, all of your MacPorts things will disappear."
       if is_confirmed; then
+        port list installed > /tmp/port-installed
+
         sudo port -fp uninstall installed
 
         sudo rm -rf /opt/local \
