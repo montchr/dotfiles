@@ -121,7 +121,7 @@ install_ohmyzsh () {
 change_shell () {
   # Change default shell to Homebrew-installed zsh
   if [ -L /usr/local/bin/zsh ]; then
-    command -v zsh | sudo tee -a /etc/shells
+    /usr/local/bin/zsh >> /etc/shells
     sudo chsh -s "$(command -v zsh)" "${USER}"
   fi
 }
