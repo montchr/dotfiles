@@ -10,14 +10,6 @@ set -e
 
 echo ''
 
-info () {
-  printf "  [ \033[00;34m..\033[0m ] $1"
-}
-
-user () {
-  printf "\r  [ \033[0;33m?\033[0m ] $1 "
-}
-
 success () {
   printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
 }
@@ -31,7 +23,7 @@ fail () {
 setup_gitconfig () {
   if ! [ -f git/gitconfig.symlink ]
   then
-    info 'setup gitconfig'
+    e_header 'Setup gitconfig'
 
     git_credential='cache'
     if [ "$(uname -s)" == "Darwin" ]
@@ -39,9 +31,9 @@ setup_gitconfig () {
       git_credential='osxkeychain'
     fi
 
-    user ' - What is your github author name?'
+    e_header ' - What is your github author name?'
     read -e git_authorname
-    user ' - What is your github author email?'
+    e_header ' - What is your github author email?'
     read -e git_authoremail
 
     sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink
@@ -56,7 +48,7 @@ link_files () {
 }
 
 install_dotfiles () {
-  info 'installing dotfiles'
+  e_header 'Installing dotfiles'
 
   overwrite_all=false
   backup_all=false
@@ -75,7 +67,7 @@ install_dotfiles () {
 
       if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
       then
-        user "File already exists: `basename $source`, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
+        e_header "File already exists: `basename $source`, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
         read -n 1 action
 
         case "$action" in
@@ -126,7 +118,7 @@ install_ohmyzsh () {
   # Install oh-my-zsh if it's not already installed
   if ! [ -d $HOME/.oh-my-zsh ]
     then
-    e_header "installing oh-my-zsh"
+    e_header "Installing oh-my-zsh"
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
     [[ $? ]] && e_success "Done"
   fi
@@ -170,7 +162,7 @@ vim_go
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
 then
-  info "installing dependencies"
+  e_header "installing dependencies"
   source bin/dot 2> /tmp/dotfiles-dot
   if [[ $? ]]
   then
