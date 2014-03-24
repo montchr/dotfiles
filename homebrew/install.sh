@@ -55,7 +55,7 @@ macports_kill () {
 
 install_homebrew () {
   e_header "Installing Homebrew for you."
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" 2> /tmp/homebrew-install.log
 }
 
 # Check for Homebrew
