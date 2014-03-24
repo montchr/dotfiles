@@ -4,12 +4,12 @@
 
 set -e
 
-DOTFILES_ROOT="`pwd`"
+DOTFILES_ROOT="$(pwd)"
 
 echo ''
 
 # Include utilities
-source $HOME/.dotfiles/lib/utils.zsh
+source "$HOME/.dotfiles/lib/utils.zsh"
 
 setup_gitconfig () {
   if ! [ -f git/gitconfig.symlink ]
@@ -34,7 +34,7 @@ setup_gitconfig () {
 }
 
 link_files () {
-  ln -s $1 $2
+  ln -s "$1" "$2"
   e_success "linked $1 to $2"
 }
 
@@ -58,7 +58,7 @@ install_dotfiles () {
 
       if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
       then
-        e_header "File already exists: `basename $source`, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
+        e_header "File already exists: $(basename "$source"), what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
         read -n 1 action
 
         case "$action" in
@@ -81,25 +81,25 @@ install_dotfiles () {
 
       if [ "$overwrite" == "true" ] || [ "$overwrite_all" == "true" ]
       then
-        rm -rf $dest
+        rm -rf "$dest"
         e_success "removed $dest"
       fi
 
       if [ "$backup" == "true" ] || [ "$backup_all" == "true" ]
       then
-        mv $dest $dest\.backup
+        mv "$dest" "$dest\.backup"
         e_success "moved $dest to $dest.backup"
       fi
 
       if [ "$skip" == "false" ] && [ "$skip_all" == "false" ]
       then
-        link_files $source $dest
+        link_files "$source" "$dest"
       else
         e_success "skipped $source"
       fi
 
     else
-      link_files $source $dest
+      link_files "$source" "$dest"
     fi
 
   done
@@ -107,7 +107,7 @@ install_dotfiles () {
 
 install_ohmyzsh () {
   # Install oh-my-zsh if it's not already installed
-  if ! [ -d $HOME/.oh-my-zsh ]
+  if ! [ -d "$HOME/.oh-my-zsh" ]
     then
     e_header "Installing oh-my-zsh"
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
@@ -121,17 +121,17 @@ install_ohmyzsh () {
 change_shell () {
   # Change default shell to Homebrew-installed zsh
   if [ -L /usr/local/bin/zsh ]; then
-    /usr/local/bin/zsh >> /etc/shells
+    command -v zsh | sudo tee -a /etc/shells
     sudo chsh -s "$(command -v zsh)" "${USER}"
   fi
 }
 
 copy_fonts () {
   # Install patched common fixed-width fonts from Powerline
-  cd $DOTFILES_ROOT/lib/powerline-fonts
+  cd "$DOTFILES_ROOT/lib/powerline-fonts"
   e_header "Installing Powerline fonts"
-  cp -f **/*.ttf ~/Library/Fonts/
-  cp -f **/*.otf ~/Library/Fonts/
+  cp -f ./**/*.ttf ~/Library/Fonts/
+  cp -f ./**/*.otf ~/Library/Fonts/
 }
 
 vim_go () {
