@@ -1,3 +1,5 @@
+#!/bin/sh
+
 cabal update
 cabal install cabal-install
 
