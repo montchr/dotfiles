@@ -145,7 +145,7 @@ vim_go () {
   if ! [ -L "$HOME/.vim" ]; then
     mv "$HOME/.vim" "$HOME/.vim.backup"
   fi
-  ln -fs "$DOTFILES/vim" "$HOME/.vim"
+  ln -fs "$DOTFILES_ROOT/vim" "$HOME/.vim"
   e_success "You now has much Vim things"
 }
 
