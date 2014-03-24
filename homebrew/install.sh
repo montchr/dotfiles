@@ -55,6 +55,8 @@ then
       else
         exit 1
       fi
+    else
+      exit 1
     fi
   fi
 fi
