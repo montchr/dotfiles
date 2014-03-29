@@ -90,4 +90,10 @@ fi
 # Execute the `brew` operations specified in ./homebrew/Brewfile
 brew bundle "$DOTFILES/homebrew/Brewfile"
 
+# Install default Mac apps with Homebrew Cask
+seek_confirmation "Would you like to install some default Mac apps?"
+if is_confirmed; then
+  brew bundle "$DOTFILES/homebrew/Caskfile"
+fi
+
 exit 0
