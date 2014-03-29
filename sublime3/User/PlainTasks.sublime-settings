@@ -1,6 +1,8 @@
 {
   "auto_wrap": false,
-  "open_tasks_bullet": "[ ]", // options: - | ❍ | ❑ | ■ | □ | ☐ | ▪ | ▫ | – | — ≡ → › | [ ]
-  "done_tasks_bullet": "[x]", // options: + | ✓ | ✔ | √ | [x]
-  "cancelled_tasks_bullet": "[-]", // options: x | ✘ | [-]
+  "archive_name": "__Archive__:",
+  "before_tasks_bullet_margin": 0,
+  "cancelled_tasks_bullet": "- [-]", // options: x | ✘ | [-]
+  "done_tasks_bullet": "- [x]", // options: + | ✓ | ✔ | √ | [x]
+  "open_tasks_bullet": "- [ ]" // options: - | ❍ | ❑ | ■ | □ | ☐ | ▪ | ▫ | – | — ≡ → › | [ ]
 }
