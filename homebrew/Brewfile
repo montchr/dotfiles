@@ -39,4 +39,15 @@ install tree
 install wget
 install zsh
 
+# Install PHP 5.6 and Composer from @josegonzalez's repo
+#
+# https://github.com/josegonzalez/homebrew-php
+# https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-
+tap homebrew/dupes
+tap homebrew/versions
+tap josegonzalez/homebrew-php
+
+install php56
+install josegonzalez/php/composer
+
 cleanup
