@@ -115,6 +115,12 @@ install_ohmyzsh () {
 
     # Move our `.zshrc` back into place after oh-my-zsh setup
     mv "$HOME/.zshrc.pre-oh-my-zsh" "$HOME/.zshrc"
+
+    # Link the `./oh-my-zsh/custom` directory to its place in `~/.oh-my-zsh`
+    if [[ -d $ZSH/custom ]]; then
+      rm -rf "$ZSH/custom"
+    fi
+    ln -Fs "$DOTFILES/oh-my-zsh/custom" "$ZSH/custom"
   fi
 }
 
