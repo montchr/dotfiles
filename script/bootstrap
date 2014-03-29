@@ -120,7 +120,8 @@ install_ohmyzsh () {
 
 change_shell () {
   # Change default shell to Homebrew-installed zsh
-  if [ -L /usr/local/bin/zsh ]; then
+  if ! [ "$SHELL" = "$(command -v zsh)" ]; then
+    e_header "Changing login shell to the latest version of ZSH in your PATH..."
     command -v zsh | sudo tee -a /etc/shells
     sudo chsh -s "$(command -v zsh)" "${USER}"
   fi
@@ -132,6 +133,7 @@ copy_fonts () {
   e_header "Installing Powerline fonts"
   cp -f ./**/*.ttf ~/Library/Fonts/
   cp -f ./**/*.otf ~/Library/Fonts/
+  cd "$DOTFILES"
 }
 
 vim_go () {
@@ -153,13 +155,13 @@ vim_go
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
 then
-  e_header "installing dependencies"
+  e_header "Installing dependencies"
   source bin/dot 2> /tmp/dotfiles-dot
   if [[ $? ]]
   then
-    e_success "dependencies installed"
+    e_success "Dependencies installed"
   else
-    e_fail "error installing dependencies"
+    e_fail "Error installing dependencies"
   fi
 fi
 
