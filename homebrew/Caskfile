@@ -1,46 +1,44 @@
-a-better-finder-rename
-adobe-creative-cloud
-alfred
-appcleaner
-audacity
-bartender
-burn
-calibre
-caskroom-versions/sublime-text3
-codekit
-colloquy
-divvy
-dropbox
-fastscripts
-firefox
-flux
-google-chrome
-google-drive
-iterm2
-kaleidoscope
-kindle
-libreoffice
-livereload
-mailplane
-marked
-mplayerx
-nvalt
-omnifocus
-omnioutliner
-onepassword
-onyx
-path-finder
-sequel pro
-sequel-pro
-sketch
-sophos-anti-virus-home-edition
-textexpander
-tomahawk
-tower
-transmission
-transmit
-vagrant
-virtualbox
-vlc
-xld
-ynab
+cask install a-better-finder-rename
+cask install adobe-creative-cloud
+cask install alfred
+cask install appcleaner
+cask install audacity
+cask install bartender
+cask install burn
+cask install calibre
+cask install caskroom-versions/sublime-text3
+cask install codekit
+cask install colloquy
+cask install divvy
+cask install dropbox
+cask install fastscripts
+cask install firefox
+cask install flux
+cask install google-chrome
+cask install google-drive
+cask install iterm2
+cask install kaleidoscope
+cask install kindle
+cask install libreoffice
+cask install livereload
+cask install mailplane
+cask install marked
+cask install mplayerx
+cask install nvalt
+cask install omnifocus
+cask install omnioutliner
+cask install onyx
+cask install path-finder
+cask install sequel-pro
+cask install sketch
+cask install sophos-anti-virus-home-edition
+cask install textexpander
+cask install tomahawk
+cask install tower
+cask install transmission
+cask install transmit
+cask install vagrant
+cask install virtualbox
+cask install vlc
+cask install xld
+cask install ynab
