@@ -5,6 +5,8 @@
 set -e
 
 DOTFILES_ROOT="$(pwd)"
+# Because oh-my-zsh hasn't yet set up $ZSH, declare it here first
+ZSH="$HOME/.oh-my-zsh"
 
 echo ''
 
