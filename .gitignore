@@ -13,3 +13,4 @@ lib/powerline-fonts
 lib/XKCD-password-generator
 
 .viminfo
+.netrwhist
