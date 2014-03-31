@@ -14,3 +14,4 @@ lib/XKCD-password-generator
 
 .viminfo
 .netrwhist
+tmp-jhbuild-revision
