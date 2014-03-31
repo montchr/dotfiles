@@ -11,7 +11,6 @@ cask install codekit
 cask install colloquy
 cask install divvy
 cask install dropbox
-cask install fastscripts
 cask install firefox
 cask install flux
 cask install google-chrome
@@ -20,7 +19,6 @@ cask install iterm2
 cask install kaleidoscope
 cask install kindle
 cask install libreoffice
-cask install livereload
 cask install mailplane
 cask install marked
 cask install mplayerx
