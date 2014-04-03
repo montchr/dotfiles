@@ -93,7 +93,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 12.0,
+	"font_size": 14.0,
 	"gutter": true,
 	"hide_minimap": true,
 	"highlight_line": true,
@@ -101,9 +101,9 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"Markdown",
 		"Dayle Rees Color Schemes",
-		"Vintage",
-		"Markdown"
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
