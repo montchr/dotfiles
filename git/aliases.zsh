@@ -13,7 +13,7 @@ alias gl='git pull --prune'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gp='git push origin HEAD'
 alias gd='git difftool'
-alias go='git checkout'
+alias gco='git checkout'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gcb='git copy-branch-name'
