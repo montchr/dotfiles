@@ -246,6 +246,17 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
+
+# Sublime Text 3
+# ----------------------------------------------------------------------
+
+# Make Sublime Text 3 the default editor for text files
+seek_confirmation "Do you want to make Sublime Text 3 the default editor for text files?"
+if is_confirmed; then
+  sudo defaults write com.apple.LaunchServices LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
+fi
+
+
 # Misc
 # ----------------------------------------------------------------------
 
