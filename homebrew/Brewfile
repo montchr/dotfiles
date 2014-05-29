@@ -48,6 +48,6 @@ tap homebrew/versions
 tap josegonzalez/homebrew-php
 
 install php55
-install josegonzalez/php/composer
+install composer
 
 cleanup
