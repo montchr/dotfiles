@@ -2,11 +2,11 @@
 	"installed_packages":
 	[
 		"Alignment",
-		"All Autocomplete",
 		"ApacheConf.tmLanguage",
 		"AutoWrap",
 		"Better CoffeeScript",
 		"BracketHighlighter",
+		"CSS Completions",
 		"DashDoc",
 		"Dayle Rees Color Schemes",
 		"DocBlockr",
@@ -24,8 +24,10 @@
 		"MarkdownEditing",
 		"Marked App Menu",
 		"nginx",
+		"Node Completions",
 		"PlainTasks",
 		"Pretty JSON",
+		"Require Node.js Modules Helper",
 		"SASS Snippets",
 		"SCSS",
 		"SFTP",
