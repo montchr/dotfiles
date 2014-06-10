@@ -1,5 +1,11 @@
 {
-  "auto_wrap": true,
+  "auto_wrap": false,
+  // The mid-line characters to align in a multi-line selection, changing
+  // this to an empty array will disable mid-line alignment
+  "alignment_chars": ["=", "|"],
+  // If the following character is matched for alignment, insert a space
+  // before it in the final alignment
+  "alignment_space_chars": ["=", "|", "\n"],
   "extensions": [
     "md",
     "mdown",
@@ -11,5 +17,7 @@
   "save_on_focus_lost": true,
   "show_minimap": false,
   "trailing_spaces_highlight_color": "",
-  "tab_size": 2
+  "trim_automatic_white_space": "false",
+  "trim_trailing_white_space_on_save": false,
+  "tab_size": 4
 }
