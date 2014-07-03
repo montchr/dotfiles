@@ -36,7 +36,7 @@
 	"bold_folder_labels": true,
 	"caret_style": "solid",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/User/Solarized (dark) (SL).tmTheme",
+	"color_scheme": "Packages/User/Solarized (light) (SL).tmTheme",
 	"create_window_at_startup": true,
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
@@ -93,7 +93,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 14.0,
+	"font_size": 14,
 	"gutter": true,
 	"hide_minimap": true,
 	"highlight_line": true,
@@ -154,7 +154,8 @@
 	"spell_check": false,
 	"tab_completion": true,
 	"tab_size": 2,
-	"theme": "Spacegray.sublime-theme",
+	"theme": "Spacegray Light.sublime-theme",
+	"trailing_spaces_modified_lines_only": true,
 	"translate_tabs_to_spaces": true,
 	"tree_animation_enabled": true,
 	"trim_automatic_white_space": true,
