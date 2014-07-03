@@ -15,7 +15,7 @@
 	"auto_indent": true,
 	"auto_match_enabled": true,
 	"auto_wrap": false,
-	"auto_wrap_break_long_word": true,
+	"auto_wrap_break_long_word": false,
 	"auto_wrap_width": 80,
 	"binary_file_patterns":
 	[
