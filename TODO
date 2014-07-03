@@ -7,6 +7,7 @@ __Inbox__:
 - program the symlinking of all omz custom themes and plugins to `~/.oh-my-zsh/custom`
 - check for linux compatability
 - get color in the `brew doctor` subshell
+- don't return error if homebrew needs update - update will be done in next step
 
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
