@@ -106,3 +106,9 @@ done
 unset config_files
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# SCM Breeze
+# https://github.com/ndbroadbent/scm_breeze
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+
+[ -s "/Users/montchr/.scm_breeze/scm_breeze.sh" ] && source "/Users/montchr/.scm_breeze/scm_breeze.sh"
