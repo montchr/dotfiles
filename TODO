@@ -8,6 +8,7 @@ __Inbox__:
 - check for linux compatability
 - get color in the `brew doctor` subshell
 - don't return error if homebrew needs update - update will be done in next step
+- fix error in `script/install` where 'homebrew is sick' does not wait for confirmation, then throws error `sh: /lib/install.sh: No such file or directory`
 
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
