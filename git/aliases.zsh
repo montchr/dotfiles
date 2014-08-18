@@ -1,10 +1,10 @@
 # Use `hub` as our git wrapper:
-#   http://defunkt.github.com/hub/
-# hub_path=$(which hub)
-# if (( $+commands[hub] ))
-# then
-#   alias git=$hub_path
-# fi
+# http://defunkt.github.com/hub/
+hub_path=$(which hub)
+if (( $+commands[hub] ))
+then
+  alias git=$hub_path
+fi
 
 # Aliases overriden by SCM Breeze
 # Leave these commented out (or don't, it doesn't make a difference because
