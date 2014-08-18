@@ -23,6 +23,7 @@ fi
 # alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative" # aliased as `gl`
 
 alias gcb='git copy-branch-name'
+alias gpsu="git push -u origin $(gcb)"
 
 # Show list of files changed in a commit
 # Follow with commit hash
