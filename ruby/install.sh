@@ -8,4 +8,4 @@ fi
 
 rvm --default use 2.1.1
 
-rvm @global do gem install bundler rake
+rvm @global do gem install bundler rake timetrap

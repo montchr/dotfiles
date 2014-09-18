@@ -48,3 +48,4 @@ Thumbs.db
 # Credentials and Sensitive Info
 sftp-config.json
 .env
+.timetrap-sheet
