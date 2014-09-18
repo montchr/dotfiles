@@ -105,6 +105,9 @@ done
 
 unset config_files
 
+# Expand aliases for completion
+setopt no_complete_aliases
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # SCM Breeze
