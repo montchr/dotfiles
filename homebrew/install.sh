@@ -12,6 +12,77 @@ export DOTFILES=$HOME/.dotfiles
 # Include utilities
 . $HOME/.dotfiles/lib/utils.zsh
 
+cask_packages="\
+  a-better-finder-rename \
+  adobe-creative-cloud \
+  alfred \
+  appcleaner \
+  audacity \
+  bartender \
+  burn \
+  calibre \
+  caskroom-versions/sublime-text3 \
+  codekit \
+  colloquy \
+  divvy \
+  dropbox \
+  firefox \
+  flux \
+  google-chrome \
+  google-drive \
+  iterm2 \
+  kaleidoscope \
+  kindle \
+  libreoffice \
+  mailplane \
+  marked \
+  mplayerx \
+  nvalt \
+  omnifocus \
+  omnioutliner \
+  onyx \
+  path-finder \
+  sequel-pro \
+  sketch \
+  sophos-anti-virus-home-edition \
+  textexpander \
+  tomahawk \
+  tower \
+  transmission \
+  transmit \
+  vagrant \
+  virtualbox \
+  vlc \
+  xld \
+  ynab
+"
+
+brew_packages="\
+  coreutils \
+  ack \
+  bash \
+  bash-completion \
+  cabal-install \
+  ffmpeg \
+  git --without-completions \
+  git-flow \
+  graphicsmagick \
+  grc \
+  hub \
+  jpeg \
+  node \
+  optipng \
+  osxfuse \
+  phantomjs \
+  python \
+  spark \
+  tree \
+  wget \
+  zsh
+"
+
+
+
 macports_check () {
   if [ -a /opt/local ] || \
     [ -a /Applications/DarwinPorts ] || \
@@ -87,13 +158,42 @@ if ! [[ $(brew doctor) = *"Your system is ready to brew."* ]]; then
   fi
 fi
 
-# Execute the `brew` operations specified in ./homebrew/Brewfile
-brew bundle "$DOTFILES/homebrew/Brewfile"
+brew update
+brew upgrade
+
+# Install GNU core utilities
+#
+# http://www.gnu.org/software/coreutils/
+#
+# This installs all of the basic command-line utilities for the GNU/Linux
+# operating system. Your Mac will be supercharged with the power of GNU.
+brew install coreutils
+
+# Install Homebrew Cask
+#
+# http://caskroom.io/
+#
+# Cask allows us to install thousands of Mac apps from the command line.
+brew install phinze/cask/brew-cask
+
+brew install "$brew_packages"
+
+# Install PHP 5.5 and Composer from @josegonzalez's repo
+#
+# https://github.com/josegonzalez/homebrew-php
+# https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap josegonzalez/homebrew-php
+brew install php55
+brew install composer
+
+brew cleanup
 
 # Install default Mac apps with Homebrew Cask
 seek_confirmation "Would you like to install some default Mac apps?"
 if is_confirmed; then
-  brew bundle "$DOTFILES/homebrew/Caskfile"
+  brew cask install "$cask_packages"
 fi
 
 exit 0
