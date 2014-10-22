@@ -55,7 +55,7 @@
         interactive = auto
 [core]
         excludesfile = ~/.gitignore
-        editor = slap
+        editor = vim
 [apply]
         whitespace = nowarn
 [difftool "Kaleidoscope"]
