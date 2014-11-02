@@ -93,7 +93,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 14,
+	"font_size": 12,
 	"gutter": true,
 	"hide_minimap": true,
 	"highlight_line": true,
