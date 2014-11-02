@@ -5,6 +5,7 @@
   { "keys": ["super+ctrl+a"], "command": "alignment" },
   { "keys": ["super+ctrl+shift+a"], "command": "sublimelinter_show_all_errors" },
   { "keys": ["super+ctrl+t","super+ctrl+m"], "command": "toggle_minimap" },
+  { "keys": ["super+alt+m"], "command": "marked" },
   { "keys": ["enter"], "command": "run_macro_file", "args": {"file": "res://Packages/User/Add Line in Braces.sublime-macro"}, "context":
     [
       { "key": "setting.auto_indent", "operator": "equal", "operand": true },
