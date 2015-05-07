@@ -72,7 +72,6 @@ brew_packages=(
   jpeg
   node
   optipng
-  osxfuse
   phantomjs
   python
   spark
