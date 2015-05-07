@@ -5,8 +5,6 @@ export scmbDir="$HOME/.scm_breeze"
 
 # Include utilities
 source "$HOME/.dotfiles/lib/utils.zsh"
-# SCM Breeze functions
-source "$scmbDir/lib/scm_breeze.sh"
 
 if ! [ -d "$HOME/.scm_breeze" ]
   then
@@ -18,3 +16,7 @@ else
 fi
 
 "$HOME/.scm_breeze/install.sh"
+
+# SCM Breeze functions
+source "$scmbDir/lib/scm_breeze.sh"
+[ -s "$scmbDir/scm_breeze.sh" ] && source "$scmbDir/scm_breeze.sh"
