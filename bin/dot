@@ -30,6 +30,9 @@ $DOTFILES/homebrew/install.sh 2>&1
 # Install npm packages
 $DOTFILES/node/install.sh 2>&1
 
+# Update/install SCM Breeze
+$DOTFILES/scm-breeze/install.sh 2>&1
+
 # Install bower packages
 cd $DOTFILES
 e_header "Installing Bower components"
