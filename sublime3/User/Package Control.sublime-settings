@@ -1,6 +1,10 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"Alignment",
 		"ApacheConf.tmLanguage",
 		"AutoWrap",
@@ -25,15 +29,15 @@
 		"MarkdownEditing",
 		"Marked App Menu",
 		"Modific",
+		"Monokai Extended",
 		"nginx",
-		"Node Completions",
+		"Package Control",
 		"PHP-Twig",
 		"PlainTasks",
 		"Predawn",
 		"Pretty JSON",
-		"Require Node.js Modules Helper",
-		"SASS Snippets",
-		"SCSS",
+		"Schemr",
+		"Seti_UI",
 		"SFTP",
 		"SideBarEnhancements",
 		"Solarized Color Scheme",
@@ -44,6 +48,7 @@
 		"SublimeLinter-php",
 		"SublimeLinter-shellcheck",
 		"Susy Snippets",
+		"Syntax Highlighting for Sass",
 		"Tag",
 		"Theme - Spacegray",
 		"Themr",

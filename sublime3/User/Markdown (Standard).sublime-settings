@@ -10,5 +10,6 @@
   "save_on_focus_lost": true,
   "show_minimap": false,
   "trailing_spaces_highlight_color": "",
-  "tab_size": 2
+  "tab_size": 2,
+  "auto_complete": false
 }
