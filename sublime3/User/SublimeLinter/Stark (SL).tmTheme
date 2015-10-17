@@ -10,7 +10,7 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#111111</string>
+				<string>#2E2C2B</string>
 				<key>caret</key>
 				<string>#F8F8F0</string>
 				<key>foreground</key>
@@ -18,9 +18,9 @@
 				<key>invisibles</key>
 				<string>#3B3A32</string>
 				<key>lineHighlight</key>
-				<string>#222222</string>
+				<string>#3B3633</string>
 				<key>selection</key>
-				<string>#333333</string>
+				<string>#161A1F</string>
 				<key>findHighlight</key>
 				<string>#FFE792</string>
 				<key>findHighlightForeground</key>
@@ -52,7 +52,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#888888</string>
+				<string>#615953</string>
 			</dict>
 		</dict>
 		<dict>
@@ -472,13 +472,13 @@
 		</dict>
 	<dict>
             <key>name</key>
-            <string>SublimeLinter Gutter Mark</string>
+            <string>SublimeLinter Error</string>
             <key>scope</key>
-            <string>sublimelinter.gutter-mark</string>
+            <string>sublimelinter.mark.error</string>
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#FFFFFF</string>
+                <string>#D02000</string>
             </dict>
         </dict><dict>
             <key>name</key>
@@ -492,13 +492,13 @@
             </dict>
         </dict><dict>
             <key>name</key>
-            <string>SublimeLinter Error</string>
+            <string>SublimeLinter Gutter Mark</string>
             <key>scope</key>
-            <string>sublimelinter.mark.error</string>
+            <string>sublimelinter.gutter-mark</string>
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#D02000</string>
+                <string>#FFFFFF</string>
             </dict>
         </dict></array>
 	<key>uuid</key>
