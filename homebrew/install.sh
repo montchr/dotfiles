@@ -185,7 +185,7 @@ done
 # https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-
 brew tap homebrew/dupes
 brew tap homebrew/versions
-brew tap josegonzalez/homebrew-php
+brew tap homebrew/php
 brew install php55
 brew install composer
 
