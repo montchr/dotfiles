@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -20,6 +21,7 @@
 		"FindKeyConflicts",
 		"Git",
 		"Git Config",
+		"HTML-CSS-JS Prettify",
 		"HTML5",
 		"Idiomatic-CSS-Comments-Snippets",
 		"jQuery",
@@ -37,7 +39,6 @@
 		"Predawn",
 		"Pretty JSON",
 		"Schemr",
-		"Seti_UI",
 		"SFTP",
 		"SideBarEnhancements",
 		"Solarized Color Scheme",
@@ -47,9 +48,10 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-php",
 		"SublimeLinter-shellcheck",
+		"Susy 2 Snippets",
 		"Susy Snippets",
 		"Syntax Highlighting for Sass",
-		"Tag",
+		"Theme - Afterglow",
 		"Theme - Spacegray",
 		"Themr",
 		"Tomorrow Color Schemes",

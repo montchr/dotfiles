@@ -11,5 +11,7 @@
   "show_minimap": false,
   "trailing_spaces_highlight_color": "",
   "tab_size": 2,
-  "auto_complete": false
+  "auto_complete": false,
+  "font_face": "Nitti Light",
+  "font_size": 18
 }

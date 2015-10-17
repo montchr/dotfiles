@@ -51,7 +51,13 @@
 	"caret_extra_width": 3,
 	"caret_style": "solid",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/SublimeLinter/Tomorrow-Night (SL).tmTheme",
+	"codeintel_disabled_languages":
+	[
+		"Markdown",
+		"md",
+		"txt"
+	],
+	"color_scheme": "Packages/User/SublimeLinter/Tomorrow-Night-Eighties (SL).tmTheme",
 	"create_window_at_startup": true,
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
@@ -103,7 +109,7 @@
 		".sass-cache",
 		"node_modules"
 	],
-	"font_face": "Sauce Code Powerline",
+	"font_face": "Inconsolata for Powerline",
 	"font_options":
 	[
 		"subpixel_antialias"
@@ -117,7 +123,6 @@
 	"ignored_packages":
 	[
 		"Markdown",
-		"Theme - Spacegray",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -171,7 +176,7 @@
 	"tab_completion": true,
 	"tab_size": 2,
 	"tabs_small": true,
-	"theme": "Seti.sublime-theme",
+	"theme": "Spacegray Eighties.sublime-theme",
 	"themr_watch_settings": false,
 	"trailing_spaces_modified_lines_only": true,
 	"translate_tabs_to_spaces": true,
