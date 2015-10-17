@@ -40,6 +40,9 @@
         wtf     = !$DOTFILES/bin/git-wtf
         rank-contributors = !$DOTFILES/bin/git-rank-contributors
         count   = !git shortlog -sn
+
+        # List recent branches
+        recent = for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(authorname) %(refname:short)'
 [hub]
         protocol = https
 [user]
