@@ -22,9 +22,12 @@
 # alias gp='git push origin HEAD' # aliased as `gps`
 # alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative" # aliased as `gl`
 
-alias gcb='git copy-branch-name'
+alias gbn="$DOTFILES/bin/git-copy-branch-name"
 # alias gpsu="git push -u origin $(gcb)"
 
 # Show list of files changed in a commit
 # Follow with commit hash
 alias gdl="git diff-tree --no-commit-id --name-only -r $1"
+
+# List branches ordered by most recent commit
+alias gbr="git branch --sort=-committerdate"
