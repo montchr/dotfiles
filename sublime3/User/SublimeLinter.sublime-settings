@@ -12,6 +12,11 @@
                 "args": [],
                 "excludes": []
             },
+            "coffeelint": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
             "jshint": {
                 "@disable": false,
                 "args": [],
@@ -31,12 +36,14 @@
         },
         "mark_style": "outline",
         "no_column_highlights_line": false,
+        "passive_warnings": false,
         "paths": {
             "linux": [],
             "osx": [
                 "/usr/bin",
                 "/usr/local/bin",
-                "~/.cabal/bin"
+                "~/.cabal/bin",
+                "/usr/local/opt/php70/bin"
             ],
             "windows": []
         },

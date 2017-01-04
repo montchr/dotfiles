@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Carbonight</string>
+	<string>Carbonight Blue</string>
 	<key>settings</key>
 	<array>
 		<dict>
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#181b1c</string>
+				<string>#25292a</string>
 				<key>caret</key>
 				<string>#F83333</string>
 				<key>foreground</key>
@@ -20,13 +20,13 @@
 				<key>lineHighlight</key>
 				<string>#3B3633</string>
 				<key>selection</key>
-				<string>#433131</string>
+				<string>#ff4500</string>
 				<key>findHighlight</key>
-				<string>#3aa6d0</string>
+				<string>#ff4500</string>
 				<key>findHighlightForeground</key>
 				<string>#000000</string>
 				<key>selectionBorder</key>
-				<string>#222218</string>
+				<string>#ff4500</string>
 				<key>activeGuide</key>
 				<string>#963131</string>
 
@@ -382,16 +382,6 @@
 
 	<dict>
             <key>name</key>
-            <string>SublimeLinter Error</string>
-            <key>scope</key>
-            <string>sublimelinter.mark.error</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#D02000</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
             <string>SublimeLinter Warning</string>
             <key>scope</key>
             <string>sublimelinter.mark.warning</string>
@@ -399,6 +389,16 @@
             <dict>
                 <key>foreground</key>
                 <string>#DDB700</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
+            <string>SublimeLinter Error</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.error</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#D02000</string>
             </dict>
         </dict><dict>
             <key>name</key>

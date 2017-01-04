@@ -30,6 +30,14 @@
 	],
 	"auto_wrap": false,
 	"auto_wrap_break_long_word": false,
+	"auto_wrap_break_patterns":
+	[
+		"\\[",
+		"\\(",
+		"\\{",
+		" ",
+		"\\n"
+	],
 	"auto_wrap_width": 80,
 	"binary_file_patterns":
 	[
@@ -57,7 +65,7 @@
 		"md",
 		"txt"
 	],
-	"color_scheme": "Packages/User/SublimeLinter/Tomorrow-Night-Eighties (SL).tmTheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
 	"create_window_at_startup": true,
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
@@ -176,7 +184,7 @@
 	"tab_completion": true,
 	"tab_size": 2,
 	"tabs_small": true,
-	"theme": "Spacegray Eighties.sublime-theme",
+	"theme": "Spacegray.sublime-theme",
 	"themr_watch_settings": false,
 	"trailing_spaces_modified_lines_only": true,
 	"translate_tabs_to_spaces": true,

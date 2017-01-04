@@ -6,7 +6,7 @@
         "paths": [],
         "application": "Kaleidoscope.app", // OSX
         "extensions":"scss|php|xml|js|json|py|c|css"  //any file with these extensions
-    }
+    },
     "open_automatically" : false // will close the view/tab and launch the application
 },
 {
@@ -17,6 +17,18 @@
         "paths": [],
         "application": "Google Chrome.app", // OSX
         "extensions":"html|xml"  //any file with these extensions
-    }
+    },
     "open_automatically" : false // will close the view/tab and launch the application
 },
+{
+    "caption": "iA Writer",
+    "id": "side-bar-files-open-with-ia-writer",
+    "command": "side_bar_files_open_with",
+    "args": {
+        "paths": [],
+        "application": "iA Writer.app", // OSX
+        "extensions":"md|txt",  //any file with these extensions
+        "args": []
+    },
+    "open_automatically": false // will close the view/tab and launch the application
+}
