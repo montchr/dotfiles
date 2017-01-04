@@ -12,51 +12,6 @@ export DOTFILES=$HOME/.dotfiles
 # Include utilities
 . $HOME/.dotfiles/lib/utils.zsh
 
-cask_packages=(
-  a-better-finder-rename
-  adobe-creative-cloud
-  alfred
-  appcleaner
-  audacity
-  bartender
-  burn
-  calibre
-  caskroom-versions/sublime-text3
-  codekit
-  colloquy
-  divvy
-  dropbox
-  firefox
-  flux
-  google-chrome
-  google-drive
-  iterm2
-  kaleidoscope
-  kindle
-  libreoffice
-  mailplane
-  marked
-  mplayerx
-  nvalt
-  omnifocus
-  omnioutliner
-  onyx
-  path-finder
-  sequel-pro
-  sketch
-  sophos-anti-virus-home-edition
-  textexpander
-  tomahawk
-  tower
-  transmission
-  transmit
-  vagrant
-  virtualbox
-  vlc
-  xld
-  ynab
-)
-
 brew_packages=(
   coreutils
   ack
@@ -168,13 +123,6 @@ brew upgrade
 # operating system. Your Mac will be supercharged with the power of GNU.
 brew install coreutils
 
-# Install Homebrew Cask
-#
-# http://caskroom.io/
-#
-# Cask allows us to install thousands of Mac apps from the command line.
-brew install phinze/cask/brew-cask
-
 for pkg in "${brew_packages[@]}"; do
   brew install ${pkg}
 done
@@ -190,13 +138,5 @@ brew install php55
 brew install composer
 
 brew cleanup
-
-# Install default Mac apps with Homebrew Cask
-seek_confirmation "Would you like to install some default Mac apps?"
-if is_confirmed; then
-  for pkg in "${cask_packages[@]}"; do
-    brew cask install ${pkg}
-  done
-fi
 
 exit 0
