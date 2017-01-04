@@ -25,6 +25,7 @@ brew_packages=(
   grc
   hub
   jpeg
+  macvim
   node
   optipng
   phantomjs
