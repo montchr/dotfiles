@@ -29,6 +29,7 @@
 .DS_Store?
 ehthumbs.db
 Thumbs.db
+.tern-project
 
 # Files that might appear on external disks
 .Spotlight-V100
