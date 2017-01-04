@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# forever
+#
+# Bash function to run any command forever (restart after it exists).
+#
+# https://github.com/vdemedes/forever
+
+"$@" &
+wait "$!"
+forever "$@"
