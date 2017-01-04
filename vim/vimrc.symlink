@@ -6,15 +6,37 @@
 " Disable Vi compatibility
 set nocompatible
 
+filetype off
+
 " Point to location of pathogen submodule (since it's not in .vim/autoload)
 silent! runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Call pathogen plugin management
 silent! call pathogen#infect()
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'millermedeiros/vim-statline'
+Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/syntastic'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'godlygeek/tabular'
+Plugin 'kien/ctrlp.vim'
+
+" Syntax Plugins
+Plugin 'othree/html5.vim'
+Plugin 'evidens/vim-twig'
+Plugin 'plasticboy/vim-markdown'
+
+let g:statline_syntastic = 0
+
 if has("autocmd")
     " Load files for specific filetypes
     syntax on
-    filetype on
     filetype indent on
     filetype plugin on
 
@@ -24,16 +46,14 @@ if has("autocmd")
     autocmd BufWritePre *.css,*.html,*.js,*.json,*.md,*.php,*.py,*.rb,*.scss,*.sh,*.txt :call StripTrailingWhitespace()
 endif
 
-if has("syntax")
-    " Enable syntax highlighting
-    syntax enable
-    " Set 256 color terminal support
-    set t_Co=256
-    " Set dark background
-    set background=dark
-    " Set colorscheme
-    silent! colorscheme solarized
-endif
+" Enable syntax highlighting
+syntax enable
+" Set 256 color terminal support
+set t_Co=256
+" Set dark background
+set background=dark
+" Set colorscheme
+silent! colorscheme solarized
 
 if has("cmdline_info")
     " Show the cursor line and column number
@@ -44,19 +64,19 @@ if has("cmdline_info")
     set showmode
 endif
 
-if has('statusline')
-    " Always show status line
-    set laststatus=2
-    " Broken down into easily includeable segments
-    " Filename
-    set statusline=%<%f\
-    " Options
-    set statusline+=%w%h%m%r
-    " Current dir
-    set statusline+=\ [%{getcwd()}]
-    " Right aligned file nav info
-    set statusline+=%=%-14.(%l,%c%V%)\ %p%%
-endif
+" if has('statusline')
+"     " Always show status line
+"     set laststatus=2
+"     " Broken down into easily includeable segments
+"     " Filename
+"     set statusline=%<%f\
+"     " Options
+"     set statusline+=%w%h%m%r
+"     " Current dir
+"     set statusline+=\ [%{getcwd()}]
+"     " Right aligned file nav info
+"     set statusline+=%=%-14.(%l,%c%V%)\ %p%%
+" endif
 
 if has("wildmenu")
     " Show a list of possible completions
@@ -144,6 +164,15 @@ inoremap jk <ESC>
 
 " Make `Y` work from the cursor to the end of line (which is more logical)
 nnoremap Y y$
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Load local machine settings if they exist
 if filereadable(glob("$HOME/.vimrc.local"))
