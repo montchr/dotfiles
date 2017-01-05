@@ -1,8 +1,0 @@
-{
-  "auto_wrap": false,
-  "before_tasks_bullet_margin": 0,
-  "cancelled_tasks_bullet": "x", // options: x | ✘ | [-]
-  "done_tasks_bullet": "+", // options: + | ✓ | ✔ | √ | [x]
-  "font_face": "Ubuntu Mono derivative Powerline",
-  "open_tasks_bullet": "-" // options: - | ❍ | ❑ | ■ | □ | ☐ | ▪ | ▫ | – | — ≡ → › | [ ]
-}
