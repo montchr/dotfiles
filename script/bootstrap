@@ -35,11 +35,6 @@ setup_gitconfig () {
   fi
 }
 
-link_files () {
-  ln -s "$1" "$2"
-  e_success "linked $1 to $2"
-}
-
 install_dotfiles () {
   e_header 'Installing dotfiles'
 
