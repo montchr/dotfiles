@@ -51,7 +51,7 @@ Here's a brief list of some of the more interesting features:
 - Installs [zsh shell][], sets it as default (replacing bash).
 - Integration with [oh-my-zsh][] for easy customizations
 - Installs [some fixed-width fonts][]
-- Installs [Homebrew][], [Node.js][], [RVM][], [Sublime Text 3][]
+- Installs [Homebrew][], [Node.js][], [RVM][], [Atom][]
 - Sets up basic configuration for [Git][], [Vim][], and of course ZSH
 - Sets some OS X default settings
 - Includes [Beets][], the command-line music library manager for the OCD
@@ -64,7 +64,7 @@ Here's a brief list of some of the more interesting features:
 [Homebrew]: http://brew.sh/
 [Node.js]: http://nodejs.org/
 [RVM]: http://sirupsen.com/get-started-right-with-rvm/
-[Sublime Text 3]: http://www.sublimetext.com/3
+[Atom]: http://atom.io/
 [Git]: http://www.git-scm.com/
 [Vim]: http://en.wikipedia.org/wiki/Vim_(text_editor)
 [Beets]: http://beets.radbox.org/
@@ -301,17 +301,6 @@ your home directory. Everything is configured and tweaked within
 7. __`ruby/install.sh`:__ Installs RVM for safely managing Ruby and its gems.
    Compiles Ruby 2.1.0 from source. Takes a while. Just let it do its thing.
 
-### sublime
-
-Sublime Text 3 settings are not set up automatically. You'll have to do that
-after running the above scripts.
-
-__If you've already been comfortably working with Sublime Text:__ you can run
-`sublime3/copy` to import your current preferences and configuration for Package Control (installed packages list, etc.). _This will overwrite my `sublime3/User` directory, so if you want to salvage anything from there, do so now before running the copy utility._ You should then run `sublime3/setup`
-immediately afterwards.
-
-__If you just want to load my suggested configuration:__ only run `sublime3/setup`. This will back up your current ST3 preferences before installing mine.
-
 
 ## everyday
 
@@ -331,21 +320,8 @@ record of it in your dotfiles and updating all your other brewed things.
 - If you use [ClamXav][], you may need to change owner and group on `/usr/local`, as ClamXav uses this directory as well – it's primarily used by Homebrew. When installed, ClamXav will change the owner of `/usr/local` to `root` and the group to `wheel`. It should be owned by your user and group `admin`. Still, you should change `/usr/local/clamXav` to owner `root` and group
 `wheel`. [Thanks to @yihangho for the tip][].
 
-- You may notice, after working with these dotfiles for some time, that `sublime3/User/Preferences.sublime-settings` changes very often without your input. This is because of two plugins:
-
-    - [SunCycle][] changes the color scheme and theme at sunrise and sunset. I
-    originally committed the file after dark, so during the day, Git sees the file has changed. You can commit those changes if you like, but you'll be
-    committing those same changes over and over again, forever...
-
-    - [SublimeLinter][] is constantly forcing the file to adhere to a certain syntax. It enforces tab indentation and it automatically adds every available setting and alphabetizes the keys. This gets annoying, especially while you're in there editing and you're told the file has changed on disk. In that case, just hit cancel and save when you're ready. Sometimes you'll also notice the "Ignored Packages" are mysteriously being re-ordered for no apparent reason...
-
-    If these issues are too aggravating for you, definitely consider adding
-    `sublime3/Preferences.sublime-settings` to `.gitignore`. But, of course, you'll lose the ability to track any future changes you make to the file yourself.
-
 [ClamXav]: http://www.clamxav.com/
 [Thanks to @yihangho for the tip]: http://www.yihangho.com/homebrew-and-clamxav/
-[SunCycle]: https://github.com/smhg/sublime-suncycle
-[SublimeLinter]: https://github.com/SublimeLinter/SublimeLinter3
 
 
 ## bugs

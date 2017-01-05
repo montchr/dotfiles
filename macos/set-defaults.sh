@@ -247,13 +247,13 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 
-# Sublime Text 3
+# Atom
 # ----------------------------------------------------------------------
 
-# Make Sublime Text 3 the default editor for text files
-seek_confirmation "Do you want to make Sublime Text 3 the default editor for text files?"
+# Make Atom the default editor for text files
+seek_confirmation "Do you want to make Atom the default editor for text files?"
 if is_confirmed; then
-  sudo defaults write com.apple.LaunchServices LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
+  defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.github.atom;}'
 fi
 
 
