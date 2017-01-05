@@ -61,3 +61,9 @@ formula_exists() {
     e_warning "Missing formula: $1"
     return 1
 }
+
+# Symlink a file to a destination and display a nice message
+link_files () {
+  ln -s "$1" "$2"
+  e_success "linked $1 to $2"
+}
