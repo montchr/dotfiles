@@ -12,7 +12,6 @@ auto-update-packages@1.0.1
 autocomplete-emojis@2.5.0
 autocomplete-modules@1.6.7
 autocomplete-php@0.3.7
-autocomplete-phpunit@1.0.2
 autocomplete-project-paths@2.2.0
 autocomplete-wordpress-hooks@0.2.2
 busy@0.7.0
@@ -61,7 +60,6 @@ regex-railroad-diagram@0.16.0
 seti-syntax@1.0.1
 seti-ui@1.4.0
 sort-lines@0.14.0
-sync-settings@0.8.1
 tablr@1.8.0
 toggle-quotes@1.0.0
 visual-bell@1.0.0
