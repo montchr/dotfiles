@@ -294,8 +294,6 @@ your home directory. Everything is configured and tweaked within
 `~/.dotfiles`.
 
 1. __`cask/install.sh`:__ Optionally installed bundles of recommended Mac apps.
-2. __`haskell/install.sh`:__ Install Shellcheck for SublimeLinter-Shellcheck
-   plugin.
 3. __`homebrew/install.sh`:__ Steps 4–6 in `script/bootstrap` (listed above).
 4. __`lib/install.sh`:__ Symlink some scripts from here to `bin`.
 5. __`node/install.sh`:__ Install Node.JS and things that depend on it.
