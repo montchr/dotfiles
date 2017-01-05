@@ -204,7 +204,7 @@ the bat.
 ```
 
 Definitely take a close look here. Everything's pretty straightforward and
-self-explanatory. None of these settings should be too earth-shattering, but 
+self-explanatory. None of these settings should be too earth-shattering, but
 you should definitely consider whether any of them will piss you off.
 
 If you'd like to add any more of these defaults to this file, check out
@@ -212,47 +212,6 @@ If you'd like to add any more of these defaults to this file, check out
 
 [@mathiasbynens' comprehensive dotfiles]: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
-#### sublime
-
-```
-.
-├── User
-│   ├── Default\ (OSX).sublime-keymap
-│   ├── LineEndings.sublime-settings
-│   ├── Markdown\ (Standard).sublime-settings
-│   ├── Markdown.sublime-settings
-│   ├── Marked.sublime-build
-│   ├── Modific.sublime-settings
-│   ├── Package\ Control.sublime-settings
-│   ├── PlainTasks.sublime-settings
-│   ├── Preferences.sublime-settings
-│   ├── Shell-Unix-Generic.sublime-settings
-│   ├── Side\ Bar.sublime-settings
-│   ├── SideBarEnhancements
-│   │   └── Open\ With
-│   │       └── Side\ Bar.sublime-menu
-│   ├── Solarized\ (dark)\ (SL).tmTheme
-│   ├── Solarized\ (light)\ (SL).tmTheme
-│   ├── SublimeLinter.sublime-settings
-│   ├── SunCycle.sublime-settings
-│   └── trailing_spaces.sublime-settings
-├── copy
-└── setup
-```
-
-This is geared up for ST3 since that's what I'm using. But switching this stuff
-to ST2 is as easy as replacing all occurrences of `sublime3` with `sublime3`
-(including the directory!) and replacing `Sublime\ Text\ 3` with `Sublime\
-Text\ 2`.
-
-__N.B. Some of the plugins currently in use may break if you switch back to
-ST2.__
-
-Make sure the symlink settings are correct in `sublime3/setup`. Also, install
-any alternative theme (like [Soda][]) using the same format as in the file
-currently.
-
-[Soda]: http://buymeasoda.github.io/soda-theme/
 
 #### system
 

@@ -1,0 +1,60 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+
+# Idiomatic Sass Comment Snippets
+'.source.scss,.source.sass':
+  'Sass: Basic Comment':
+    'prefix': 'com-basic'
+    'body': '// ${1}'
+  'Sass: Longer Descriptor Comment':
+    'prefix': 'com-long'
+    'body': """
+      //
+      // ${1}
+      //
+    """
+  'Sass: Section Comment Block':
+    'prefix': 'com-section'
+    'body': """
+      // ==========================================================================
+      // ${1}
+      // ==========================================================================
+
+
+      ${2}
+
+    """
+  'Sass: Sub-Section Comment Block':
+    'prefix': 'com-sub'
+    'body': """
+      //
+      // ${1}
+      // ==========================================================================
+
+
+      ${2}
+
+    """
+  'Sass: Todo Comment':
+    'prefix': 'com-todo'
+    'body': """
+      //
+      // TODO
+      //
+      // - ${1}
+
+      ${2}
+    """

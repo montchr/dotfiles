@@ -1,0 +1,91 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "89fbf5f9-c55f-48a1-b866-b1e4f9f1662f"
+  core:
+    disabledPackages: [
+      "Atom-Syntax-highlighting-for-Sass"
+      "linter-phpcs"
+      "busy"
+      "php-integrator-annotations"
+      "php-integrator-autocomplete-plus"
+      "php-integrator-base"
+      "php-integrator-call-tips"
+      "php-integrator-navigation"
+      "php-integrator-tooltips"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
+      "vendor"
+      "dist"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    backUpBeforeSaving: true
+    fontFamily: "Fira Mono For Powerline"
+    fontSize: 13
+    invisibles: {}
+    showInvisibles: true
+    softWrapHangingIndent: 4
+    tabType: "soft"
+  emmet: {}
+  "exception-reporting":
+    userId: "d933ad92-5e48-369d-c805-46991b155381"
+  "git-diff":
+    showIconsInEditorGutter: true
+  "isotope-ui":
+    backgroundColor: "false"
+    backgroundGradient: true
+    fontFamily: "Ubuntu"
+  linter:
+    subtleLinterErrors: [
+      "phpcs"
+      "phpmd"
+      "scss-lint"
+    ]
+  "linter-phpcs":
+    executablePath: "/Users/montchr/Sites/spiritedmedia/public/vendor/bin/phpcs"
+  "linter-phpmd": {}
+  marked: {}
+  metrics:
+    userId: "8d53384b4cba39680a039773c474de6a35e4e6a6"
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+  "php-integrator-base":
+    phpCommand: "/usr/local/opt/php70/bin/php"
+  "release-notes":
+    viewedVersion: "0.80.0"
+  "seti-ui":
+    compactView: true
+    disableAnimations: true
+    themeColor: "Purple"
+  "sync-settings":
+    _analyticsUserId: "a8314524-14ce-46ce-a8e8-a7694647485e"
+    _lastBackupHash: "7fcae9dfa32e718bb0a50b4b3473ab0b0ef4294f"
+    gistId: "014d1a7a00372d57d6736ea4eac3f888"
+    personalAccessToken: "5e3ccb70cbb2a223ac0341788e1663fcd6d381be"
+  welcome:
+    showOnStartup: false
+".hyperlink.text":
+  editor:
+    softWrapHangingIndent: 4
+".sass.source":
+  editor:
+    softWrapHangingIndent: 4
+".scss.source":
+  editor:
+    softWrapHangingIndent: 4
+"linter-phpcs":
+  executablePath: "/Users/montchr/Sites/spiritedmedia/public/vendor/bin/phpcs"
+"linter-rubocop":
+  executablePath: "/Users/montchr/.rvm/gems/ruby-2.2.2@global/wrappers/rubocop"
+"linter-ruby":
+  rubyExecutablePath: "/Users/montchr/.rvm/rubies/ruby-2.2.2/bin/ruby"
