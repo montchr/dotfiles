@@ -32,6 +32,8 @@
     softWrapHangingIndent: 4
     tabType: "soft"
   emmet: {}
+  "exception-reporting":
+    userId: "4217ace1-2199-e251-fc9f-29440d0570be"
   "git-diff":
     showIconsInEditorGutter: true
   "isotope-ui":
