@@ -9,6 +9,7 @@ brew 'coreutils'
 cask 'xquartz'
 
 brew 'ack'
+brew 'cabal-install'
 brew 'curl'
 brew 'ddate'
 brew 'go'
