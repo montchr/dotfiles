@@ -119,8 +119,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 [ -s "/Users/montchr/.scm_breeze/scm_breeze.sh" ] && source "/Users/montchr/.scm_breeze/scm_breeze.sh"
 
-# Fuck
-eval "$(thefuck --alias)"
-
 export NVM_DIR="/Users/montchr/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
