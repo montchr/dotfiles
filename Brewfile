@@ -5,6 +5,9 @@ tap 'homebrew/php'
 
 brew 'coreutils'
 
+# Install xquartz first because some things depend on it
+cask 'xquartz'
+
 brew 'ack'
 brew 'cabal-install'
 brew 'curl'
@@ -38,7 +41,6 @@ cask 'alfred'
 cask 'appcleaner'
 cask 'ascension'
 cask 'atom'
-cask 'audacity'
 cask 'audio-hijack'
 cask 'bartender'
 cask 'calibre'
