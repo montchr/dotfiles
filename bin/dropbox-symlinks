@@ -1,0 +1,57 @@
+#!/bin/sh
+#
+# lndropbox
+#
+# Link some important data stored in my Dropbox to locations within the home
+# directory
+
+set -e
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Include utilities
+# shellcheck source=/dev/null
+source "$HOME/.dotfiles/lib/utils.zsh"
+
+DROPBOX="$HOME/Dropbox"
+APP_SUP="$HOME/Library/Application Support"
+
+# If we're on a Mac, let's install and setup homebrew.
+if [ "$(uname -s)" == "Darwin" ]; then
+  seek_confirmation "Do you want to symlink Dropbox's versions of macOS user directories e.g. Music? This will delete all existing data in those directories!"
+  if is_confirmed; then
+    for dir in Documents Movies Music Pictures; do
+      if [ -d "$DROPBOX/$dir" ] && [ ! -L "$HOME/$dir" ]; then
+        sudo rm -rf "$HOME/$dir"
+        link_files "$DROPBOX/$dir" "$HOME/$dir"
+      fi
+    done
+    e_success "User directories linked!"
+  fi
+
+  e_header "Linking Application Support directories..."
+  for dir_dropbox_app_sup in "$DROPBOX"/"Application Support"/*; do
+    dir_macos_app_sup="$APP_SUP/${dir_dropbox_app_sup##*/}"
+    echo "$dir_macos_app_sup"
+    if [ -d "$dir_dropbox_app_sup" ] && [ ! -L "$dir_macos_app_sup" ]; then
+      if [ -d "$dir_macos_app_sup" ]; then
+        rm -rf "$dir_macos_app_sup"
+      fi
+      link_files "$dir_dropbox_app_sup" "$dir_macos_app_sup"
+    fi
+  done
+  e_success "Application Support directories linked!"
+
+  e_header "Linking miscellaneous directories..."
+  for dir in a notes; do
+    if [ -d "$DROPBOX/$dir" ] && [ ! -L "$HOME/$dir" ]; then
+      link_files "$DROPBOX/$dir" "$HOME/$dir"
+    fi
+  done
+
+  e_success "All done!"
+fi
