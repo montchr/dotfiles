@@ -41,6 +41,7 @@ linter-phpcs@1.5.5
 linter-rubocop@0.5.2
 linter-ruby@1.2.4
 linter-scss-lint@3.0.4
+linter-shellcheck@1.4.2
 linter-tidy@2.3.0
 marked@0.1.10
 merge-conflicts@1.4.4
