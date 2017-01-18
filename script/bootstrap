@@ -155,6 +155,9 @@ setup_gitconfig
 install_dotfiles
 vim_go
 
+# Set macOS defaults
+$DOTFILES/macos/set-defaults.sh
+
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
 then
