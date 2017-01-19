@@ -20,7 +20,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.dotfiles/oh-my-zsh/custom/themes/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bower brew colorize composer copydir copyfile cp git git-flow gnu-utils nyan rvm)
+plugins=(bower brew colorize composer copydir copyfile cp git-flow gnu-utils nyan rvm)
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -121,3 +121,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export NVM_DIR="/Users/montchr/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Load iTerm shell integration if installed
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

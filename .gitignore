@@ -19,3 +19,6 @@ lib/XKCD-password-generator
 .viminfo
 .netrwhist
 tmp-jhbuild-revision
+
+vim/bundle/*
+!vim/bundle/Vundle.vim

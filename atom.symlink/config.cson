@@ -2,14 +2,10 @@
   core:
     disabledPackages: [
       "Atom-Syntax-highlighting-for-Sass"
-      "linter-phpcs"
       "busy"
       "php-integrator-annotations"
-      "php-integrator-autocomplete-plus"
-      "php-integrator-base"
-      "php-integrator-call-tips"
       "php-integrator-navigation"
-      "php-integrator-tooltips"
+      "notifications"
     ]
     ignoredNames: [
       ".git"
@@ -57,7 +53,7 @@
       "find-and-replace": true
       "find-and-replaceDecorationsZIndex": 0
   "php-integrator-base":
-    phpCommand: "/usr/local/opt/php70/bin/php"
+    phpCommand: "/usr/local/opt/php71/bin/php"
   "release-notes":
     viewedVersion: "0.80.0"
   "seti-ui":
