@@ -1,0 +1,4 @@
+library: ~/Music/library/library.db
+directory: ~/Music/library/files
+
+plugins: chroma discogs embedart fetchart
