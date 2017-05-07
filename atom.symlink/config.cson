@@ -20,7 +20,7 @@
     telemetryConsent: "limited"
   editor:
     backUpBeforeSaving: true
-    fontFamily: "Fira Mono For Powerline"
+    fontFamily: "Operator Mono SSm"
     fontSize: 13
     invisibles: {}
     showInvisibles: true
