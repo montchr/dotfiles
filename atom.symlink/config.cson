@@ -5,7 +5,6 @@
       "busy"
       "php-integrator-annotations"
       "php-integrator-navigation"
-      "notifications"
     ]
     ignoredNames: [
       ".git"
