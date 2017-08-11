@@ -34,3 +34,6 @@
 # atom-text-editor[data-grammar~="css"]:not([mini]),
 # atom-text-editor[data-grammar~="scss"]:not([mini])':
 #   'tab': 'snippets:next-tab-stop'
+
+'atom-text-editor':
+  'cmd-alt-q': 'hard-wrap:reflow-selection'

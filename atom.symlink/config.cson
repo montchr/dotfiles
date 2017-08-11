@@ -1,11 +1,21 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "3d743396-3e0b-468d-9bc6-eeae402b90de"
+  "atom-package-deps":
+    ignored: []
   core:
     disabledPackages: [
       "Atom-Syntax-highlighting-for-Sass"
+      "autocomplete-php"
+      "autoflow"
+      "symbols-view"
+      "regex-railroad-diagram"
       "busy"
+      "linter-stylelint"
       "php-integrator-annotations"
+      "linter-phpcs"
       "php-integrator-navigation"
-      "notifications"
     ]
     ignoredNames: [
       ".git"
@@ -14,14 +24,17 @@
       ".DS_Store"
       "._*"
       "Thumbs.db"
-      "node_modules"
       "vendor"
-      "dist"
     ]
+    openEmptyEditorOnStart: false
     telemetryConsent: "limited"
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
   editor:
     backUpBeforeSaving: true
-    fontFamily: "Fira Mono For Powerline"
+    fontFamily: "Operator Mono Ssm"
     fontSize: 13
     invisibles: {}
     showInvisibles: true
@@ -45,6 +58,8 @@
   "linter-phpcs":
     executablePath: "/Users/montchr/dev/spiritedmedia.dev/public/vendor/bin/phpcs"
   "linter-phpmd": {}
+  "linter-ui-default":
+    panelHeight: 164
   marked: {}
   metrics:
     userId: "8d53384b4cba39680a039773c474de6a35e4e6a6"
@@ -52,14 +67,23 @@
     plugins:
       "find-and-replace": true
       "find-and-replaceDecorationsZIndex": 0
+  "php-integrator-autocomplete-plus":
+    automaticallyAddUseStatements: false
   "php-integrator-base":
+    core:
+      phpCommand: "/usr/local/opt/php71/bin/php"
+    linting:
+      showUnknownGlobalConstants: false
     phpCommand: "/usr/local/opt/php71/bin/php"
+  "php-integrator-base:confirmed-upgrade-message": true
   "release-notes":
     viewedVersion: "0.80.0"
   "seti-ui":
     compactView: true
     disableAnimations: true
     themeColor: "Purple"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
 ".hyperlink.text":
