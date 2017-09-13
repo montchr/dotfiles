@@ -13,9 +13,11 @@
       "regex-railroad-diagram"
       "busy"
       "linter-stylelint"
-      "php-integrator-annotations"
-      "linter-phpcs"
-      "php-integrator-navigation"
+      "linter-eslint"
+      "php-integrator-call-tips-legacy-php56"
+      "php-integrator-tooltips-legacy-php56"
+      "emmet"
+      "whitespace"
     ]
     ignoredNames: [
       ".git"
@@ -39,12 +41,13 @@
     invisibles: {}
     showInvisibles: true
     softWrapHangingIndent: 4
-    tabType: "soft"
+    tabType: "auto"
   emmet: {}
   "exception-reporting":
     userId: "4217ace1-2199-e251-fc9f-29440d0570be"
   "git-diff":
     showIconsInEditorGutter: true
+  "ide-php": {}
   "isotope-ui":
     backgroundColor: "false"
     backgroundGradient: true
@@ -59,7 +62,7 @@
     executablePath: "/Users/montchr/dev/spiritedmedia.dev/public/vendor/bin/phpcs"
   "linter-phpmd": {}
   "linter-ui-default":
-    panelHeight: 164
+    panelHeight: 195
   marked: {}
   metrics:
     userId: "8d53384b4cba39680a039773c474de6a35e4e6a6"
