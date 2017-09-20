@@ -14,47 +14,36 @@
 #     'body': 'console.log $1'
 #
 
-# Idiomatic Sass Comment Snippets
-'.source.scss,.source.sass':
-  'Sass: Basic Comment':
+
+# Idiomatic CSS snippets
+'.source.css,source.css.less,source.css.scss,source.css.sass':
+  'Preprocessor: Basic Comment':
     'prefix': 'com-basic'
     'body': '// ${1}'
-  'Sass: Longer Descriptor Comment':
+  'Preprocessor: Longer Descriptor Comment':
     'prefix': 'com-long'
-    'body': """
-      //
-      // ${1}
-      //
-    """
-  'Sass: Section Comment Block':
+    'body': '//\n// ${1}\n//'
+  'Preprocessor: Section Comment Block':
     'prefix': 'com-section'
-    'body': """
-      // ==========================================================================
-      // ${1}
-      // ==========================================================================
-
-
-      ${2}
-
-    """
-  'Sass: Sub-Section Comment Block':
+    'body': '// ==========================================================================\n// ${1}\n// ==========================================================================\n\n${2}'
+  'Preprocessor: Sub-Section Comment Block':
     'prefix': 'com-sub'
-    'body': """
-      //
-      // ${1}
-      // ==========================================================================
-
-
-      ${2}
-
-    """
-  'Sass: Todo Comment':
+    'body': '//\n// ${1}\n// ==========================================================================\n\n${2}'
+  'Preprocessor: Todo Comment':
     'prefix': 'com-todo'
-    'body': """
-      //
-      // TODO
-      //
-      // - ${1}
-
-      ${2}
-    """
+    'body': '//\n// @TODO\n// ${1}\n//\n\n${2}'
+  'CSS: Basic Comment':
+    'prefix': 'com-css-basic'
+    'body': '/* ${1} */'
+  'CSS: Longer Descriptor Comment':
+    'prefix': 'com-css-long'
+    'body': '/**\n * ${1}\n */'
+  'CSS: Section Comment Block':
+    'prefix': 'com-css-section'
+    'body': '/* ==========================================================================\n   ${1}\n   ========================================================================== */\n\n${2}'
+  'CSS: Sub-Section Comment Block':
+    'prefix': 'com-css-sub'
+    'body': '/*\n   ${1}\n   ========================================================================== */\n\n${2}'
+  'CSS: Todo Comment':
+    'prefix': 'com-css-todo'
+    'body': '/**\n * @TODO\n */'

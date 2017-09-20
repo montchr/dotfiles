@@ -49,6 +49,7 @@ brew 'sqlite3'
 brew 'tag'
 brew 'tree'
 brew 'wget'
+brew 'yarn'
 brew 'youtube-dl'
 brew 'zsh'
 

@@ -30,6 +30,7 @@
 ehthumbs.db
 Thumbs.db
 .tern-project
+.tags*
 
 # Files that might appear on external disks
 .Spotlight-V100
