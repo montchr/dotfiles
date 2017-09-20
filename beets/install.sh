@@ -2,4 +2,6 @@
 
 export DOTFILES=$HOME/.dotfiles
 
-ln -s $DOTFILES/beets $HOME/.config/beets
+if [ ! -d "$DOTFILES/beets" ]; then
+  ln -s $DOTFILES/beets $HOME/.config/beets
+fi
