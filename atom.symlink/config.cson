@@ -8,7 +8,6 @@
     disabledPackages: [
       "Atom-Syntax-highlighting-for-Sass"
       "autocomplete-php"
-      "autoflow"
       "symbols-view"
       "regex-railroad-diagram"
       "busy"
@@ -16,8 +15,13 @@
       "linter-eslint"
       "php-integrator-call-tips-legacy-php56"
       "php-integrator-tooltips-legacy-php56"
-      "emmet"
       "whitespace"
+      "hard-wrap"
+      "linter-phpcs"
+      "php-integrator-annotations"
+      "php-integrator-navigation"
+      "php-integrator-tooltips"
+      "php-integrator-call-tips"
     ]
     ignoredNames: [
       ".git"
@@ -31,8 +35,8 @@
     openEmptyEditorOnStart: false
     telemetryConsent: "limited"
     themes: [
-      "seti-ui"
-      "seti-syntax"
+      "one-light-ui"
+      "solarized-light-syntax"
     ]
   editor:
     backUpBeforeSaving: true
@@ -59,10 +63,12 @@
       "scss-lint"
     ]
   "linter-phpcs":
+    autoConfigSearch: false
+    codeStandardOrConfigFile: "/Users/montchr/dev/spiritedmedia.dev/public/phpcs.ruleset.xml"
     executablePath: "/Users/montchr/dev/spiritedmedia.dev/public/vendor/bin/phpcs"
   "linter-phpmd": {}
   "linter-ui-default":
-    panelHeight: 195
+    panelHeight: 300
   marked: {}
   metrics:
     userId: "8d53384b4cba39680a039773c474de6a35e4e6a6"
@@ -70,13 +76,21 @@
     plugins:
       "find-and-replace": true
       "find-and-replaceDecorationsZIndex": 0
+  "package-sync":
+    createOnChange: true
   "php-integrator-autocomplete-plus":
     automaticallyAddUseStatements: false
   "php-integrator-base":
     core:
       phpCommand: "/usr/local/opt/php71/bin/php"
     linting:
+      enable: false
+      showMissingDocs: false
+      showUnknownClasses: false
       showUnknownGlobalConstants: false
+      showUnknownGlobalFunctions: false
+      showUnusedUseStatements: false
+      validateDocblockCorrectness: false
     phpCommand: "/usr/local/opt/php71/bin/php"
   "php-integrator-base:confirmed-upgrade-message": true
   "release-notes":
