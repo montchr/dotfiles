@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# snda
+#
+# `snda` simply archives my samples
+
+set -e
+
+# Include utilities
+source $HOME/.dotfiles/lib/utils.zsh
+
+if [[ -n "$SNDBACKUPS" && -n "$SNDS" ]]; then
+  DATE=$(date +%Y-%m-%d)
+  tar -cjvf "$SNDBACKUPS/cm.samples.$DATE.tar.bz2" "$SNDS"
+fi
+
+printf "\n"

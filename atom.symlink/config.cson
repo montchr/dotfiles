@@ -103,6 +103,10 @@
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
 ".hyperlink.text":
   editor:
     softWrapHangingIndent: 4
