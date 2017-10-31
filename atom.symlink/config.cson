@@ -7,21 +7,14 @@
   core:
     disabledPackages: [
       "Atom-Syntax-highlighting-for-Sass"
-      "autocomplete-php"
       "symbols-view"
       "regex-railroad-diagram"
       "busy"
       "linter-stylelint"
-      "linter-eslint"
-      "php-integrator-call-tips-legacy-php56"
-      "php-integrator-tooltips-legacy-php56"
       "whitespace"
       "hard-wrap"
+      "linter-php"
       "linter-phpcs"
-      "php-integrator-annotations"
-      "php-integrator-navigation"
-      "php-integrator-tooltips"
-      "php-integrator-call-tips"
     ]
     ignoredNames: [
       ".git"
@@ -65,6 +58,7 @@
   "linter-phpcs":
     autoConfigSearch: false
     codeStandardOrConfigFile: "/Users/montchr/dev/spiritedmedia.dev/public/phpcs.ruleset.xml"
+    disableWhenNoConfigFile: true
     executablePath: "/Users/montchr/dev/spiritedmedia.dev/public/vendor/bin/phpcs"
   "linter-phpmd": {}
   "linter-ui-default":
@@ -103,10 +97,9 @@
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
-".blade.html.php.text":
+".html.php.text":
   editor:
-    commentEnd: " --}}"
-    commentStart: "{{-- "
+    tabLength: 4
 ".hyperlink.text":
   editor:
     softWrapHangingIndent: 4
