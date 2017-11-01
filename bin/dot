@@ -37,9 +37,4 @@ if type_exists bower; then
   e_success "Done"
 fi
 
-# If RVM is installed, update it
-if type_exists rvm; then
-  rvm get stable
-fi
-
 printf "\n"

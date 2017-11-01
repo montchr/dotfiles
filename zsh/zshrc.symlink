@@ -20,7 +20,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.dotfiles/oh-my-zsh/custom/themes/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bower brew colorize composer copydir copyfile cp git-flow gnu-utils nyan rvm)
+plugins=(bower brew colorize composer copydir copyfile cp git-flow gnu-utils nyan)
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -57,7 +57,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export PATH="/Users/montchr/.rvm/gems/ruby-2.1.0/bin:/Users/montchr/.rvm/gems/ruby-2.1.0@global/bin:/Users/montchr/.rvm/rubies/ruby-2.1.0/bin:./bin:/Users/montchr/bin:/Users/montchr/.wp-cli/bin:/usr/local/bin:/usr/local/sbin:/Users/montchr/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/montchr/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -111,8 +110,6 @@ unset config_files
 # Expand aliases for completion
 setopt no_complete_aliases
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # SCM Breeze
 # https://github.com/ndbroadbent/scm_breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
@@ -124,3 +121,6 @@ export NVM_DIR="/Users/montchr/.nvm"
 
 # Load iTerm shell integration if installed
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Load rbenv
+eval "$(rbenv init -)"
