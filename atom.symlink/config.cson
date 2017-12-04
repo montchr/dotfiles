@@ -2,6 +2,9 @@
   "atom-beautify":
     general:
       _analyticsUserId: "3d743396-3e0b-468d-9bc6-eeae402b90de"
+  "atom-ide-ui":
+    use:
+      "atom-ide-diagnostics-ui": false
   "atom-package-deps":
     ignored: []
   core:
@@ -28,8 +31,8 @@
     openEmptyEditorOnStart: false
     telemetryConsent: "limited"
     themes: [
-      "one-light-ui"
-      "solarized-light-syntax"
+      "nord-atom-ui"
+      "nord-atom-syntax"
     ]
   editor:
     backUpBeforeSaving: true
@@ -97,6 +100,10 @@
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
 ".html.php.text":
   editor:
     tabLength: 4
