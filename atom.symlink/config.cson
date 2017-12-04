@@ -118,10 +118,10 @@
   editor:
     softWrapHangingIndent: 4
 "linter-phpcs":
-  executablePath: "/Users/montchr/dev/spiritedmedia.dev/public/vendor/bin/phpcs"
+  executablePath: "/Users/syadasti/dev/spiritedmedia.dev/public/vendor/bin/phpcs"
 "linter-rubocop":
-  executablePath: "/Users/montchr/.rvm/gems/ruby-2.3.3@global/wrappers/rubocop"
+  executablePath: "/Users/syadasti/.rbenv/shims/rubocop"
 "linter-ruby":
-  rubyExecutablePath: "/Users/montchr/.rvm/rubies/ruby-2.3.3/bin/ruby"
+  rubyExecutablePath: "/Users/syadasti/.rbenv/shims/ruby"
 "linter-shellcheck":
   shellcheckExecutablePath: "/Users/montchr/.cabal/bin/shellcheck"
