@@ -75,6 +75,7 @@
       "find-and-replaceDecorationsZIndex": 0
   "package-sync":
     createOnChange: true
+    forceOverwrite: true
   "php-integrator-autocomplete-plus":
     automaticallyAddUseStatements: false
   "php-integrator-base":
