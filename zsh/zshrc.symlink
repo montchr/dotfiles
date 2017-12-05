@@ -124,3 +124,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Load rbenv
 eval "$(rbenv init -)"
+
+[ -s "/Users/syadasti/.scm_breeze/scm_breeze.sh" ] && source "/Users/syadasti/.scm_breeze/scm_breeze.sh"
