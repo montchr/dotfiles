@@ -22,3 +22,7 @@ tmp-jhbuild-revision
 
 vim/bundle/*
 !vim/bundle/Vundle.vim
+
+# Beets
+state.pickle
+discogs_token.json
