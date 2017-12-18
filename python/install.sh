@@ -1,4 +1,4 @@
-sudo pip install virtualenv
+sudo -H pip install virtualenv
 virtualenv $HOME
 source $HOME/bin/activate
 

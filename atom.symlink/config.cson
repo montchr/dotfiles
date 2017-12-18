@@ -18,6 +18,7 @@
       "hard-wrap"
       "linter-php"
       "linter-phpcs"
+      "php-integrator-navigation"
     ]
     ignoredNames: [
       ".git"
@@ -64,8 +65,7 @@
     disableWhenNoConfigFile: true
     executablePath: "/Users/montchr/dev/spiritedmedia.dev/public/vendor/bin/phpcs"
   "linter-phpmd": {}
-  "linter-ui-default":
-    panelHeight: 300
+  "linter-ui-default": {}
   marked: {}
   metrics:
     userId: "8d53384b4cba39680a039773c474de6a35e4e6a6"
