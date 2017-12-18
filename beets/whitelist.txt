@@ -1,0 +1,506 @@
+2-step garage
+8-bit
+acapella
+acid
+acid breaks
+acid house
+acid jazz
+acid rock
+adult contemporary music
+african popular music
+african rumba
+afrobeat
+aleatoric music
+alternative country
+alternative dance
+alternative hip hop
+alternative metal
+alternative rock
+ambient
+ambient house
+ambient dub
+ambient techno
+americana
+anarcho punk
+anti-folk
+arabesque
+arabic pop
+argentine rock
+ars antiqua
+ars nova
+art punk
+art rock
+ashiq
+asian american jazz
+australian country music
+australian hip hop
+australian pub rock
+austropop
+avant-garde
+avant-garde jazz
+avant-garde metal
+avant-garde music
+baila
+balinese gamelan
+balkan pop
+ballet
+barbershop music
+baroque
+baroque pop
+bass music
+beatboxing
+bebop
+berlin school of electronic music
+bhangra
+big band
+big beat
+bitcore
+bitpop
+black metal
+blue-eyed soul
+bluegrass
+blues
+blues ballad
+blues-rock
+boogie
+bossa nova
+braindance
+brazilian funk
+brazilian jazz
+breakbeat
+breakcore
+britfunk
+british blues
+british invasion
+britpop
+broken beat
+bubblegum dance
+bubblegum pop
+byzantine chant
+cabaret
+cajun music
+calypso
+calypso jazz
+cantata
+carol
+celtic
+celtic fusion
+celtic metal
+celtic punk
+celtic reggae
+celtic rock
+chamber jazz
+chamber music
+chamber pop
+chant
+chicago blues
+chicago house
+chicago soul
+chicano rap
+children's music
+chillwave
+chinese music
+chinese pop
+chinese rock
+chiptune
+christian alternative
+christian black metal
+christian electronic music
+christian hardcore
+christian hip hop
+christian industrial
+christian metal
+christian music
+christian punk
+christian r&b
+christian rock
+christian ska
+christmas carol
+christmas music
+classic rock
+classical
+comedy
+comedy rap
+comedy rock
+cool jazz
+country
+country blues
+country gospel
+country music
+country pop
+country r&b
+country rock
+country-rap
+cowpunk
+crust punk
+dancehall
+dark ambient
+dark cabaret
+dark pop
+darkcore
+darkstep
+darkwave
+death industrial
+death metal
+death rock
+deathcore
+deathgrind
+deep funk
+deep house
+deep soul
+delta blues
+desert rock
+detroit blues
+digital hardcore
+disco house
+dixieland
+djent
+doo wop
+doom metal
+doomcore
+downtempo
+drag
+dream pop
+drone
+drone doom
+drone metal
+drum and bass
+dub
+dub house
+dub techno
+dubstep
+dubtronica
+east coast blues
+east coast hip hop
+easy listening
+electric blues
+electric folk
+electro
+electroclash
+electrofunk
+electronic
+electronic body music
+electronic dance
+electropop
+elevator music
+emo
+emo pop
+emo rap
+emocore
+emotronic
+ethereal pop
+ethereal wave
+euro disco
+eurobeat
+eurodance
+europop
+exotica
+experimental music
+experimental pop
+experimental rock
+field recording
+flamenco
+flamenco rumba
+folk hop
+folk metal
+folk music
+folk pop
+folk punk
+folk rock
+folktronica
+freak-folk
+free improvisation
+free jazz
+free music
+french pop
+frenchcore
+fuji music
+funk
+funk metal
+funk rock
+funkcore
+g-funk
+gabber
+gamelan
+gangsta rap
+garage rock
+german folk music
+ghetto house
+ghettotech
+glam metal
+glam punk
+glam rock
+glitch
+go-go
+goa
+gospel music
+gothic metal
+gothic rock
+gregorian chant
+grime
+grindcore
+grunge
+gypsy jazz
+gypsy punk
+hard bop
+hard rock
+hardcore punk
+hauntology
+heavy metal
+hi-nrg
+hip hop
+honky tonk
+horrorcore
+house
+illbient
+incidental music
+indian pop
+indie folk
+indie music
+indie pop
+indie rock
+industrial
+industrial death metal
+industrial hip-hop
+industrial metal
+industrial rock
+iranian pop
+irish folk
+irish rebel music
+island
+italo disco
+j-pop
+j-rock
+jam band
+jazz
+jazz blues
+jazz fusion
+jazz metal
+jazz rap
+jazz-funk
+jungle
+k-pop
+klezmer
+krautrock
+latin american
+latin jazz
+latin pop
+latin rap
+library music
+lo-fi
+lounge
+lowercase
+mambo
+mandarin pop
+mariachi
+marimba
+martial industrial
+math rock
+mathcore
+mazurka
+medieval folk rock
+medieval metal
+medieval music
+meditation
+melodic black metal
+melodic death metal
+melodic hardcore
+memphis blues
+memphis rap
+memphis soul
+metal
+metalcore
+mexican pop
+mexican rock
+miami bass
+microhouse
+minimal techno
+minimalist
+minimalist trance
+modal jazz
+modern classical
+morna
+motorpop
+motown
+mozambique
+musique concrète
+muzak
+neo soul
+neo-classical metal
+neo-medieval
+neo-prog
+neo-psychedelia
+neofolk
+nerdcore
+new age
+new orleans blues
+new orleans jazz
+new wave
+new york blues
+new york house
+no wave
+noise
+noise pop
+noise rock
+nordic folk
+nu jazz
+nu metal
+organic ambient
+organum
+oriental metal
+p-funk
+pagan metal
+pagan rock
+philadelphia soul
+piano blues
+piano rock
+polka
+polska
+pop
+pop folk
+pop punk
+pop rap
+pop rock
+pornocore
+post-grunge
+post-hardcore
+post-industrial
+post-metal
+post-minimalism
+post-punk
+post-rock
+power electronics
+power metal
+power noise
+power pop
+powerviolence
+progressive bluegrass
+progressive country
+progressive death metal
+progressive electronic
+progressive folk
+progressive house
+progressive metal
+progressive rock
+progressive trance
+protopunk
+psych folk
+psychedelic
+psychedelic pop
+psychedelic rock
+psychedelic trance
+psychobilly
+punk blues
+punk cabaret
+punk jazz
+punk rock
+queercore
+raga
+raga rock
+ragga
+ragga jungle
+ragtime
+rap metal
+rap rock
+reggae
+reggae fusion
+reggaeton
+renaissance music
+rhythm & blues
+riot grrrl
+rock
+rock and roll
+rockabilly
+rocksteady
+roots reggae
+roots rock
+rumba
+russian pop
+sacred harp
+sacred music
+sadcore
+salsa
+salsa erotica
+salsa romantica
+saltarello
+samba
+samba-canção
+samba-reggae
+samba-rock
+screamo
+serialism
+shock rock
+shoegaze
+show tune
+ska
+ska punk
+skacore
+slowcore
+sludge metal
+smooth jazz
+soca
+soft rock
+soul
+soul blues
+soul jazz
+southern gospel
+southern harmony
+southern hip hop
+southern metal
+southern rock
+southern soul
+space rock
+spectralism
+speed garage
+speed metal
+speedcore
+spirituals
+square dance
+st. louis blues
+stoner metal
+stoner rock
+straight edge
+sufi music
+surf music
+surf pop
+surf rock
+swamp blues
+swamp pop
+swamp rock
+swing
+swing music
+swingbeat
+symphonic black metal
+symphonic metal
+symphonic poem
+symphonic rock
+synthpop
+synthpunk
+taiwanese pop
+tango
+tarantella
+tech house
+tech trance
+technical metal
+techno
+technopop
+texas blues
+thai pop
+thrash metal
+thrashcore
+tibetan pop
+tin pan alley
+trance
+tribal house
+trip hop
+tropicalia
+turkish music
+turkish pop
+turntablism
+tuvan throat-singing
+vaporwave
+west coast hip hop
+west coast jazz
+witch house
+world fusion
+world music

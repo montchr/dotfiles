@@ -1,12 +1,25 @@
 library: ~/Music/library/library.db
 directory: ~/Music/library/files
 
-plugins: chroma discogs embedart fetchart importfeeds
+plugins: chroma discogs embedart fetchart importfeeds lastgenre
 
 importfeeds:
   absolute_path: yes
   dir: ~/Music/library/imports
   formats: link
+
 fetchart:
   minwidth: 300
   sources: filesystem coverart discogs amazon albumart 
+
+lastgenre:
+  # auto: yes
+  canonical: ~/.config/beets/canonical.txt
+  # count: 1
+  # fallback: ''
+  force: no
+  min_weight: 6
+  # prefer_specific: no
+  # separator: ', '
+  # source: album
+  whitelist: ~/.config/beets/whitelist.txt
