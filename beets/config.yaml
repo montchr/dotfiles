@@ -1,7 +1,17 @@
 library: ~/Music/library/library.db
 directory: ~/Music/library/files
-
 plugins: chroma discogs embedart fetchart importfeeds lastgenre
+
+# Use English names if possible
+languages:
+  - en
+
+# Use the album's original date instead of the release's date
+original_date: yes
+
+# Prevent iTunes from being an asshole and not importing some files
+asciify_paths: yes
+max_filename_length: 150
 
 importfeeds:
   absolute_path: yes
@@ -9,7 +19,6 @@ importfeeds:
   formats: link
 
 fetchart:
-  minwidth: 300
   sources: filesystem coverart discogs amazon albumart 
 
 lastgenre:

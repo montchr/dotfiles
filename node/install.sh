@@ -14,7 +14,7 @@ run_npm () {
   e_header "Installing Node.js packages..."
 
   # List of npm packages
-  local packages="grunt-cli yarn"
+  local packages="grunt-cli yarn editorconfig-cli"
 
   # Install packages globally and quietly
   npm install $packages --global --quiet
