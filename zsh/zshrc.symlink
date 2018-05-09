@@ -126,3 +126,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 eval "$(rbenv init -)"
 
 [ -s "/Users/syadasti/.scm_breeze/scm_breeze.sh" ] && source "/Users/syadasti/.scm_breeze/scm_breeze.sh"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
