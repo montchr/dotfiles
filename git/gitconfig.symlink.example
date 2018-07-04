@@ -43,6 +43,11 @@
 
         # List recent branches
         recent = for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(authorname) %(refname:short)'
+
+        # Temporarily ignore/unignore files, and list ignored files
+        ignore = !git update-index --assume-unchanged
+        unignore = !git update-index --no-assume-unchanged
+        ignored = !git ls-files -v | grep ^[a-z]
 [hub]
         protocol = https
 [user]
