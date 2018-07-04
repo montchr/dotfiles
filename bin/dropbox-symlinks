@@ -19,6 +19,7 @@ source "$HOME/.dotfiles/lib/utils.zsh"
 
 DROPBOX="$HOME/Dropbox"
 APP_SUP="$HOME/Library/Application Support"
+APP_SCRIPTS="$HOME/Library/Application Scripts"
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]; then
@@ -45,6 +46,19 @@ if [ "$(uname -s)" == "Darwin" ]; then
     fi
   done
   e_success "Application Support directories linked!"
+
+  e_header "Linking Application Scripts directories..."
+  for dir_dropbox_app_scripts in "$DOTFILES"/scripts/apps/*; do
+    dir_macos_app_scripts="$APP_SCRIPTS/${dir_dropbox_app_scripts##*/}"
+    echo "$dir_macos_app_scripts"
+    if [ -d "$dir_dropbox_app_scripts" ] && [ ! -L "$dir_macos_app_scripts" ]; then
+      if [ -d "$dir_macos_app_scripts" ]; then
+        rm -rf "$dir_macos_app_scripts"
+      fi
+      link_files "$dir_dropbox_app_scripts" "$dir_macos_app_scripts"
+    fi
+  done
+  e_success "Application Scripts directories linked!"
 
   e_header "Linking miscellaneous directories..."
   for dir in a notes; do
