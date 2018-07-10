@@ -4,10 +4,10 @@ export DOTFILES=$HOME/.dotfiles
 
 # Beets
 pip install beets
+pip install discogs-client
+pip install beets-bandcamp
 # Beets: LastGenre
 pip install pylast
-# Beets: Discogs
-pip install discogs-client
 # Beets: FetchArt
 pip install requests
 # Beets: Chromaprint/Acoustid

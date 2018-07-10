@@ -1,6 +1,6 @@
 library: ~/Music/library/library.db
 directory: ~/Music/library/files
-plugins: chroma discogs embedart fetchart importfeeds lastgenre
+plugins: chroma bandcamp discogs embedart fetchart importfeeds lastgenre
 
 # Use English names if possible
 languages:
@@ -13,13 +13,16 @@ original_date: yes
 asciify_paths: yes
 max_filename_length: 150
 
+bandcamp:
+  art: true
+
 importfeeds:
   absolute_path: yes
   dir: ~/Music/library/imports
   formats: link
 
 fetchart:
-  sources: filesystem coverart discogs amazon albumart 
+  sources: filesystem coverart discogs amazon albumart
 
 lastgenre:
   # auto: yes
