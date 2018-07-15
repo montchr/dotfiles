@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# playlist-to-pathlist
+#
+# Given an M3U8 playlist file, remove everything in the file save for the unique
+# part of filenames.
+#
+# For example:
+#
+# Take this M3U8 playlist:
+#
+# ```
+# #EXTM3U
+# #EXTINF:277,Modul - Pole
+# /Users/username/Dropbox/Music/library/files/Pole/1/01 Modul.mp3
+# #EXTINF:407,Fragen - Pole
+# /Users/username/Dropbox/Music/library/files/Pole/1/02 Fragen.mp3
+# ```
+#
+# And manipulate it to:
+#
+# ```
+# Pole/1/01 Modul.mp3
+# Pole/1/02 Fragen.mp3
+# ```
+
+# basename=$(basename "$1" .m3u8)
+# working_file="$basename".txt
+
+# cp $1 $working_file
+
+# # Remove the non-unique path from the track filename
+# remove_path="$HOME/Dropbox/Music/library/files/"
+# sed "s~$remove_path~~g" $working_file > "$basename".clean.txt
+# Remove all lines beginning with `#`
