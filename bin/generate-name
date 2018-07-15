@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# generate-name
+
+_generate () {
+  "$HOME/.dotfiles/node_modules/.bin/random-word" | gsed 's/.*/\u&/'
+}
+
+echo "$(_generate)$(_generate)"
