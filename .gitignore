@@ -1,17 +1,3 @@
-# Remove useless Atom stuff
-atom.symlink/.apm
-atom.symlink/.node-gyp
-atom.symlink/.package-cop.json
-atom.symlink/.storage
-atom.symlink/blob-store
-atom.symlink/compile-cache/
-atom.symlink/packages
-atom.symlink/projects.cson
-atom.symlink/storage
-atom.symlink/themes
-atom.symlink/blob-store
-atom.symlink/recovery
-
 git/gitconfig.symlink
 lib/powerline-fonts
 lib/XKCD-password-generator
