@@ -130,13 +130,12 @@ change_shell () {
   fi
 }
 
-copy_fonts () {
-  # Install patched common fixed-width fonts from Powerline
-  cd "$DOTFILES_ROOT/lib/powerline-fonts"
-  e_header "Installing Powerline fonts"
-  cp -f ./**/*.ttf ~/Library/Fonts/
-  cp -f ./**/*.otf ~/Library/Fonts/
-  cd "$DOTFILES"
+install_fonts () {
+  git clone https://github.com/powerline/fonts.git --depth=1
+  cd fonts
+  ./install.sh
+  cd ..
+  rm -rf fonts
 }
 
 vim_go () {
@@ -173,7 +172,7 @@ fi
 
 install_ohmyzsh
 change_shell
-copy_fonts
+install_fonts
 
 echo ''
 echo '  All installed!'

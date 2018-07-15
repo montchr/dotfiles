@@ -1,0 +1,27 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "Chris Montgomery's dotfiles",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montchr/dotfiles.git"
+  },
+  "author": "Chris Montgomery",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/montchr/dotfiles/issues"
+  },
+  "homepage": "https://github.com/montchr/dotfiles#readme",
+  "dependencies": {
+    "editorconfig-cli": "^0.2.1",
+    "grunt-cli": "^1.2.0",
+    "yarn": "^1.7.0"
+  }
+}

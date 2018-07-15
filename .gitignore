@@ -1,6 +1,4 @@
 git/gitconfig.symlink
-lib/powerline-fonts
-lib/XKCD-password-generator
 
 .viminfo
 .netrwhist
@@ -12,3 +10,5 @@ vim/bundle/*
 # Beets
 state.pickle
 discogs_token.json
+
+node_modules

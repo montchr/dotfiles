@@ -20,21 +20,9 @@ brew update
 $DOTFILES/scripts/install
 
 # Install npm packages
-$DOTFILES/node/install.sh
+npm install
 
 # Update/install SCM Breeze
 $DOTFILES/scm-breeze/install.sh
-
-# Install bower packages
-cd $DOTFILES
-e_header "Installing Bower components"
-bower install
-e_success "Done"
-# Update bower packages
-if type_exists bower; then
-  e_header "Updating Bower"
-  bower update
-  e_success "Done"
-fi
 
 printf "\n"

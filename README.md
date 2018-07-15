@@ -111,7 +111,7 @@ your home directory. Everything is configured and tweaked within
 4.  Install Homebrew if it's not already installed. If MacPorts is detected, you
     have the option of removing it or aborting.
 5.  Install the Homebrew packages listed in `homebrew/Brewfile`.
-6.  Install Bower packages in `lib`.
+6.  Install NPM/Node packages.
 7.  Install oh-my-zsh.
 8.  Change default shell to the Homebrew-managed zsh in `/usr/local/bin`
 9.  Copy Powerline-patched coding fonts to `~/Library/Fonts`.
