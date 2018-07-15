@@ -4,6 +4,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/php'
 
 brew 'coreutils'
+brew 'gnu-sed'
 
 # Install xquartz first because some things depend on it
 cask 'xquartz'
