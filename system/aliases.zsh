@@ -19,3 +19,6 @@ alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false &
 
 # Create spacer for the Dock
 alias spacer="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}'; killall Dock"
+
+# Launch Chrome with remote debugging support
+alias chrome-debug="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
