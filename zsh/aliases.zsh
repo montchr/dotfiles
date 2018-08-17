@@ -7,8 +7,8 @@ alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
 # List directory contents
-alias ls='ls -h'
-alias lsa='ls -lah'
-alias l='ls -lah'
-alias ll='ls -lh'
-alias la='ls -lAh'
+alias ls='ls -Gh'
+alias lsa='ls -lahG'
+alias l='ls -lahG'
+alias ll='ls -lhG'
+alias la='ls -lAhG'
