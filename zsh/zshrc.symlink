@@ -89,7 +89,10 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Do some stuff upon changing pwd
 function chpwd() {
+  source "$HOME/.scm_breeze/scm_breeze.sh"
+  source "$DOTFILES/zsh/aliases.zsh"
   emulate -L zsh
-  l
+
+  ls
   gs
 }
