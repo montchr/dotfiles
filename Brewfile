@@ -39,7 +39,7 @@ brew 'mysql'
 brew 'node'
 brew 'openssl'
 brew 'optipng'
-brew 'php@7.1'
+brew 'php@7.1', args: ['with-pear']
 brew 'phpunit'
 brew 'pinentry-mac'
 brew 'postgresql'
