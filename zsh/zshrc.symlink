@@ -16,6 +16,7 @@ source $DOTFILES/zsh/antigen.zsh
 
 # These Antigen plugins must be loaded first
 antigen bundle mafredri/zsh-async
+antigen bundle zsh-users/zsh-autosuggestions
 
 # Antigen plugins
 antigen bundle sindresorhus/pure
@@ -28,6 +29,7 @@ antigen bundle mollifier/cd-gitroot
 antigen bundle zdharma/zsh-diff-so-fancy
 antigen bundle adolfoabegg/browse-commit
 antigen bundle walesmd/caniuse.plugin.zsh
+antigen bundle zsh-users/zsh-history-substring-search
 
 # Tell Antigen that we're done.
 antigen apply
