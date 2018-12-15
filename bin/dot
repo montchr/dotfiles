@@ -26,3 +26,5 @@ npm install
 $DOTFILES/scm-breeze/install.sh
 
 printf "\n"
+
+e_success "dot ran successfully!"
