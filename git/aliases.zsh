@@ -10,3 +10,8 @@ alias gbr="git branch --sort=-committerdate"
 
 # List all the commits on the current branch ahead of master
 alias glb="git cherry -v master"
+
+# Deploy to staging
+alias gds="$DOTFILES/bin/git-deploy-to-staging"
+
+alias gm="git merge --no-edit"

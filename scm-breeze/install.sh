@@ -16,7 +16,3 @@ else
 fi
 
 "$HOME/.scm_breeze/install.sh"
-
-# SCM Breeze functions
-source "$scmbDir/lib/scm_breeze.sh"
-[ -s "$scmbDir/scm_breeze.sh" ] && source "$scmbDir/scm_breeze.sh"
