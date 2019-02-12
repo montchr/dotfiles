@@ -60,6 +60,11 @@ if [ "$(uname -s)" == "Darwin" ]; then
   done
   e_success "Application Scripts directories linked!"
 
+  e_header "Linking GIFs to Public directory..."
+  if [ -d "$DROPBOX/gifs" ] && [ ! -L "$DROPBOX/Public/gifs" ]; then
+    link_files "$DROPBOX/gifs" "$DROPBOX/Public/gifs"
+  fi
+
   e_header "Linking miscellaneous directories..."
   for dir in a notes; do
     if [ -d "$DROPBOX/$dir" ] && [ ! -L "$HOME/$dir" ]; then
