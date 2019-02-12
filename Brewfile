@@ -23,6 +23,7 @@ brew 'flac'
 brew 'git', args: ['without-completions']
 brew 'gnupg'
 brew 'gpg-agent'
+brew 'graphicsmagick'
 brew 'grc'
 brew 'gsl'
 brew 'imagemagick'
