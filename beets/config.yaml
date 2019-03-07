@@ -9,7 +9,7 @@ languages:
 # Use the album's original date instead of the release's date
 original_date: yes
 
-# Prevent iTunes from being an asshole and not importing some files
+# Play it safe with filenames
 asciify_paths: yes
 max_filename_length: 150
 
