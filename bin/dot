@@ -19,12 +19,6 @@ brew update
 # Install software
 $DOTFILES/scripts/install
 
-# Install npm packages
-npm install
-
-# Update/install SCM Breeze
-$DOTFILES/scm-breeze/install.sh
-
 printf "\n"
 
 e_success "dot ran successfully!"

@@ -1,11 +1,11 @@
 alias reload="source $HOME/.zshrc"
 
 alias ~="cd ~/"
-# alias -g ..='cd ..'
-# alias -g ...='cd ../..'
-# alias -g ....='cd ../../..'
-# alias -g .....='cd ../../../..'
-# alias -g ......='cd ../../../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
 
 # List directory contents
 alias ls='ls -Gh'

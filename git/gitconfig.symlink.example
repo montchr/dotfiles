@@ -57,7 +57,7 @@
         interactive = auto
 [core]
         excludesfile = ~/.gitignore
-	editor = vim
+	editor = micro
         pager = diff-so-fancy | less -FXRi
 [apply]
         whitespace = nowarn
