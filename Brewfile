@@ -100,3 +100,14 @@ brew 'zsh-syntax-highlighting'
 # cask 'visual-studio-code'
 # cask 'vlc'
 # cask 'zoomus'
+
+# QuickLook plugins
+# https://github.com/sindresorhus/quick-look-plugins
+# cask 'qlcolorcode'
+# cask 'qlstephen'
+# cask 'qlmarkdown'
+# cask 'quicklook-json'
+# cask 'webpquicklook'
+# cask 'suspicious-package'
+# cask 'quicklookase'
+# cask 'qlvideo'
