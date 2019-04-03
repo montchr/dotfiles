@@ -20,8 +20,6 @@
   },
   "homepage": "https://github.com/montchr/dotfiles#readme",
   "dependencies": {
-    "check-updates": "0.0.1",
-    "editorconfig-cli": "^0.3.0",
     "grunt-cli": "^1.2.0",
     "hint": "^3.4.4",
     "random-word": "^2.0.0",
