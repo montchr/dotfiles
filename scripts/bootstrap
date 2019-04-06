@@ -102,25 +102,6 @@ install_dotfiles () {
   done
 }
 
-install_ohmyzsh () {
-  # Install oh-my-zsh if it's not already installed
-  if ! [ -d "$HOME/.oh-my-zsh" ]
-    then
-    e_header "Installing oh-my-zsh"
-    curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-    [[ $? ]] && e_success "Done"
-
-    # Move our `.zshrc` back into place after oh-my-zsh setup
-    mv "$HOME/.zshrc.pre-oh-my-zsh" "$HOME/.zshrc"
-
-    # Link the `./oh-my-zsh/custom` directory to its place in `~/.oh-my-zsh`
-    if [[ -d $ZSH/custom ]]; then
-      rm -rf "$ZSH/custom"
-    fi
-    ln -Fs "$DOTFILES/oh-my-zsh/custom" "$ZSH/custom"
-  fi
-}
-
 change_shell () {
   # Change default shell to Homebrew-installed zsh
   if ! [ "$SHELL" = "$(command -v zsh)" ]; then
@@ -128,14 +109,6 @@ change_shell () {
     command -v zsh | sudo tee -a /etc/shells
     sudo chsh -s "$(command -v zsh)" "${USER}"
   fi
-}
-
-install_fonts () {
-  git clone https://github.com/powerline/fonts.git --depth=1
-  cd fonts
-  ./install.sh
-  cd ..
-  rm -rf fonts
 }
 
 vim_go () {
@@ -155,7 +128,7 @@ install_dotfiles
 vim_go
 
 # Set macOS defaults
-$DOTFILES/macos/set-defaults.sh
+$DOTFILES_ROOT/macos/set-defaults.sh
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
@@ -170,9 +143,7 @@ then
   fi
 fi
 
-install_ohmyzsh
 change_shell
-install_fonts
 
 echo ''
 echo '  All installed!'
