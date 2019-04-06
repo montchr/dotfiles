@@ -86,8 +86,8 @@
         # Setting to git 2.0 default to surpress warning message
         default = current
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
-	program = gpg2
+	program = gpg
 [rerere]
 	enabled = true

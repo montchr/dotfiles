@@ -1,7 +1,10 @@
 #!/bin/sh
 
 if [ ! -d "$HOME/.gnupg" ]; then
-  mkdir $HOME/.gnupg
+  mkdir "$HOME/.gnupg"
 fi
 
-cp $DOTFILES/gpg/*.conf $HOME/.gnupg/
+
+chmod 700 "$HOME/.gnupg"
+
+cp "$DOTFILES/gpg/*.conf" "$HOME/.gnupg/"
