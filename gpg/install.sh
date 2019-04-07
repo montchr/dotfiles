@@ -7,4 +7,4 @@ fi
 
 chmod 700 "$HOME/.gnupg"
 
-cp "$DOTFILES/gpg/*.conf" "$HOME/.gnupg/"
+cp $DOTFILES/gpg/*.conf "$HOME/.gnupg/"
