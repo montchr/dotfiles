@@ -77,8 +77,13 @@ set input-meta on
 set output-meta on
 set convert-meta off
 
-# Use Alt/Meta + Delete to delete the preceding word
-# "\e[3;3~": kill-word
+# Use Ctrl + Delete to delete the preceding word
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+}
+zle -N backward-kill-dir
+bindkey '^[^?' backward-kill-dir
 
 # Load NodeVersionManager
 export NVM_DIR="/Users/montchr/.nvm"
