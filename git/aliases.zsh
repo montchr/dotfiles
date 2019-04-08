@@ -1,5 +1,7 @@
 alias g="git"
 
+# See `scmpuff/env.zsh` for the `gl` alias
+
 alias gap="git add -p"
 alias gcob="git checkout -b"
 alias gc="git commit"
@@ -13,7 +15,6 @@ alias gcam="git commit --amend -C HEAD"
 alias gb="git branch"
 alias gm="git merge --no-edit"
 alias gcp="git cherry-pick"
-alias glg="git log --graph --max-count=5"
 alias gsh="git stash"
 alias gsha="git stash apply"
 alias gshp="git stash pop"
