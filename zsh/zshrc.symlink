@@ -86,7 +86,7 @@ zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
 
 # Load NodeVersionManager
-export NVM_DIR="/Users/montchr/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Load iTerm shell integration if installed
