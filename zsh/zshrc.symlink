@@ -30,6 +30,7 @@ antigen bundle zdharma/zsh-diff-so-fancy
 antigen bundle adolfoabegg/browse-commit
 antigen bundle walesmd/caniuse.plugin.zsh
 antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle paulirish/git-open
 
 # Tell Antigen that we're done.
 antigen apply
