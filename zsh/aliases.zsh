@@ -19,9 +19,9 @@ fi
 # List directory contents
 alias ll='ls -lhG'
 # List all files colorized in long format
-alias l="ls -lhF ${colorflag}"
+alias l="ls -alhF ${colorflag}"
 # List all files colorized in long format, excluding . and ..
-alias la="ls -lAF ${colorflag}"
+alias la="ls -alAF ${colorflag}"
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 # Always use color output for `ls`
