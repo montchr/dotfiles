@@ -82,8 +82,6 @@
 [push]
         # See `git help config` (search for push.default)
         # for more information on different options of the below setting.
-        #
-        # Setting to git 2.0 default to surpress warning message
         default = current
 [commit]
 	gpgsign = false
@@ -91,3 +89,7 @@
 	program = gpg
 [rerere]
 	enabled = true
+[branch]
+        autosetupmerge = always
+[fetch]
+	recurseSubmodules = true
