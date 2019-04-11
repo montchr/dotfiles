@@ -81,6 +81,7 @@ cask 'dash'
 cask 'dupeguru'
 cask 'fantastical'
 cask 'fastscripts'
+cask 'finicky'
 # Not sure where to find the right tap for this!
 # cask 'firefox-developer-edition'
 cask 'google-chrome'
