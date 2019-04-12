@@ -4,7 +4,7 @@
 const FIREFOX = 'org.mozilla.firefox';
 const FIREFOX_DEV = 'org.mozilla.firefoxdeveloperedition';
 const CHROME = 'com.google.Chrome';
-const DEFAULT = FIREFOX_DEV;
+const DEFAULT = FIREFOX;
 
 // Source applications
 const VSCODE = 'com.microsoft.VSCode';
@@ -13,6 +13,7 @@ const TWEETBOT = 'com.tapbots.Tweetbot3Mac';
 const ALFRED = 'com.runningwithcrayons.Alfred-3';
 const CAPRINE = 'com.sindresorhus.caprine';
 const DASH = 'com.kapeli.dashdoc';
+const SLACK = 'com.tinyspeck.slackmacgap';
 
 const EMPLOYER = 'alley';
 
@@ -22,7 +23,7 @@ finicky.setDefaultBrowser(DEFAULT);
 finicky.onUrl((url, opts) => {
   let browser = DEFAULT;
   const flags = opts.flags;
-  if (flags.ctrl && flags.alt) {
+  if (flags.cmd) {
     browser = FIREFOX;
   }
   return {
@@ -33,9 +34,7 @@ finicky.onUrl((url, opts) => {
 // Open social network links in Firefox
 finicky.onUrl((url, opts) => {
   let browser = DEFAULT;
-  if (url.match(/^https?:\/\/(youtube|facebook|twitter|linkedin|amazon)\./)) {
-    browser = FIREFOX;
-  } else if (url.match(/^https?:\/\/(github|atlassian|alley)\./)) {
+  if (url.match(/^https?:\/\/(github|atlassian|alley|google)\./)) {
     browser = FIREFOX_DEV;
   }
   return {
@@ -68,14 +67,15 @@ finicky.onUrl((url, opts) => {
   let browser = DEFAULT;
   const sourceApplication = opts && opts.sourceBundleIdentifier;
   switch (sourceApplication) {
-    case AIRMAIL:
     case ALFRED:
     case CAPRINE:
       browser = FIREFOX;
       break;
     case DASH:
+    case SLACK:
     case VSCODE:
       browser = FIREFOX_DEV;
+      break;
     default:
       break;
   }
