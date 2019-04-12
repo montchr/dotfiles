@@ -16,6 +16,6 @@ pip install requests
 # http://beets.readthedocs.io/en/v1.4.5/plugins/chroma.html
 pip install pyacoustid
 
-if [ ! -d "$DOTFILES/beets" ]; then
+if [ ! -d "$HOME/.config/beets" ]; then
   ln -s $DOTFILES/beets $HOME/.config/beets
 fi
