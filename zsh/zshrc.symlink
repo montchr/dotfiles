@@ -77,6 +77,16 @@ unset config_files
 # Expand aliases for completion
 setopt no_complete_aliases
 
+# case insensitive (all), partial-word and substring completion
+# https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/completion.zsh
+# only uncomment one of these at a time
+# case sensitive
+# zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
+# hyphen sensitive
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+# hyphen insensitive
+# zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+
 # Allow UTF-8 input and output, instead of showing stuff like $'\0123\0456'
 set input-meta on
 set output-meta on
