@@ -39,6 +39,13 @@ antigen apply
 typeset -U config_files
 config_files=($DOTFILES/**/*.zsh)
 
+# Load NodeVersionManager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Load rbenv
+eval "$(rbenv init -)"
+
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
@@ -83,15 +90,8 @@ backward-kill-dir () {
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
 
-# Load NodeVersionManager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Load iTerm shell integration if installed
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# Load rbenv
-eval "$(rbenv init -)"
 
 # zsh syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
