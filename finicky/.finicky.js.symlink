@@ -4,24 +4,29 @@
 const FIREFOX = 'org.mozilla.firefox';
 const FIREFOX_DEV = 'org.mozilla.firefoxdeveloperedition';
 const CHROME = 'com.google.Chrome';
-const DEFAULT = FIREFOX;
+
+const DEFAULT_BROWSER = FIREFOX;
+const WORK_BROWSER = CHROME;
 
 // Source applications
-const VSCODE = 'com.microsoft.VSCode';
 const AIRMAIL = 'it.bloop.airmail2';
-const TWEETBOT = 'com.tapbots.Tweetbot3Mac';
 const ALFRED = 'com.runningwithcrayons.Alfred-3';
 const CAPRINE = 'com.sindresorhus.caprine';
 const DASH = 'com.kapeli.dashdoc';
+const FANTASTICAL = 'com.flexibits.fantastical2.mac';
+const HARVEST = 'com.getharvest.harvestx';
+const ITERM = 'com.googlecode.iterm2';
 const SLACK = 'com.tinyspeck.slackmacgap';
+const TWEETBOT = 'com.tapbots.Tweetbot3Mac';
+const VSCODE = 'com.microsoft.VSCode';
 
 const EMPLOYER = 'alley';
 
 
-finicky.setDefaultBrowser(DEFAULT);
+finicky.setDefaultBrowser(DEFAULT_BROWSER);
 
 finicky.onUrl((url, opts) => {
-  let browser = DEFAULT;
+  let browser = DEFAULT_BROWSER;
   const flags = opts.flags;
   if (flags.cmd) {
     browser = FIREFOX;
@@ -33,9 +38,9 @@ finicky.onUrl((url, opts) => {
 
 // Open social network links in Firefox
 finicky.onUrl((url, opts) => {
-  let browser = DEFAULT;
+  let browser = DEFAULT_BROWSER;
   if (url.match(/^https?:\/\/(github|atlassian|alley|google)\./)) {
-    browser = FIREFOX_DEV;
+    browser = WORK_BROWSER;
   }
   return {
     bundleIdentifier: browser
@@ -64,7 +69,7 @@ finicky.onUrl((url, opts) => {
 
 // Always open links from some applications in specific browsers
 finicky.onUrl((url, opts) => {
-  let browser = DEFAULT;
+  let browser = DEFAULT_BROWSER;
   const sourceApplication = opts && opts.sourceBundleIdentifier;
   switch (sourceApplication) {
     case ALFRED:
@@ -72,9 +77,12 @@ finicky.onUrl((url, opts) => {
       browser = FIREFOX;
       break;
     case DASH:
+    case FANTASTICAL:
+    case HARVEST:
+    case ITERM:
     case SLACK:
     case VSCODE:
-      browser = FIREFOX_DEV;
+      browser = WORK_BROWSER;
       break;
     default:
       break;
