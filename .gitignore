@@ -19,3 +19,4 @@ zsh/antigen.zsh
 # Ignore repos contained within
 perspective-icons
 hcl/config
+beets/beets
