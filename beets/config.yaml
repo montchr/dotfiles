@@ -1,6 +1,6 @@
 library: ~/Music/library/library.db
 directory: ~/Music/library/files
-plugins: chroma bandcamp discogs embedart fetchart importfeeds lastgenre
+plugins: chroma bandcamp discogs embedart fetchart importfeeds lastgenre replaygain
 
 # Use English names if possible
 languages:
@@ -35,3 +35,7 @@ lastgenre:
   # separator: ', '
   # source: album
   whitelist: ~/.config/beets/whitelist.txt
+
+replaygain:
+  auto: yes
+  backend: command
