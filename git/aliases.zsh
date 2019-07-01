@@ -21,6 +21,7 @@ alias gb="git branch"
 # Output the current branch name
 # alias gbn='echo $(git rev-parse --abbrev-ref HEAD)'
 alias gm="git merge --no-edit"
+alias gmt="git mergetool"
 alias gcp="git cherry-pick"
 
 # remotes
@@ -28,6 +29,7 @@ alias gpl="git pull"
 alias gplo='git pull origin'
 alias gpls="git pull && gsumo"
 alias gps="git push"
+alias gpsu="git push -u"
 alias gpso="git push origin"
 alias gpss="git push && gsumo"
 
