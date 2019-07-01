@@ -89,7 +89,5 @@
 	program = gpg
 [rerere]
 	enabled = true
-[branch]
-        autosetupmerge = always
 [fetch]
 	recurseSubmodules = true
