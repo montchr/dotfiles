@@ -16,7 +16,9 @@ const DASH = 'com.kapeli.dashdoc';
 const FANTASTICAL = 'com.flexibits.fantastical2.mac';
 const HARVEST = 'com.getharvest.harvestx';
 const ITERM = 'com.googlecode.iterm2';
+const NOTEPLAN = 'co.noteplan.NotePlan';
 const SLACK = 'com.tinyspeck.slackmacgap';
+const TASKPAPER = 'com.hogbaysoftware.TaskPaper3.direct';
 const TWEETBOT = 'com.tapbots.Tweetbot3Mac';
 const VSCODE = 'com.microsoft.VSCode';
 
@@ -80,7 +82,9 @@ finicky.onUrl((url, opts) => {
     case FANTASTICAL:
     case HARVEST:
     case ITERM:
+    case NOTEPLAN:
     case SLACK:
+    case TASKPAPER:
     case VSCODE:
       browser = WORK_BROWSER;
       break;
