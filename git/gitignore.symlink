@@ -47,6 +47,7 @@ Thumbs.db
 *.sass-cache
 *.sw?
 *.vi
+*.bak
 
 # Credentials and Sensitive Info
 sftp-config.json
