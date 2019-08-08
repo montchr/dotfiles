@@ -20,3 +20,6 @@ zsh/antigen.zsh
 perspective-icons
 hcl/config
 beets/beets
+
+# The `pstorm` command is generated automatically by PhpStorm and is specific to the machine
+bin/pstorm
