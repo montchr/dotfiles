@@ -91,3 +91,5 @@
 	enabled = true
 [fetch]
 	recurseSubmodules = true
+[init]
+	templatedir = ~/.git-templates

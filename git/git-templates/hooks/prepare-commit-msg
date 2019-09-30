@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Prepare Commit Message
+# ~/.git-templates/hooks/
+#
+# https://github.com/goodguyry/dotfiles/blob/master/dev/prepare-commit-msg
+#
+
+if [ -z "$BRANCHES_TO_SKIP" ]; then
+  BRANCHES_TO_SKIP=(master develop test production preprod staging qa);
+fi;
+
+BRANCH_NAME=$(git symbolic-ref --short HEAD);
+BRANCH_NAME=$(echo "${BRANCH_NAME}" | tr '[:lower:]' '[:upper:]');
+
+BRANCH_EXCLUDED=$(printf "%s\n" "${BRANCHES_TO_SKIP[@]}" | grep -c "^$BRANCH_NAME$");
+
+if [[ "${BRANCH_NAME}" =~ ([A-Z]{2,4}-[0-9]{1,4}) ]]; then
+  # Verify branch name
+  if ! [[ $BRANCH_EXCLUDED -eq 1 ]] && ! [[ $BRANCH_IN_COMMIT -ge 1 ]]; then
+    sed -i.bak -e "1s/^/${BASH_REMATCH[1]} /" $1;
+  fi;
+fi;
