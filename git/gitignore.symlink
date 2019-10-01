@@ -56,3 +56,6 @@ sftp-config.json
 .timetrap-sheet
 TODO
 .envrc
+
+# Other stuff
+upgrade
