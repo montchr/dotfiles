@@ -2,9 +2,11 @@
 
 export DOTFILES=$HOME/.dotfiles
 
+exit 0
+
 # Install the latest version of Beets from GitHub
 BEETS_SRC_DIR=$DOTFILES/beets/beets
-pip uninstall beets
+# pip uninstall beets
 if [ -d $BEETS_SRC_DIR ]; then
   cd $BEETS_SRC_DIR
   git pull
