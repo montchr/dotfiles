@@ -32,6 +32,7 @@ Thumbs.db
 .tern-project
 .tags*
 .vscode
+.idea
 
 # Files that might appear on external disks
 .Spotlight-V100
