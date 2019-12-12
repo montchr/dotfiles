@@ -21,7 +21,6 @@
   "homepage": "https://github.com/montchr/dotfiles#readme",
   "dependencies": {
     "grunt-cli": "^1.2.0",
-    "hint": "^3.4.4",
     "lorem-ipsum": "^2.0.3",
     "random-word": "^2.0.0",
     "random-word-cli": "^1.0.0"
