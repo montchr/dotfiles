@@ -20,9 +20,13 @@
   },
   "homepage": "https://github.com/montchr/dotfiles#readme",
   "dependencies": {
+    "diff-so-fancy": "^1.2.7",
+    "git-open": "^2.1.0",
+    "git-recent": "^1.1.1",
     "grunt-cli": "^1.2.0",
     "lorem-ipsum": "^2.0.3",
     "random-word": "^2.0.0",
-    "random-word-cli": "^1.0.0"
+    "random-word-cli": "^1.0.0",
+    "trash-cli": "^3.0.0"
   }
 }
