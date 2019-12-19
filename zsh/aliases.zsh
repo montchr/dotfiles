@@ -35,3 +35,5 @@ alias egrep='egrep --color=auto'
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"
+
+alias rm=trash
