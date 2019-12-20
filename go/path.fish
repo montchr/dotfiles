@@ -1,3 +1,3 @@
 set -x GOPATH $HOME/gocode/
-set -x PATH /usr/local/opt/go/libexec/bin $PATH
-set -x PATH $GOPATH/bin $PATH
+set -xp PATH /usr/local/opt/go/libexec/bin
+set -xp PATH $GOPATH/bin
