@@ -19,4 +19,8 @@ for func_dir in $DOTFILES/*/functions
     set fish_function_path $func_dir $fish_function_path
 end
 
+# rbenv
+status --is-interactive; and source (rbenv init -|psub)
+
+# starship
 starship init fish | source
