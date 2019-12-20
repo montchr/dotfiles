@@ -1,0 +1,20 @@
+Inbox:
+
+.dotfiles:
+	New Features:
+		- https://remysharp.com/2018/08/23/cli-improved
+		- nvm
+		- move fiels from bin to functions
+	Ideas:
+		- load fewer things directly on shell load
+			- move things to functions
+	Bugs:
+Archive:
+	- Starship @done(2019-12-20 13:44) @project(.dotfiles / New Features)
+	- exa @done(2019-12-20 13:44) @project(.dotfiles / New Features)
+Search Definitions:
+	Top Priority @search(@priority = 5 and not @done)
+	High Priority @search(@priority > 3 and not @done)
+	Maybe @search(@maybe)
+	Next @search(@na and not @done and not project = "Archive")
+
