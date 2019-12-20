@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 #
 # bootstrap installs things.
 
@@ -102,12 +102,30 @@ install_dotfiles () {
   done
 }
 
-change_shell () {
-  # Change default shell to Homebrew-installed zsh
-  if ! [ "$SHELL" = "$(command -v zsh)" ]; then
-    e_header "Changing login shell to the latest version of ZSH in your PATH..."
-    command -v zsh | sudo tee -a /etc/shells
-    sudo chsh -s "$(command -v zsh)" "${USER}"
+set_fish_shell() {
+  if grep --quiet fish <<< "$SHELL"; then
+    success "Fish shell is already set up."
+  else
+    substep_info "Adding fish executable to /etc/shells"
+    if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/fish" /etc/shells; then
+      substep_success "Fish executable already exists in /etc/shells."
+    else
+      if sudo bash -c "echo /usr/local/bin/fish >> /etc/shells"; then
+        substep_success "Fish executable added to /etc/shells."
+      else
+        substep_error "Failed adding Fish executable to /etc/shells."
+        return 1
+      fi
+    fi
+    substep_info "Changing shell to fish"
+    if sudo chsh -s /usr/local/bin/fish; then
+      substep_success "Changed shell to fish"
+    else
+      substep_error "Failed changing shell to fish"
+      return 2
+    fi
+    substep_info "Running fish initial setup"
+    fish -c "setup"
   fi
 }
 
@@ -117,10 +135,10 @@ vim_go () {
   # From @necolas' dotfiles
   #
   # Note that the `.symlink` files will still (needlessly) exist in the
-  # symlinked `~/.vim` directory, but they won't do anyone any harm there.
+  # symlinked `~/.vim` directory, but they won't do any harm there.
   e_header "Installing Vim things"
   ln -Fhfs "$DOTFILES_ROOT/vim" "$HOME/.vim"
-  e_success "You now has much Vim things"
+  e_success "Vim things installed."
 }
 
 setup_gitconfig
@@ -143,7 +161,7 @@ then
   fi
 fi
 
-change_shell
+set_fish_shell
 
 echo ''
 echo '  All installed!'
