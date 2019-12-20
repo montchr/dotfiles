@@ -7,3 +7,5 @@ gem 'rubocop'
 gem 'solargraph'
 gem 'timetrap'
 gem 'hcl'
+
+gem "mdless", "~> 1.0"
