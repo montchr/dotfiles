@@ -24,3 +24,4 @@ alias rm=trash
 alias reload="exec $SHELL -l"
 
 alias search="fd"
+alias man="tldr"
