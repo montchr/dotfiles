@@ -22,3 +22,6 @@ alias spacer="defaults write com.apple.dock persistent-apps -array-add '{tile-da
 
 # Launch Chrome with remote debugging support
 alias chrome-debug="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
+
+# Pipe my public key to my clipboard.
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"

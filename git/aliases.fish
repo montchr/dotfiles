@@ -1,5 +1,3 @@
-#!/bin/sh
-
 alias g="git"
 
 # See `scmpuff/env.zsh` for the `gl` alias

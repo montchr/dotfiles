@@ -1,8 +1,8 @@
-eval "$(gpgconf --launch gpg-agent)"
+eval (gpgconf --launch gpg-agent)
 
 # https://unix.stackexchange.com/questions/217737/pinentry-fails-with-gpg-agent-and-ssh
-export GPG_TTY=`/usr/bin/tty`
-export SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
+set -x GPG_TTY '/usr/bin/tty'
+set -x SSH_AUTH_SOCK "$HOME/.gnupg/S.gpg-agent.ssh"
 
 # In order for gpg to find gpg-agent, gpg-agent must be running, and there must be an env
 # variable pointing GPG to the gpg-agent socket. This little script, which must be sourced

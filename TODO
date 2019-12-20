@@ -1,15 +1,8 @@
 __Inbox__:
-- ask user for confirmation for a lot more things
-- submit PR to \@necolas' dotfiles fixing [`read -p` from within `seek_confirmation`](https://github.com/necolas/dotfiles/blob/master/lib/utils#L27)
-- get a goddamn good working cli for taskpaper- or similar-format todo lists... one that works with zsh.
-- resolve "stty: stdin isn't a terminal" error when running `script/install`
-- oh my zsh overwrites symlinked on first run
-- program the symlinking of all omz custom themes and plugins to `~/.oh-my-zsh/custom`
-- check for linux compatability
-- get color in the `brew doctor` subshell
-- don't return error if homebrew needs update - update will be done in next step
-- fix error in `script/install` where 'homebrew is sick' does not wait for confirmation, then throws error `sh: /lib/install.sh: No such file or directory`
-- actually get hub working
+- Starship
+- exa
+- https://remysharp.com/2018/08/23/cli-improved
+- scm breeze for fish
 
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
