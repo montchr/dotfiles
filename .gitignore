@@ -20,3 +20,5 @@ zsh/antigen.zsh
 perspective-icons
 hcl/config
 beets/beets
+
+fish_variables
