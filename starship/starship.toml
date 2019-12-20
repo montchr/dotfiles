@@ -1,0 +1,17 @@
+[git_branch]
+style = "green"
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
+
+[php]
+disabled = true
+
+[ruby]
+disabled = true
+
+[time]
+disabled = false

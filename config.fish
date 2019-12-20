@@ -18,3 +18,5 @@ end
 for func_dir in $DOTFILES/*/functions
     set fish_function_path $func_dir $fish_function_path
 end
+
+starship init fish | source
