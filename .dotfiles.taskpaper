@@ -3,12 +3,14 @@ Inbox:
 .dotfiles:
 	New Features:
 		- https://remysharp.com/2018/08/23/cli-improved
-		- nvm
+		- nvm @done(2019-12-20 14:07)
 		- move fiels from bin to functions
 	Ideas:
 		- load fewer things directly on shell load
 			- move things to functions
 	Bugs:
+		- maid dependency causes security issue
+			- consider ditching maid
 Archive:
 	- Starship @done(2019-12-20 13:44) @project(.dotfiles / New Features)
 	- exa @done(2019-12-20 13:44) @project(.dotfiles / New Features)
