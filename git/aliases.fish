@@ -1,10 +1,7 @@
 alias g="git"
 
-# See `scmpuff/env.zsh` for the `gl` alias
-
-alias gsumo="git submodule update --init --recursive"
-
 # commits / index
+alias ga='git add'
 alias gaa="git add --all"
 alias gap="git add -p"
 alias gdt="git difftool"
@@ -12,12 +9,13 @@ alias gc="git commit"
 alias gca="git commit --amend"
 # amend commit without editing message
 alias gcam="git commit --amend -C HEAD"
+alias gd='git diff'
+alias grs='git reset'
 
 # branches / refs
+alias gco='git checkout'
 alias gcob="git checkout -b"
 alias gb="git branch"
-# Output the current branch name
-# alias gbn='echo $(git rev-parse --abbrev-ref HEAD)'
 alias gm="git merge --no-edit"
 alias gmt="git mergetool"
 alias gcp="git cherry-pick"
@@ -45,7 +43,10 @@ alias gdl="git diff-tree --no-commit-id --name-only -r $1"
 alias gbl="git recent"
 
 # logs
+alias gl="git log --oneline --decorate -20"
 # List all the commits on the current branch ahead of master
 alias glb="git log --oneline --decorate \$GIT_PRIMARY_BRANCH.."
 # Based on https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs
 alias gla="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(green)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(bold cyan)%s%C(reset) %C(dim white)- %an%C(reset)%n''' --all"
+
+alias gsumo="git submodule update --init --recursive"
