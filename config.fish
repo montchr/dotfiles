@@ -24,3 +24,6 @@ status --is-interactive; and source (rbenv init -|psub)
 
 # starship
 starship init fish | source
+
+# direnv
+direnv hook fish | source
