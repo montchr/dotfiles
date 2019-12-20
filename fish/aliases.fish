@@ -20,3 +20,6 @@ alias egrep='egrep --color=auto'
 
 alias rm=trash
 alias cat=bat
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
