@@ -1,1 +1,0 @@
-set -x MICRO_TRUECOLOR 1
