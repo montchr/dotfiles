@@ -33,6 +33,7 @@ prompt_order = [
 
 [git_branch]
 style = "green"
+symbol = ""
 
 [time]
 disabled = false
