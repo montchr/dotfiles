@@ -6,11 +6,11 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 # Listing files
-alias l='exa -Falh'
+alias l='exa --all --oneline'
 alias ll='exa -Flagh --git'
 alias la='exa -Fal'
 alias lld='exa -Flagh --git --group-directories-first'
-alias ld='exa -lghF --git --group-directories-first'
+alias ld='exa -D1'
 alias tree='exa --tree'
 alias ls='grc ls'
 
