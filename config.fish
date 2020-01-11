@@ -31,3 +31,5 @@ starship init fish | source
 
 # direnv
 direnv hook fish | source
+
+if test -e "$HOME/.localrc"; source "$HOME/.localrc"; end
