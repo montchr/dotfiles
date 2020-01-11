@@ -1,6 +1,7 @@
 set -xg TERM "xterm-256color"
 set -xg DOTFILES "$HOME/.dotfiles"
 
+source "$DOTFILES/__abbreviations.fish"
 source "$DOTFILES/__aliases.fish"
 source "$DOTFILES/__env.fish"
 source "$DOTFILES/__path.fish"
