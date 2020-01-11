@@ -19,3 +19,7 @@ set -x MICRO_TRUECOLOR 1
 set -x SND "$HOME/Music/0-sounds-0"
 set -x SNDS "$HOME/Music/0-sounds-0/-- samples --"
 set -x SNDBACKUPS "$HOME/Music/0-sounds-0/--- backup ---"
+
+# nvm
+set -x NODE_VERSIONS ~/.nvm/versions/node/
+set -x NODE_VERSION_PREFIX 'v'
