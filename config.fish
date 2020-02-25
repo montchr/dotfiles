@@ -6,18 +6,16 @@ source "$DOTFILES/__aliases.fish"
 source "$DOTFILES/__env.fish"
 source "$DOTFILES/__path.fish"
 
-for completion_dir in $DOTFILES/fish/*/completions
-    set fish_complete_path $completion_dir $fish_complete_path
-end
+# Completions
+set -xp fish_complete_path $DOTFILES/completions
 for completion_dir in $DOTFILES/*/completions
-    set fish_complete_path $completion_dir $fish_complete_path
+    set -xp fish_complete_path $completion_dir
 end
 
-for func_dir in $DOTFILES/fish/*/functions
-    set fish_function_path $func_dir $fish_function_path
-end
+# Functions
+set -xp fish_function_path $DOTFILES/functions
 for func_dir in $DOTFILES/*/functions
-    set fish_function_path $func_dir $fish_function_path
+    set -xp fish_function_path $func_dir
 end
 
 # GPG
