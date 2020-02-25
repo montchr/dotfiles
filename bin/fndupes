@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# fndupes
-#
-# Find all filename duplicates in subdirectories
-# 
-# http://askubuntu.com/a/48611
-
-find . -type f -exec basename {} \; | sed 's/\(.*\)\..*/\1/' | sort | uniq -c | grep -v "^[ \t]*1 "

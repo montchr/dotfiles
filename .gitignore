@@ -1,5 +1,7 @@
 git/gitconfig.symlink
 
+*.taskpaper
+
 .viminfo
 .netrwhist
 tmp-jhbuild-revision
@@ -20,3 +22,5 @@ zsh/antigen.zsh
 perspective-icons
 hcl/config
 beets/beets
+
+fish_variables
