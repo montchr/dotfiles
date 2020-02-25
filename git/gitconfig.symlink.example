@@ -39,7 +39,7 @@
         count   = !git shortlog -sn
 
         # List recent branches
-        recent = for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(authorname) %(refname:short)'
+        recent = "!r(){git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)'|column -ts'|'}; r"
 
         # Temporarily ignore/unignore files, and list ignored files
         ignore = !git update-index --assume-unchanged

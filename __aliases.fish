@@ -74,9 +74,6 @@ alias gshl="git stash list"
 # Follow with commit hash
 alias gdl="git diff-tree --no-commit-id --name-only -r $1"
 
-# List branches ordered by most recent commit
-alias gbl="git recent"
-
 # logs
 alias gl="git log --oneline --decorate -20"
 # List all the commits on the current branch ahead of master

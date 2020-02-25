@@ -6,6 +6,7 @@ set -x ENHANCD_DISABLE_HYPHEN 1
 set -x GIT_EDITOR 'vim'
 # This can be overridden on a per-project basis using direnv
 set -x GIT_PRIMARY_BRANCH 'master'
+set -x SCMPUFF_GIT_CMD (which hub)
 
 # GPG
 # https://unix.stackexchange.com/questions/217737/pinentry-fails-with-gpg-agent-and-ssh
