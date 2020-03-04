@@ -7,15 +7,13 @@ source "$DOTFILES/__env.fish"
 source "$DOTFILES/__path.fish"
 
 # Completions
-set -xp fish_complete_path $DOTFILES/completions
 for completion_dir in $DOTFILES/*/completions
-    set -xp fish_complete_path $completion_dir
+  set -p fish_complete_path $completion_dir
 end
 
 # Functions
-set -xp fish_function_path $DOTFILES/functions
 for func_dir in $DOTFILES/*/functions
-    set -xp fish_function_path $func_dir
+  set -p fish_function_path $func_dir
 end
 
 # GPG
