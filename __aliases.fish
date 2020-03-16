@@ -21,8 +21,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Simple swapping
-alias man="tldr"
-alias rm=trash
+alias rm="trash"
 alias search="fd"
 
 # Reload the shell (i.e. invoke as a login shell)
