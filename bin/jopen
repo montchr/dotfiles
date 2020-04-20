@@ -1,7 +1,0 @@
-#!/bin/bash
-#
-# If the current branch name has a JIRA ticket, open it in the browser.
-
-this_branch=$(git rev-parse --abbrev-ref HEAD)
-this_ticket=$(echo "$this_branch" | egrep -oe "[A-Z0-9]+-[0-9]+")
-open -b 'com.google.Chrome' "https://alleyinteractive.atlassian.net/browse/$this_ticket"
