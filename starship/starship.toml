@@ -31,6 +31,11 @@ prompt_order = [
     "character",
 ]
 
+[directory]
+# truncate_to_repo = false
+truncation_length = 1
+fish_style_pwd_dir_length = 1
+
 [git_branch]
 style = "green"
 symbol = ""
