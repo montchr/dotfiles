@@ -56,6 +56,8 @@ sftp-config.json
 .timetrap-sheet
 TODO
 .envrc
+.scratch
 
 # Other stuff
 upgrade
+.php_cs.cache

@@ -47,6 +47,7 @@ alias gd='git diff'
 alias grs='git reset'
 
 # branches / refs
+alias gsw='git switch'
 alias gco='git checkout'
 alias gcob="git checkout -b"
 alias gb="git branch"
