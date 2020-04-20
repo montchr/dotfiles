@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'homebrew/cask-fonts'
+tap 'railwaycat/emacsmacport'
 
 brew 'coreutils'
 brew 'gnu-sed'
@@ -91,9 +92,8 @@ cask 'cardhop'
 cask 'cloudapp'
 cask 'colloquy'
 cask 'dash'
-# Assuming Dropbox is already installed because of its importance
-# cask 'dropbox'
 cask 'dupeguru'
+cask 'emacs-mac'
 cask 'fantastical'
 cask 'fastscripts'
 cask 'finicky'
