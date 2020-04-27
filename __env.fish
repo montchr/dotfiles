@@ -3,7 +3,7 @@ set -x ENHANCD_DISABLE_DOT 1
 set -x ENHANCD_DISABLE_HYPHEN 1
 
 # Git
-set -x GIT_EDITOR 'vim'
+set -x GIT_EDITOR 'emacs -nw'
 # This can be overridden on a per-project basis using direnv
 set -x GIT_PRIMARY_BRANCH 'master'
 set -x SCMPUFF_GIT_CMD (which hub)
