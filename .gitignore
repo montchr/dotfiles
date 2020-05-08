@@ -22,5 +22,6 @@ zsh/antigen.zsh
 perspective-icons
 hcl/config
 beets/beets
+emacs/emacs.d
 
 fish_variables
