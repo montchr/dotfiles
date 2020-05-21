@@ -57,7 +57,7 @@
         interactive = auto
 [core]
         excludesfile = ~/.gitignore
-	editor = micro
+	      editor = 'emacsclient -t'
         pager = diff-so-fancy | less -FXRi
 [apply]
         whitespace = nowarn

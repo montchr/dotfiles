@@ -28,6 +28,15 @@ alias search="fd"
 alias reload="exec $SHELL -l"
 
 #
+# Emacs
+#
+
+alias e='emacsclient -t'
+alias ec='emacsclient -c'
+alias vim='emacsclient -t'
+alias vi='emacsclient -t'
+
+#
 # Git
 #
 
