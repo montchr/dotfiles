@@ -88,9 +88,6 @@
 ;; https://tecosaur.github.io/emacs-config/config.html#windows
 (setq evil-vsplit-window-right t
       evil-split-window-below t)
-(defadvice! prompt-for-buffer (&rest _)
-  :after '(evil-window-split evil-window-vsplit)
-  (+ivy/switch-buffer))
 
 ;; Show previews in ivy.
 (setq +ivy-buffer-preview t)
