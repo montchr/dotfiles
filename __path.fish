@@ -6,6 +6,12 @@ set -xp PATH "$HOME/.maid/bin"
 # Use GNU coreutils before system coreutils
 set -xp PATH /usr/local/opt/coreutils/libexec/gnubin
 
+#
+# emacs / doom-emacs
+#
+
+set -xp PATH "$HOME/.emacs.d/bin"
+
 
 #
 # Golang
