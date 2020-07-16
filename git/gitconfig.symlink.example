@@ -92,4 +92,4 @@
 [fetch]
 	recurseSubmodules = true
 [init]
-	templatedir = ~/.git-templates
+	templateDir = ~/.git-templates
