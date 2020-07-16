@@ -16,9 +16,6 @@ for func_dir in $DOTFILES/*/functions
   set -p fish_function_path $func_dir
 end
 
-# GPG
-eval (gpgconf --launch gpg-agent)
-
 # rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
