@@ -1,5 +1,8 @@
 set -xp PATH "$DOTFILES/bin" "$HOME/bin" /usr/local/bin /usr/local/sbin
 
+# PHP
+set -xp PATH "$HOME/.composer/vendor/bin"
+
 # Maid
 set -xp PATH "$HOME/.maid/bin"
 
