@@ -1,5 +1,5 @@
 #!/bin/bash
 
-if [ ! -f "$HOME/.config/karabiner/karabiner.json" ] && [ ! -L "$HOME/.config/karabiner/karabiner.json" ]; then
-	ln -s "$DOTFILES/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
+if [ ! -d "$HOME/.config/karabiner" ] && [ ! -L "$HOME/.config/karabiner" ]; then
+	ln -s "$DOTFILES/karabiner" "$HOME/.config/karabiner"
 fi
