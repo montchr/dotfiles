@@ -16,6 +16,6 @@ if [ ! -d "$doom_private_dir" ] && [ ! -L "$doom_private_dir" ]; then
 fi
 
 # Symlink the org-mode directory.
-if [ ! -d "$HOME/Dropbox/org" ] && [ ! -L "$HOME/Dropbox/org" ]; then
+if [ ! -d "$HOME/org" ] && [ ! -L "$HOME/org" ]; then
 	ln -s "$HOME/Dropbox/org" "$HOME/org"
 fi
