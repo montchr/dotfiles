@@ -69,9 +69,7 @@
   truncate-string-ellipsis "…")
 
 ;; Allow the default macOS ~alt~ behavior for special keyboard chars.
-(setq ns-alternate-modifier 'none)
-(setq ns-command-modifier 'meta)
-(setq ns-right-command-modifier 'super)
+(setq ns-right-alternate-modifier 'none)
 
 ;; Autosave
 (setq auto-save-default t
