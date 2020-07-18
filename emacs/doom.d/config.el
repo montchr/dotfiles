@@ -26,6 +26,13 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-monokai-pro)
 
+(add-hook 'ns-system-appearance-change-functions
+          #'(lambda (appearance)
+              (mapc #'disable-theme custom-enabled-themes)
+              (pcase appearance
+                ('light (load-theme 'doom-one-light t))
+                ('dark (load-theme 'doom-monokai-pro t)))))
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
@@ -55,13 +62,6 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-;; Load and configure auto-dark-emacs
-(use-package! auto-dark-emacs
-  :custom
-  (auto-dark-emacs/dark-theme 'doom-monokai-pro)
-  (auto-dark-emacs/light-theme 'doom-one-light))
-
-
 ;; Simple settings.
 ;; https://tecosaur.github.io/emacs-config/config.html#simple-settings
 (setq undo-limit 80000000
@@ -74,10 +74,9 @@
 (setq ns-right-command-modifier 'super)
 
 ;; Autosave
-(setq auto-save-default t)
+(setq auto-save-default t
+      auto-save-no-message t)
 (add-hook 'auto-save-hook 'org-save-all-org-buffers)
-;; Silence autosave message -- available in Emacs 27 (not yet!)
-;; (setq auto-save-no-message t)
 
 ;; Add prompt to select buffer upon opening new window
 ;; https://tecosaur.github.io/emacs-config/config.html#windows
@@ -140,20 +139,3 @@
 
 ;; [BROKEN] Archive items to an archive sibling instead of a separate file
 (setq org-archive-default-command 'org-archive-to-archive-sibling)
-
-
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(auto-dark-emacs/dark-theme (quote doom-monokai-pro))
- '(auto-dark-emacs/light-theme (quote doom-one-light))
- '(package-selected-packages (quote (with-editor))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

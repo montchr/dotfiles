@@ -24,9 +24,8 @@ brew 'curl'
 brew 'ddate'
 brew 'direnv'
 brew 'ical-buddy'
-brew 'emacs-plus'
-# https://github.com/d12frosted/homebrew-emacs-plus/issues/195
-# brew 'emacs-plus', args: ['with-modern-icon-papirus']
+brew 'emacs-plus@27', args: ['with-modern-papirus-icon']
+brew 'editorconfig' # For faster editorconfig in emacs.
 brew 'exa'
 brew 'fd'
 brew 'fish'
@@ -59,7 +58,6 @@ brew 'phpunit'
 brew 'pinentry-mac'
 brew 'postgresql'
 brew 'pkg-config'
-brew 'python2'
 brew 'python3'
 brew 'rbenv'
 brew 'rclone'
