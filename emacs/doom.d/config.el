@@ -125,8 +125,8 @@
         ""
         :immediate-finish t
         :file-name "%<%Y-%m-%d>"
-        :head "#+title: %<%A, %d %B %Y>"))
-  ))
+        :head "#+title: %<%A, %d %B %Y>")))
+  (setq +org-roam-open-buffer-on-find-file nil))
 
 ;; Configure org-journal for compatability with org-roam-dailies
 (use-package! org-journal
