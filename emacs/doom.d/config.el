@@ -62,6 +62,10 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
+(use-package! doct
+  :ensure t
+  :commands (doct))
+
 ;; Simple settings.
 ;; https://tecosaur.github.io/emacs-config/config.html#simple-settings
 (setq undo-limit 80000000
