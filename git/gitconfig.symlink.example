@@ -93,3 +93,5 @@
 	recurseSubmodules = true
 [init]
 	templateDir = ~/.git-templates
+[pull]
+	rebase = false
