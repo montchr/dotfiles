@@ -5,8 +5,6 @@
 set -e
 
 DOTFILES_ROOT="$(pwd)"
-# Because oh-my-zsh hasn't yet set up $ZSH, declare it here first
-ZSH="$HOME/.oh-my-zsh"
 
 echo ''
 
@@ -146,12 +144,18 @@ install_dotfiles
 vim_go
 
 # Set macOS defaults
-$DOTFILES_ROOT/macos/set-defaults.sh
+if [ "$(uname -s)" == "Darwin" ]; then
+  $DOTFILES_ROOT/macos/set-defaults.sh
+fi
 
-# If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
+if test ! $(which brew)
 then
-  e_header "Installing dependencies"
+  e_header "Installing Homebrew"
+
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+
+e_header "Installing dependencies"
   source bin/dot 2> /tmp/dotfiles-dot
   if [[ $? ]]
   then
@@ -159,7 +163,6 @@ then
   else
     e_fail "Error installing dependencies"
   fi
-fi
 
 set_fish_shell
 

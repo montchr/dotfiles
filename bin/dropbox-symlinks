@@ -21,7 +21,6 @@ DROPBOX="$HOME/Dropbox"
 APP_SUP="$HOME/Library/Application Support"
 APP_SCRIPTS="$HOME/Library/Application Scripts"
 
-# If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]; then
   seek_confirmation "Do you want to symlink Dropbox's versions of macOS user directories e.g. Music? This will delete all existing data in those directories!"
   if is_confirmed; then
