@@ -7,3 +7,6 @@
 [submodule "alfred/workflows/gifs"]
 	path = alfred/workflows/gifs
 	url = git@github.com:montchr/alfred-gifs.git
+[submodule "emacs/doom.d"]
+	path = emacs/doom.d
+	url = git@github.com:montchr/doom.d.git
