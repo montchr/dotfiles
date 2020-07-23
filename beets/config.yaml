@@ -1,5 +1,3 @@
-library: ~/Music/library/library.db
-directory: ~/Music/library/files
 plugins: chroma bandcamp discogs embedart fetchart importfeeds lastgenre replaygain
 
 # Use English names if possible
@@ -18,7 +16,6 @@ bandcamp:
 
 importfeeds:
   absolute_path: yes
-  dir: ~/Music/library/imports
   formats: link
 
 fetchart:
