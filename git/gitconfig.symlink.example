@@ -45,7 +45,7 @@
 [hub]
         protocol = https
 [credential]
-        helper = osxkeychain
+        helper = cache
 [color]
         diff = auto
         status = auto
@@ -54,20 +54,13 @@
         interactive = auto
 [core]
         excludesfile = ~/.gitignore
-	      editor = 'emacsclient -t'
         pager = diff-so-fancy | less -FXRi
 [apply]
         whitespace = nowarn
-[merge]
-	tool = vscode
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
-[diff]
-	tool = vscode
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [pretty]
         # tut: http://gitimmersion.com/lab_10.html
@@ -88,3 +81,5 @@
 	templateDir = ~/.git-templates
 [pull]
 	rebase = false
+[include]
+  path = .gitconfig-os
