@@ -33,9 +33,6 @@
         unstage = reset HEAD --
 
         co = checkout
-        promote = !$DOTFILES/bin/git-promote
-        wtf     = !$DOTFILES/bin/git-wtf
-        rank-contributors = !$DOTFILES/bin/git-rank-contributors
         count   = !git shortlog -sn
 
         # List recent branches
@@ -48,7 +45,7 @@
 [hub]
         protocol = https
 [credential]
-        helper = osxkeychain
+        helper = cache
 [color]
         diff = auto
         status = auto
@@ -57,20 +54,13 @@
         interactive = auto
 [core]
         excludesfile = ~/.gitignore
-	      editor = 'emacsclient -t'
         pager = diff-so-fancy | less -FXRi
 [apply]
         whitespace = nowarn
-[merge]
-	tool = vscode
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
-[diff]
-	tool = vscode
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [pretty]
         # tut: http://gitimmersion.com/lab_10.html
@@ -83,10 +73,6 @@
         # See `git help config` (search for push.default)
         # for more information on different options of the below setting.
         default = current
-[commit]
-	gpgsign = false
-[gpg]
-	program = gpg
 [rerere]
 	enabled = true
 [fetch]
@@ -95,3 +81,5 @@
 	templateDir = ~/.git-templates
 [pull]
 	rebase = false
+[include]
+  path = .gitconfig-os

@@ -8,11 +8,11 @@ exit 0
 BEETS_SRC_DIR=$DOTFILES/beets/beets
 # pip uninstall beets
 if [ -d $BEETS_SRC_DIR ]; then
-  cd $BEETS_SRC_DIR
-  git pull
+	cd $BEETS_SRC_DIR
+	git pull
 else
-  git clone https://github.com/beetbox/beets.git $BEETS_SRC_DIR
-  cd $BEETS_SRC_DIR
+	git clone https://github.com/beetbox/beets.git $BEETS_SRC_DIR
+	cd $BEETS_SRC_DIR
 fi
 pip install -e .
 cd $DOTFILES
@@ -27,5 +27,9 @@ pip install requests
 pip install pyacoustid
 
 if [ ! -d "$HOME/.config/beets" ] && [ ! -L "$HOME/.config/beets" ]; then
-  ln -s $DOTFILES/beets $HOME/.config/beets
+	ln -s $DOTFILES/beets $HOME/.config/beets
 fi
+
+# if [ ! -f "$DOTFILES/beets/local-config.yaml" ]; then
+#   cp "$DOTFILES/beets/local-config.yaml.example" "$DOTFILES/beets/local-config.yaml"
+# fi

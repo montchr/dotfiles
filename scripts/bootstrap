@@ -16,10 +16,10 @@ setup_gitconfig () {
   then
     e_header 'Setup gitconfig'
 
-    git_credential='cache'
-    if [ "$(uname -s)" == "Darwin" ]
-    then
-      git_credential='osxkeychain'
+    if [ "$(uname -s)" == "Darwin" ]; then
+      cp git/gitconfig-macos.symlink.example git/gitconfig-os.symlink
+    elif [ $(uname -s) == "Linux" ]; then
+      cp git/gitconfig-linux.symlink.example git/gitconfig-os.symlink
     fi
 
     e_header ' - What is your github author name?'
@@ -27,7 +27,7 @@ setup_gitconfig () {
     e_header ' - What is your github author email?'
     read -e git_authoremail
 
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink
+    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" git/gitconfig.symlink.example > git/gitconfig.symlink
 
     e_success 'gitconfig'
   fi
@@ -153,6 +153,14 @@ then
   e_header "Installing Homebrew"
 
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+
+if [ ! -f "$DOTFILES_ROOT/Brewfile" ] && [ ! -L "$DOTFILES_ROOT/Brewfile" ]; then
+  if [ "$(uname -s)" == "Darwin" ]; then
+    cp "$DOTFILES_ROOT/Brewfile.macos.example" "$DOTFILES_ROOT/Brewfile"
+  else
+    cp "$DOTFILES_ROOT/Brewfile.linux.example" "$DOTFILES_ROOT/Brewfile"
+  fi
 fi
 
 e_header "Installing dependencies"
