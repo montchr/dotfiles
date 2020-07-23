@@ -155,6 +155,14 @@ then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
+if [ ! -f "$DOTFILES_ROOT/Brewfile" ] && [ ! -L "$DOTFILES_ROOT/Brewfile" ]; then
+  if [ "$(uname -s)" == "Darwin" ]; then
+    cp "$DOTFILES_ROOT/Brewfile.macos.example" "$DOTFILES_ROOT/Brewfile"
+  else
+    cp "$DOTFILES_ROOT/Brewfile.linux.example" "$DOTFILES_ROOT/Brewfile"
+  fi
+fi
+
 e_header "Installing dependencies"
   source bin/dot 2> /tmp/dotfiles-dot
   if [[ $? ]]

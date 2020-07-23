@@ -1,11 +1,13 @@
 git/gitconfig.symlink
 
+# Copy the Brewfile from one of the OS-specific example files.
+Brewfile
+
 *.taskpaper
 
 .viminfo
 .netrwhist
 tmp-jhbuild-revision
-
 vim/bundle/*
 !vim/bundle/Vundle.vim
 
