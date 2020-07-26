@@ -13,8 +13,14 @@ source $HOME/.dotfiles/lib/utils.zsh
 export DOTFILES=$HOME/.dotfiles
 
 # Install/update homebrew packages
-$DOTFILES/homebrew/install.sh 2>&1
+set +e
+echo "> brew update"
 brew update
+
+echo "> brew bundle"
+brew bundle
+
+set -e
 
 # Install software
 $DOTFILES/scripts/install

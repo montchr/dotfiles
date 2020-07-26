@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 #
 # bootstrap installs things.
 
@@ -135,7 +135,7 @@ vim_go () {
   # Note that the `.symlink` files will still (needlessly) exist in the
   # symlinked `~/.vim` directory, but they won't do any harm there.
   e_header "Installing Vim things"
-  ln -Fhfs "$DOTFILES_ROOT/vim" "$HOME/.vim"
+  ln -Ffs "$DOTFILES_ROOT/vim" "$HOME/.vim"
   e_success "Vim things installed."
 }
 
