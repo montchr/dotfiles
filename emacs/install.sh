@@ -17,7 +17,6 @@ fi
 
 # Update or install doom-emacs.
 if [ -d "$doom_private_dir" ] && [ -L "$doom_private_dir" ]; then
-	doom upgrade
 	doom env
 	doom sync
 else
