@@ -12,14 +12,16 @@ echo ''
 source "$HOME/.dotfiles/lib/utils.zsh"
 
 setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]
+  local_config="git/gitconfig.local.symlink"
+  if ! [ -f $local_config ]
   then
     e_header 'Setup gitconfig'
 
+
     if [ "$(uname -s)" == "Darwin" ]; then
-      cp git/gitconfig-macos.symlink.example git/gitconfig-os.symlink
+      cp git/gitconfig-macos.symlink.example $local_config
     elif [ $(uname -s) == "Linux" ]; then
-      cp git/gitconfig-linux.symlink.example git/gitconfig-os.symlink
+      cp git/gitconfig-linux.symlink.example $local_config
     fi
 
     e_header ' - What is your github author name?'
@@ -27,7 +29,7 @@ setup_gitconfig () {
     e_header ' - What is your github author email?'
     read -e git_authoremail
 
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" git/gitconfig.symlink.example > git/gitconfig.symlink
+    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" $local_config
 
     e_success 'gitconfig'
   fi
