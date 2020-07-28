@@ -1,12 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 
 export DOTFILES=$HOME/.dotfiles
 
-exit 0
-
 # Install the latest version of Beets from GitHub
 BEETS_SRC_DIR=$DOTFILES/beets/beets
-# pip uninstall beets
 if [ -d $BEETS_SRC_DIR ]; then
 	cd $BEETS_SRC_DIR
 	git pull
@@ -14,22 +11,26 @@ else
 	git clone https://github.com/beetbox/beets.git $BEETS_SRC_DIR
 	cd $BEETS_SRC_DIR
 fi
-pip install -e .
+python3 setup.py install
 cd $DOTFILES
 
-pip install discogs-client
-pip install beets-bandcamp
+pip3 install discogs-client
+pip3 install beets-bandcamp
 # Beets: LastGenre
-pip install pylast
+pip3 install pylast
 # Beets: FetchArt
-pip install requests
+pip3 install requests
 # Beets: Chromaprint/Acoustid
-pip install pyacoustid
+pip3 install pyacoustid
 
 if [ ! -d "$HOME/.config/beets" ] && [ ! -L "$HOME/.config/beets" ]; then
 	ln -s $DOTFILES/beets $HOME/.config/beets
 fi
 
+# Don't do this automatically because the values need to be configured properly.
+# @todo prompt for the values
 # if [ ! -f "$DOTFILES/beets/local-config.yaml" ]; then
 #   cp "$DOTFILES/beets/local-config.yaml.example" "$DOTFILES/beets/local-config.yaml"
 # fi
+
+pip3 install --user betanin

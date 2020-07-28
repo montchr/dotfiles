@@ -12,14 +12,16 @@ echo ''
 source "$HOME/.dotfiles/lib/utils.zsh"
 
 setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]
+  local_config="git/gitconfig.local.symlink"
+  if ! [ -f $local_config ]
   then
     e_header 'Setup gitconfig'
 
+
     if [ "$(uname -s)" == "Darwin" ]; then
-      cp git/gitconfig-macos.symlink.example git/gitconfig-os.symlink
+      cp git/gitconfig-macos.symlink.example $local_config
     elif [ $(uname -s) == "Linux" ]; then
-      cp git/gitconfig-linux.symlink.example git/gitconfig-os.symlink
+      cp git/gitconfig-linux.symlink.example $local_config
     fi
 
     e_header ' - What is your github author name?'
@@ -27,7 +29,7 @@ setup_gitconfig () {
     e_header ' - What is your github author email?'
     read -e git_authoremail
 
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" git/gitconfig.symlink.example > git/gitconfig.symlink
+    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" $local_config
 
     e_success 'gitconfig'
   fi
@@ -104,26 +106,28 @@ set_fish_shell() {
   if grep --quiet fish <<< "$SHELL"; then
     success "Fish shell is already set up."
   else
-    substep_info "Adding fish executable to /etc/shells"
-    if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/fish" /etc/shells; then
-      substep_success "Fish executable already exists in /etc/shells."
+    e_header "Adding fish executable to /etc/shells"
+    if grep --fixed-strings --line-regexp --quiet "$(brew --prefix)/bin/fish" /etc/shells; then
+      e_success "Fish executable already exists in /etc/shells."
     else
-      if sudo bash -c "echo /usr/local/bin/fish >> /etc/shells"; then
-        substep_success "Fish executable added to /etc/shells."
+      if sudo bash -c "echo $(brew --prefix)/bin/fish >> /etc/shells"; then
+        e_success "Fish executable added to /etc/shells."
       else
-        substep_error "Failed adding Fish executable to /etc/shells."
+        e_error "Failed adding Fish executable to /etc/shells."
         return 1
       fi
     fi
-    substep_info "Changing shell to fish"
-    if sudo chsh -s /usr/local/bin/fish; then
-      substep_success "Changed shell to fish"
+    e_header "Changing shell to fish"
+    if chsh -s $(brew --prefix)/bin/fish; then
+      e_success "Changed shell to fish"
     else
-      substep_error "Failed changing shell to fish"
+      e_error "Failed changing shell to fish"
       return 2
     fi
-    substep_info "Running fish initial setup"
-    fish -c "setup"
+    if [ ! -L "$HOME/.config/fish" ]; then
+      rm -rf "$HOME/.config/fish"
+      ln -s "$DOTFILES" "$HOME/.config/fish"
+    fi
   fi
 }
 

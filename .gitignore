@@ -1,8 +1,8 @@
-git/gitconfig.symlink
-git/gitconfig-os.symlink
+git/gitconfig.local.symlink
 
 # Copy the Brewfile from one of the OS-specific example files.
 Brewfile
+Brewfile.lock.json
 
 *.taskpaper
 
@@ -13,6 +13,7 @@ vim/bundle/*
 !vim/bundle/Vundle.vim
 
 # Beets
+library.db
 state.pickle
 discogs_token.json
 local-config.yaml

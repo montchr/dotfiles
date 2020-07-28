@@ -1,3 +1,8 @@
+# Non-interactive users (sshy, sync)
+if not status --is-interactive
+    exit # Skips the rest of this file, not exiting the shell
+end
+
 set -xg TERM "xterm-256color"
 set -xg DOTFILES "$HOME/.dotfiles"
 
@@ -8,12 +13,12 @@ source "$DOTFILES/__path.fish"
 
 # Completions
 for completion_dir in $DOTFILES/*/completions
-  set -p fish_complete_path $completion_dir
+    set -p fish_complete_path $completion_dir
 end
 
 # Functions
 for func_dir in $DOTFILES/*/functions
-  set -p fish_function_path $func_dir
+    set -p fish_function_path $func_dir
 end
 
 # rbenv
@@ -25,10 +30,12 @@ starship init fish | source
 # direnv
 direnv hook fish | source
 
-if test -e "$HOME/.localrc"; source "$HOME/.localrc"; end
+if test -e "$HOME/.localrc"
+    source "$HOME/.localrc"
+end
 
 # emacs-libvterm integration
-function vterm_printf;
+function vterm_printf
     if [ -n "$TMUX" ]
         # tell tmux to pass the escape sequences through
         # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)

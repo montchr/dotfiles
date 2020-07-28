@@ -1,4 +1,8 @@
-set -xp PATH "$DOTFILES/bin" "$HOME/bin" /usr/local/bin /usr/local/sbin
+# Homebrew
+set -xp PATH /usr/local/bin /home/linuxbrew/.linuxbrew/bin /usr/local/sbin
+
+# Custom sources
+set -xp PATH "$DOTFILES/bin" "$HOME/bin"
 
 # PHP
 set -xp PATH "$HOME/.composer/vendor/bin"
@@ -48,7 +52,7 @@ set -xp PATH "$HOME/.yarn/bin" "$HOME/.config/yarn/global/node_modules/.bin"
 # PHP
 #
 
-set -xp PATH "(brew --prefix php)/bin"
+set -xp PATH (brew --prefix php)/bin
 set -xp PATH "$HOME/.wp-cli/bin"
 
 

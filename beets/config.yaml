@@ -1,11 +1,24 @@
-plugins: inline chroma bandcamp discogs embedart fetchart importfeeds lastgenre replaygain
+include:
+  - local-config.yaml
+
+plugins:
+  - bandcamp
+  - chroma
+  - discogs
+  - embedart
+  - fetchart
+  - inline
+  - lastgenre
+  - plexupdate
+  - replaygain
 
 paths:
-  default: $albumartist/$album%aunique{}/%if{$multidisc,Disc $disc/}$track $title
-  comp: Various Artists/$album%aunique{}/%if{$multidisc,Disc $disc/}$track $title
+  default: $albumartist/$album%aunique{}/%if{$multidisc,Disc $disc/}$track - $title
+  comp: Various Artists/$album%aunique{}/%if{$multidisc,Disc $disc/}$track - $title
 
 item_fields:
   multidisc: 1 if disctotal > 1 else 0
+  artist_differs: 1 if albumartist != artist else 0
 
 # Use English names if possible
 languages:
@@ -32,10 +45,6 @@ ui:
 
 bandcamp:
   art: true
-
-importfeeds:
-  absolute_path: yes
-  formats: link
 
 fetchart:
   sources: filesystem coverart discogs amazon albumart
