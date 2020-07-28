@@ -13,6 +13,7 @@ vim/bundle/*
 !vim/bundle/Vundle.vim
 
 # Beets
+library.db
 state.pickle
 discogs_token.json
 local-config.yaml
