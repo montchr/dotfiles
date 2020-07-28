@@ -13,8 +13,8 @@ plugins:
   - replaygain
 
 paths:
-  default: $albumartist/$album%aunique{}/%if{$multidisc,Disc $disc/}$track $title
-  comp: Various Artists/$album%aunique{}/%if{$multidisc,Disc $disc/}$track $title
+  default: $albumartist/$album%aunique{}/%if{$multidisc,Disc $disc/}$track - $title
+  comp: Various Artists/$album%aunique{}/%if{$multidisc,Disc $disc/}$track - $title
 
 item_fields:
   multidisc: 1 if disctotal > 1 else 0
