@@ -2,11 +2,14 @@ include:
   - local-config.yaml
 
 plugins:
-  - bandcamp
+  #  - bandcamp # broken, see https://github.com/unrblt/beets-bandcamp/issues/13
   - chroma
   - discogs
+  - edit
   - embedart
   - fetchart
+  - importadded
+  - info
   - inline
   - lastgenre
   - plexupdate
@@ -16,6 +19,7 @@ paths:
   default: $albumartist/$album%aunique{}/%if{$multidisc,Disc $disc/}$track - $title
   comp: Various Artists/$album%aunique{}/%if{$multidisc,Disc $disc/}$track - $title
 
+# https://beets.readthedocs.io/en/stable/plugins/inline.html
 item_fields:
   multidisc: 1 if disctotal > 1 else 0
   artist_differs: 1 if albumartist != artist else 0
@@ -43,12 +47,19 @@ ui:
     action: blue
   bell: yes
 
+# beets-bandcamp plugin
+# https://github.com/unrblt/beets-bandcamp/
+# BROKEN! See https://github.com/unrblt/beets-bandcamp/issues/13
 bandcamp:
   art: true
 
+# FetchArt plugin
+# https://beets.readthedocs.io/en/stable/plugins/fetchart.html
 fetchart:
   sources: filesystem coverart discogs amazon albumart
 
+# LastGenre plugin
+# https://beets.readthedocs.io/en/stable/plugins/lastgenre.html
 lastgenre:
   # auto: yes
   canonical: ~/.config/beets/canonical.txt
@@ -61,6 +72,8 @@ lastgenre:
   # source: album
   whitelist: ~/.config/beets/whitelist.txt
 
+# ReplayGain plugin
+# https://beets.readthedocs.io/en/stable/plugins/replaygain.html
 replaygain:
   auto: yes
   backend: command
