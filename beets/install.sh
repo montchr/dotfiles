@@ -15,12 +15,10 @@ python3 setup.py install
 cd $DOTFILES
 
 pip3 install discogs-client
-pip3 install beets-bandcamp
+# pip3 install beets-bandcamp
 pip3 install pylast
 pip3 install requests
 pip3 install pyacoustid
-pip3 install mutagen
-pip3 install rauth
 pip3 install betanin
 
 if [ ! -d "$HOME/.config/beets" ] && [ ! -L "$HOME/.config/beets" ]; then

@@ -1,0 +1,163 @@
+# whatlastgenre tags file
+#
+# [upper]   tags with length>2 which should be uppercase
+# [alias]   tag aliases: alias = tag
+# [regex]   tag regex substitutions: pattern = replacement
+#
+# all lines should be lowercase
+# empty lines and lines starting with # are ignored
+
+[upper]
+ebm
+edm
+idm
+mpb
+ndw
+nwa
+nwobhm
+nyhc
+
+[alias]
+# most common tags that are also handled by replaces can be added
+# here for extra performance (aliases way faster the regex replaces)
+electronica = electronic
+hip hop = hip-hop
+trip hop = trip-hop
+# regular aliases
+2 step = 2-step
+2step = 2-step
+a capella = acapella
+a cappella = acapella
+abstract-hip-hop = abstract hip-hop
+abstracthiphop = abstract hip-hop
+acidjazz = acid jazz
+alternative-rock = alternative rock
+ambiant = ambient
+beat box = beatbox
+beatboxing = beatbox
+blues rock = blues-rock
+bluesrock = blues-rock
+bossanova = bossa nova
+brit pop = britpop
+brit-pop = britpop
+canons = canon
+carols = carol
+childrens = children
+childrens music = children
+chill = chillout
+chill out = chillout
+chill-out = chillout
+chrismas = christmas
+cold wave = coldwave
+dance hall = dancehall
+dark wave = darkwave
+death core = deathcore
+deephouse = deep house
+dub step = dubstep
+easy-listening = easy listening
+easylistening = easy listening
+elecronic = electronic
+electroacoustic music = electroacoustic
+electronic blues = electric blues
+electronic folk = electric folk
+electronic house = house
+electronic swing = electro-swing
+electroswing = electro-swing
+eletronic = electronic
+ethnic ambient = fourth world
+ethno ambient = fourth world
+finger style = fingerstyle
+fusion jazz = jazz fusion
+freak folk = freak-folk
+gangstarap = gangsta rap
+gangster rap = gangsta rap
+glamrock = glam rock
+hardbop = hard bop
+hardhouse = hard house
+hardrock = hard rock
+hardtrance = hard trance
+indie-pop = indie pop
+indie-rock = indie rock
+indiepop = indie pop
+indierock = indie rock
+indietronica = indietronic
+instrumentals = instrumental
+instumental = instrumental
+intelligent dance music = idm
+jump style = jumpstyle
+kids = children
+kraut rock = krautrock
+live electronics = electroacoustic
+lliquid funk = liquid funk
+minimalwave = minimal wave
+neo-psychedelia = neo-psychedelic
+nerd-core = nerdcore
+new progressive = neo-progressive
+newage = new age
+oldie = oldies
+powerpop = power pop
+progressive-rock = progressive rock
+proto punk = protopunk
+proto-punk = protopunk
+psytrance = psy-trance
+punkrock = punk rock
+regueton = reggaeton
+rock steady = rocksteady
+root reggae = roots reggae
+singer songwriter = singer-songwriter
+singersongwriter = singer-songwriter
+skate punk = skatepunk
+slow core = slowcore
+slow-core = slowcore
+smoothjazz = smooth jazz
+soundtracks = soundtrack
+spacerock = space rock
+swampy blues = swamp blues
+trash metal = thrash metal
+tribal ambient = fourth world
+trible house = tribal house
+trip rock = trip-rock
+world music = world
+# translations
+liedermacher = singer-songwriter
+mittelalter = medieval
+weihnachten = christmas
+welt = world
+
+[regex]
+# tags with ampersands
+d(rum)?[ n/]*b(ass)? = drum & bass
+drill[ n/]*bass = drill & bass
+hard[ n/]*heavy = hard & heavy
+r(hythm)?[ n/]*b(lues)? = rhythm & blues
+rock[ n/]*roll = rock & roll
+stage[ n/]*screen = stage & screen
+# consistent delimiters
+(c|k|j)[ /]*(folk|goth|hip-hop|pop|rock|ska|trance) = \g<1>-\g<2>
+(euro(?!p[ae]+n?)|neo|post|tech(?!n[io]))[ /]*(\w+) = \g<1>-\g<2>
+(g?lo)[ /]*fi = \g<1>-fi
+(glitch|hip|jazz|trip)y?([ /]*hip)?[ /]*hop = \g<1>-hop
+(p|g)[ /]*funk = \g<1>-funk
+nu[/-]*(disco|jazz|metal|soul) = nu \g<1>
+synth[ /-]+(\w+) = synth\g<1>
+# abbreviation related
+alt(/|er*n(/|ati[fv](es?)?))? = alternative
+avant(/|gard)? = avantgarde
+ele[ck]tr(i[ck]|o(ni[ck][as]*)?) = electronic
+goth(?!ic) = gothic
+prog+(/|r*es+(/|i[fv]e?)?)? = progressive
+ps?y(/|ch(/|[aeo]l?del+i[ca]+)?)? = psychedelic
+trad(/|ition(/|al)?)?-? = traditional
+# other
+(cabaret|comedi(an|e)|humou?r|kabarett|parod(ie|y)) = comedy
+^(film|games?|movies?|t(ele)?v(ision)?|video(s| )?games?) ?(scores?|music)? = soundtrack
+g?old(i(es?)?|en)? = oldies
+(8[ /-]*bit|(8[ /-]*)?bit[ /-]*pop|chip([ /-]*tunes?)?) = chiptune
+(fem|m)ale[ /]*vo(cal(ist)?|ice)s? = \g<1>ale vocalist
+(ost|vgm|scores?|video[ /]*game[ /]*music) = soundtrack
+.*top.*[0-9]+.* = charts
+best.*of (\w+) = \g<1>
+br(eaks?|oken)([ /]*beats?)? = breakbeat
+down[ /-]*(beat|tempo?) = downtempo
+#minimal[ /-]*(electronic|house|techno) = minimal
+shoegaze(r|ing?) = shoegaze

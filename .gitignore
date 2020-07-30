@@ -18,6 +18,9 @@ state.pickle
 discogs_token.json
 local-config.yaml
 
+whatlastgenre/config
+whatlastgenre/cache
+
 node_modules
 
 # Antigen should be installed to this location during initial dotfiles install
