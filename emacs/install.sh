@@ -13,6 +13,8 @@ if [ "$(uname -s)" == "Darwin" ]; then
 	if [ -d "$HOME/Dropbox/org" ] && [ ! -d "$HOME/org" ] && [ ! -L "$HOME/org" ]; then
 		ln -s "$HOME/Dropbox/org" "$HOME/org"
 	fi
+elif [ ! -d "$HOME/org" ]; then
+	mkdir "$HOME/org"
 fi
 
 # Update or install doom-emacs.
