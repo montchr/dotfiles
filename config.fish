@@ -24,6 +24,9 @@ end
 # rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
+# pyenv
+pyenv init - | source
+
 # starship
 starship init fish | source
 
