@@ -12,14 +12,14 @@ tmp-jhbuild-revision
 vim/bundle/*
 !vim/bundle/Vundle.vim
 
-# Beets
+# Beets etc.
 library.db
 state.pickle
 discogs_token.json
 local-config.yaml
-
 whatlastgenre/config
 whatlastgenre/cache
+betanin/config.toml
 
 node_modules
 

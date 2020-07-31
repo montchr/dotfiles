@@ -21,7 +21,6 @@ pip3 install discogs-client
 pip3 install pylast
 pip3 install requests
 pip3 install pyacoustid
-pip3 install betanin
 
 if [ ! -d "$HOME/.config/beets" ] && [ ! -L "$HOME/.config/beets" ]; then
 	ln -s $DOTFILES/beets $HOME/.config/beets
