@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+PATH="$(pyenv root)/shims:$PATH"
+
 pip3 install mutagen
 pip3 install requests
 pip3 install rauth

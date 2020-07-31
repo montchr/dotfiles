@@ -2,7 +2,6 @@ include:
   - local-config.yaml
 
 plugins:
-  #  - bandcamp # broken, see https://github.com/unrblt/beets-bandcamp/issues/13
   - chroma
   - discogs
   - edit
@@ -11,22 +10,39 @@ plugins:
   - importadded
   - info
   - inline
-  - lastgenre
-  - plexupdate
+  # - lastgenre
+  # - plexupdate
   - replaygain
+  #  - wlg
+
+pluginpath: ~/.whatlastgenre/whatlastgenre/plugin/beets/beetsplug
 
 paths:
   default: $albumartist/$album%aunique{}/%if{$multidisc,Disc $disc/}$track - $title
   comp: Various Artists/$album%aunique{}/%if{$multidisc,Disc $disc/}$track - $title
 
-# https://beets.readthedocs.io/en/stable/plugins/inline.html
+# Support for Plex
+# https://forums.plex.tv/t/music-which-version-of-id3-tags-does-the-plex-scanner-inspect/193379/7
+id3v23: yes
+
 item_fields:
   multidisc: 1 if disctotal > 1 else 0
   artist_differs: 1 if albumartist != artist else 0
 
-# Use English names if possible
-languages:
-  - en
+import:
+  bell: yes
+  copy: no
+  languages:
+    - en
+  log: ~/.config/beets/beets.log
+  move: yes
+
+# format_item:
+
+match:
+  preferred:
+    countries: ["US", "GB|UK", "DE"]
+    media: ["CD", "Digital Media|File"]
 
 # Use the album's original date instead of the release's date
 original_date: yes
@@ -45,13 +61,12 @@ ui:
     text_highlight_minor: lightgray
     action_default: turquoise
     action: blue
-  bell: yes
 
-# beets-bandcamp plugin
-# https://github.com/unrblt/beets-bandcamp/
-# BROKEN! See https://github.com/unrblt/beets-bandcamp/issues/13
-bandcamp:
-  art: true
+# Edit plugin
+# https://beets.readthedocs.io/en/stable/plugins/edit.html
+edit:
+  itemfields: track title artist album
+  albumfields: album albumartist
 
 # FetchArt plugin
 # https://beets.readthedocs.io/en/stable/plugins/fetchart.html
@@ -60,20 +75,24 @@ fetchart:
 
 # LastGenre plugin
 # https://beets.readthedocs.io/en/stable/plugins/lastgenre.html
-lastgenre:
-  # auto: yes
-  canonical: ~/.config/beets/canonical.txt
-  # count: 1
-  # fallback: ''
-  force: no
-  min_weight: 6
-  # prefer_specific: no
-  # separator: ', '
-  # source: album
-  whitelist: ~/.config/beets/whitelist.txt
+# lastgenre:
+# auto: yes
+# canonical: ~/.config/beets/canonical.txt
+# count: 1
+# fallback: ''
+# force: no
+# min_weight: 6
+# prefer_specific: no
+# separator: ', '
+# source: album
+# whitelist: ~/.config/beets/whitelist.txt
 
 # ReplayGain plugin
 # https://beets.readthedocs.io/en/stable/plugins/replaygain.html
 replaygain:
   auto: yes
   backend: command
+
+wlg:
+  auto: yes
+  force: no

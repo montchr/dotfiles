@@ -2,6 +2,8 @@
 
 export DOTFILES=$HOME/.dotfiles
 
+PATH="$(pyenv root)/shims:$PATH"
+
 # Install the latest version of Beets from GitHub
 BEETS_SRC_DIR=$DOTFILES/beets/beets
 if [ -d $BEETS_SRC_DIR ]; then

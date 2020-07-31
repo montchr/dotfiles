@@ -11,11 +11,6 @@
 ebm
 edm
 idm
-mpb
-ndw
-nwa
-nwobhm
-nyhc
 
 [alias]
 # most common tags that are also handled by replaces can be added
@@ -35,6 +30,7 @@ alternative-rock = alternative rock
 ambiant = ambient
 beat box = beatbox
 beatboxing = beatbox
+berlin school = berlin-school
 blues rock = blues-rock
 bluesrock = blues-rock
 bossanova = bossa nova
@@ -44,9 +40,6 @@ canons = canon
 carols = carol
 childrens = children
 childrens music = children
-chill = chillout
-chill out = chillout
-chill-out = chillout
 chrismas = christmas
 cold wave = coldwave
 dance hall = dancehall
@@ -64,13 +57,13 @@ electronic house = house
 electronic swing = electro-swing
 electroswing = electro-swing
 eletronic = electronic
-ethnic ambient = fourth world
-ethno ambient = fourth world
-finger style = fingerstyle
 fusion jazz = jazz fusion
+futurepop = ebm
 freak folk = freak-folk
 gangstarap = gangsta rap
 gangster rap = gangsta rap
+gothic = goth rock
+gothic rock = goth rock
 glamrock = glam rock
 hardbop = hard bop
 hardhouse = hard house
@@ -81,17 +74,17 @@ indie-rock = indie rock
 indiepop = indie pop
 indierock = indie rock
 indietronica = indietronic
-instrumentals = instrumental
-instumental = instrumental
+industrial dance = ebm
 intelligent dance music = idm
 jump style = jumpstyle
 kids = children
-kraut rock = krautrock
 live electronics = electroacoustic
 lliquid funk = liquid funk
 minimalwave = minimal wave
+musique concrete = musique concrète
 neo-psychedelia = neo-psychedelic
 nerd-core = nerdcore
+neo-folk = neofolk
 new progressive = neo-progressive
 newage = new age
 oldie = oldies
@@ -112,10 +105,10 @@ slow-core = slowcore
 smoothjazz = smooth jazz
 soundtracks = soundtrack
 spacerock = space rock
+stoner metal = doom metal
 swampy blues = swamp blues
+tape music = musique concrète
 trash metal = thrash metal
-tribal ambient = fourth world
-trible house = tribal house
 trip rock = trip-rock
 world music = world
 # translations
@@ -161,3 +154,7 @@ br(eaks?|oken)([ /]*beats?)? = breakbeat
 down[ /-]*(beat|tempo?) = downtempo
 #minimal[ /-]*(electronic|house|techno) = minimal
 shoegaze(r|ing?) = shoegaze
+# total renaming
+krautrock = kosmische
+^noise music$ = noise
+(ethnic|ethno|tribal) ambient = fourth world

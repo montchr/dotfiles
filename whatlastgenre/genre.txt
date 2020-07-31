@@ -3,46 +3,59 @@ abstract
 abstract hip-hop
 abstract rock
 acapella
+acid
 acid breakbeat
 acid house
 acid jazz
 acid rock
 acoustic
+adult contemporary
+african
 african blues
 afrobeat
-alternative
 alternative metal
 alternative rock
 ambient
 ambient dub
 ambient house
+ambient industrial
+ambient jazz
+ambient noise
 ambient techno
+ambient space jazz
+arab pop
+arena rock
 art rock
-avantgarde
-avantgarde jazz
-avantgarde metal
+audiobook
+avant-garde
+avant-garde jazz
+avant-garde metal
 balearic beat
+barbershop
 baroque
+baroque pop
 beatbox
 bebop
-berlin school
+berlin-school
 big band
 big beat
 bitcore
 bitpop
 black metal
+blue-eyed soul
 bluegrass
 blues
 blues-rock
+bollywood
 boogie
 boogie-woogie
+boom bap
 bossa nova
-brass band
 breakbeat
 breakcore
 britpop
 broken beat
-bumba-meu-boi
+bubblegum pop
 c-gothic
 c-hip-hop
 c-jazz
@@ -63,39 +76,31 @@ celtic metal
 celtic punk
 celtic reggae
 celtic rock
-cha-cha-cha
-chamber
 chamber jazz
 chamber pop
 chanson
 chant
 chicago blues
 chicago house
-chicha
 children
-chillout
 chillwave
 chiptune
 christian
 christmas
-classic
-classic pop
 classic rock
 classical
-club
 coldwave
 comedy
 computer music
 contemporary blues
 contemporary classical
 contemporary jazz
+contemporary r&b
 cool jazz
 country
-crossover
 crunk
 crunkcore
 crust punk
-dance
 dance-rock
 dance-punk
 dancehall
@@ -108,9 +113,11 @@ death industrial
 death metal
 deathcore
 deathgrind
+deconstructed club
 deep funk
 deep house
 deep soul
+deep techno
 detroit techno
 digital hardcore
 disco
@@ -126,9 +133,11 @@ drone metal
 drum & bass
 dub
 dub house
+dub poetry
 dub techno
 dubstep
 dubtronica
+dungeon synth
 easy listening
 ebm
 edm
@@ -151,17 +160,13 @@ emocore
 emotronic
 euro-beat
 euro-dance
-euro-disco
 euro-house
 euro-pop
 euro-trance
 experimental
-experimental noise
 experimental pop
 experimental rock
-female vocalist
 field recording
-fingerstyle
 flamenco
 folk
 folk hop
@@ -170,17 +175,25 @@ folk pop
 folk punk
 folk rock
 folktronica
+footwork
 fourth world
 freak-folk
+free funk
+free improvisation
+free jazz
+freestyle
 funk
+funk metal
 funk rock
 funkcore
 future jazz
 g-funk
 gabber
+gamelan
 gangsta rap
 garage rock
 ghetto house
+ghettotech
 glam metal
 glam punk
 glam rock
@@ -189,10 +202,8 @@ glitch-hop
 glo-fi
 goa
 gospel
-gothic
 gothic metal
-gothic rock
-gregorian chant
+goth rock
 grime
 grindcore
 grunge
@@ -204,6 +215,7 @@ hard house
 hard rock
 hard trance
 hardstyle
+hauntology
 heavy metal
 hi-nrg
 hip-hop
@@ -211,10 +223,9 @@ horror punk
 horror synth
 horrorcore
 house
+hypnagogic pop
 idm
 illbient
-impressionist
-incidental
 indian pop
 indie
 indie folk
@@ -226,6 +237,7 @@ industrial metal
 industrial rock
 instrumental hip-hop
 instrumental rock
+iranian pop
 italo dance
 italo disco
 italo house
@@ -240,7 +252,10 @@ j-trance
 jam rock
 jazz
 jazz fusion
+jazz rock
 jazz-hop
+jazz-funk
+juke
 jumpstyle
 jungle
 k-gothic
@@ -250,12 +265,17 @@ k-pop
 k-rock
 k-ska
 k-trance
+klezmer
 korean pop
-krautrock
+kosmische
+latin
+latin jazz
+library music
 liquid funk
 live coding
 lo-fi
 lounge
+lovers rock
 lowercase
 mambo
 marimba
@@ -265,48 +285,54 @@ mathcore
 medieval
 medieval metal
 medieval rock
+melodic death metal
 melodic metal
 melodic metalcore
 melodic trance
 merengue
 metal
 metalcore
+miami bass
 microhouse
 microsound
 minimal
 minimal wave
 minimal techno
+minimal synth
+mizrahi
 modal jazz
-modern classical
-modern rock
-mpb
-mushroom jazz
 musique concrète
-ndw
+neo-bop
 neo-classical
-neo-folk
+neofolk
 neo-medieval
 neo-progressive
 neo-psychedelic
 neo-soul
+neo-swing
 nerdcore
 new age
 new wave
 newgrass
+no wave
+noise
 noise pop
 noise rock
+noisecore
 nu disco
 nu jazz
 nu metal
 nu soul
-nwa
-nwobhm
-nyhc
 oldies
 opera
+outsider house
 p-funk
 polka
 pop
+pop punk
+pop rap
+pop rock
+post-bop
 post-britpop
 post-disco
 post-grunge
@@ -315,11 +341,14 @@ post-industrial
 post-metal
 post-punk
 post-rock
+power electronics
 power metal
 power noise
 power pop
+powerviolence
 progressive bluegrass
 progressive country
+progressive electronic
 progressive house
 progressive metal
 progressive rock
@@ -329,16 +358,23 @@ psy-trance
 psychedelic
 psychedelic pop
 psychedelic rock
+psychobilly
+pub rock
 punk
+punk jazz
 punk rock
 ragga
-rap
+ragtime
 rapcore
+rap metal
+rap rock
 reggae
 reggae fusion
 reggaeton
 renaissance
 rhythm & blues
+rhythmic noise
+riot grrrl
 rock
 rock & roll
 rockabilly
@@ -350,9 +386,12 @@ samba
 schlager
 schranz
 screamo
+sea shanties
+sephardic
 shoegaze
 singer-songwriter
 ska
+ska jazz
 ska punk
 skacore
 skatepunk
@@ -361,8 +400,10 @@ slowcore
 smooth jazz
 soft rock
 soul
+soul jazz
 soundtrack
 southern rock
+southern hip-hop
 space disco
 space jazz
 space rock
@@ -370,8 +411,13 @@ speed garage
 speed metal
 speedcore
 stage & screen
-stoner metal
 stoner rock
+straight-ahead jazz
+symphonic metal
+sufi rock
+surf rock
+thrash metal
+turkish pop
 swamp blues
 swamp pop
 swamp rock
@@ -386,17 +432,24 @@ tech-house
 tech-trance
 technical metal
 techno
+technopop
 techstep
 thrash metal
 traditional bluegrass
 traditional jazz
 trance
+trap
 tribal house
 trip-hop
 trip-rock
 turntablism
+uk garage
+vaporwave
 vocal house
 vocal jazz
 vocal trance
+west coast hip-hop
+witch house
 world
 world fusion
+zouk
