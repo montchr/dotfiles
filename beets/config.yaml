@@ -10,12 +10,9 @@ plugins:
   - importadded
   - info
   - inline
-  # - lastgenre
+  - lastgenre
   # - plexupdate
   - replaygain
-  #  - wlg
-
-pluginpath: ~/.whatlastgenre/whatlastgenre/plugin/beets/beetsplug
 
 paths:
   default: $albumartist/$album%aunique{}/%if{$multidisc,Disc $disc/}$track - $title
@@ -75,24 +72,20 @@ fetchart:
 
 # LastGenre plugin
 # https://beets.readthedocs.io/en/stable/plugins/lastgenre.html
-# lastgenre:
-# auto: yes
-# canonical: ~/.config/beets/canonical.txt
-# count: 1
-# fallback: ''
-# force: no
-# min_weight: 6
-# prefer_specific: no
-# separator: ', '
-# source: album
-# whitelist: ~/.config/beets/whitelist.txt
+lastgenre:
+  auto: yes
+  canonical: ~/.config/beets/canonical.yaml
+  count: 4
+  fallback: ""
+  force: yes
+  min_weight: 6
+  prefer_specific: no
+  separator: "/ "
+  source: album
+  whitelist: ~/.config/beets/allowlist.txt
 
 # ReplayGain plugin
 # https://beets.readthedocs.io/en/stable/plugins/replaygain.html
 replaygain:
   auto: yes
   backend: command
-
-wlg:
-  auto: yes
-  force: no
