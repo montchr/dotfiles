@@ -13,3 +13,6 @@
 [submodule "whatlastgenre/whatlastgenre"]
 	path = whatlastgenre/whatlastgenre
 	url = git@github.com:YetAnotherNerd/whatlastgenre.git
+[submodule "bash/basher"]
+	path = bash/basher
+	url = https://github.com/basherpm/basher.git
