@@ -34,12 +34,17 @@ import:
   log: ~/.config/beets/beets.log
   move: yes
 
-# format_item:
-
 match:
+  # max_rec:
+  #   track_index: low
+  #   track_length: medium
+  #   year: medium
   preferred:
-    countries: ["US", "GB|UK", "DE"]
+    countries: ["US", "UK|GB", "DE", "NL"]
     media: ["CD", "Digital Media|File"]
+  strong_rec_thresh: 0.15
+  medium_red_thresh: 0.25
+  rec_gap_thresh: 0.25
 
 # Use the album's original date instead of the release's date
 original_date: yes
@@ -69,6 +74,9 @@ edit:
 # https://beets.readthedocs.io/en/stable/plugins/fetchart.html
 fetchart:
   sources: filesystem coverart discogs amazon albumart
+  # enforce_ratio: 10px
+  # minwidth: 300
+  # maxwidth: 2000
 
 # LastGenre plugin
 # https://beets.readthedocs.io/en/stable/plugins/lastgenre.html
@@ -80,7 +88,7 @@ lastgenre:
   force: yes
   min_weight: 6
   prefer_specific: no
-  separator: "/ "
+  separator: "; "
   source: album
   whitelist: ~/.config/beets/allowlist.txt
 
