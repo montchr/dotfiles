@@ -7,3 +7,9 @@ cd "$HOME/.dotfiles"
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+
+# Cross-platform fzf keybindings support
+fzf_keybindings_file="$HOME/.dotfiles/functions/fzf_key_bindings.fish"
+if [ ! -L $fzf_keybindings_file ]; then
+  ln -sf "$(brew --prefix fzf)/shell/key-bindings.fish" $fzf_keybindings_file 
+fi

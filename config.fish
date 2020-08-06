@@ -24,6 +24,9 @@ end
 # rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
+# pyenv
+pyenv init - | source
+
 # starship
 starship init fish | source
 
@@ -47,3 +50,10 @@ function vterm_printf
         printf "\e]%s\e\\" "$argv"
     end
 end
+
+# basher support
+if test -d ~/.basher
+    set basher ~/.basher/bin
+end
+set -gx PATH $basher $PATH
+status --is-interactive; and . (basher init -|psub)

@@ -61,6 +61,7 @@ set -xp PATH "$HOME/.wp-cli/bin"
 #
 
 set -xp PATH /usr/local/opt/python/libexec/bin
+set -xp PATH $HOME/.local/bin
 
 
 #

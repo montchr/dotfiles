@@ -61,6 +61,7 @@ brew 'pkg-config'
 brew 'python3'
 brew 'rbenv'
 brew 'rclone'
+brew 'readline' # pyenv
 brew 'ripgrep' # required by doom-emacs
 brew 'scmpuff'
 brew 'shellcheck'
@@ -73,7 +74,9 @@ brew 'tree'
 brew 'wget'
 brew 'whatmp3'
 brew 'xclip'
+brew 'xz' # pyenv
 brew 'youtube-dl'
+brew 'zlib' # pyenv
 brew 'zsh'
 brew 'zsh-syntax-highlighting'
 

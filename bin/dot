@@ -12,6 +12,8 @@ source $HOME/.dotfiles/lib/utils.zsh
 
 export DOTFILES=$HOME/.dotfiles
 
+cd $DOTFIlES
+
 # Install/update homebrew packages
 set +e
 echo "> brew update"

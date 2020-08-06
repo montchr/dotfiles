@@ -2,6 +2,8 @@
 
 export DOTFILES=$HOME/.dotfiles
 
+PATH="$(pyenv root)/shims:$PATH"
+
 # Install the latest version of Beets from GitHub
 BEETS_SRC_DIR=$DOTFILES/beets/beets
 if [ -d $BEETS_SRC_DIR ]; then
@@ -15,12 +17,9 @@ python3 setup.py install
 cd $DOTFILES
 
 pip3 install discogs-client
-pip3 install beets-bandcamp
-# Beets: LastGenre
+# pip3 install beets-bandcamp
 pip3 install pylast
-# Beets: FetchArt
 pip3 install requests
-# Beets: Chromaprint/Acoustid
 pip3 install pyacoustid
 
 if [ ! -d "$HOME/.config/beets" ] && [ ! -L "$HOME/.config/beets" ]; then
@@ -33,4 +32,3 @@ fi
 #   cp "$DOTFILES/beets/local-config.yaml.example" "$DOTFILES/beets/local-config.yaml"
 # fi
 
-pip3 install --user betanin
