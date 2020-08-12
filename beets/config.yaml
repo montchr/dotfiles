@@ -11,6 +11,7 @@ plugins:
   - info
   - inline
   - lastgenre
+  - originquery
   # - plexupdate
   - replaygain
 
@@ -45,6 +46,9 @@ match:
   strong_rec_thresh: 0.15
   medium_red_thresh: 0.25
   rec_gap_thresh: 0.25
+
+musicbrainz:
+  extra_tags: [year, catalognum, country, media, label]
 
 # Use the album's original date instead of the release's date
 original_date: yes
@@ -91,6 +95,15 @@ lastgenre:
   separator: "; "
   source: album
   whitelist: ~/.config/beets/allowlist.txt
+
+originquery:
+  origin_file: origin.yaml
+  tag_patterns:
+    media: "$.Media"
+    year: '$."Edition year"'
+    label: '$."Record label"'
+    catalognum: '$."Catalog number"'
+    albumdisambig: "$.Edition"
 
 # ReplayGain plugin
 # https://beets.readthedocs.io/en/stable/plugins/replaygain.html

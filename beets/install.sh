@@ -21,6 +21,8 @@ pip3 install discogs-client
 pip3 install pylast
 pip3 install requests
 pip3 install pyacoustid
+pip3 install git+https://github.com/x1ppy/gazelle-origin
+pip3 install git+https://github.com/x1ppy/beets-originquery
 
 if [ ! -d "$HOME/.config/beets" ] && [ ! -L "$HOME/.config/beets" ]; then
 	ln -s $DOTFILES/beets $HOME/.config/beets
