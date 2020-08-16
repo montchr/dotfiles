@@ -41,7 +41,7 @@ alias vi='emacsclient -t'
 #
 
 alias g="git"
-alias gs='__scmpuff_status'
+alias gs='scmpuff_status'
 
 # commits / index
 alias ga='git add'
