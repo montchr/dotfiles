@@ -57,3 +57,5 @@ if test -d ~/.basher
 end
 set -gx PATH $basher $PATH
 status --is-interactive; and . (basher init - fish | psub)
+
+fish_ssh_agent
