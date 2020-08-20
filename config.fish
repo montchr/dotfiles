@@ -56,4 +56,4 @@ if test -d ~/.basher
     set basher ~/.basher/bin
 end
 set -gx PATH $basher $PATH
-status --is-interactive; and . (basher init -|psub)
+status --is-interactive; and . (basher init - fish | psub)
