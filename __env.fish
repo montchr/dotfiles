@@ -24,3 +24,4 @@ set -x SNDBACKUPS "$HOME/Music/0-sounds-0/--- backup ---"
 # nvm
 set -x NODE_VERSIONS ~/.nvm/versions/node/
 set -x NODE_VERSION_PREFIX 'v'
+set -x NVM_SYMLINK_CURRENT true
