@@ -1,3 +1,5 @@
+set -x EDITOR emacs
+
 # enhancd
 set -x ENHANCD_DISABLE_DOT 1
 set -x ENHANCD_DISABLE_HYPHEN 1
