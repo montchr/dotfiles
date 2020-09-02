@@ -12,7 +12,7 @@ prompt_order = [
     # "dotnet",
     # "golang",
     # "java",
-    # "nodejs",
+    "nodejs",
     # "php",
     # "python",
     # "ruby",
