@@ -33,7 +33,6 @@ beets/beets
 emacs/emacs.d
 
 fish_variables
-functions/fzf_key_bindings.fish
 
 # Karabiner Elements directory contains numerous backup and assets files we
 # don't want. `karabiner.json` can't be symlinked directly because the
