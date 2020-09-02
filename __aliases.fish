@@ -23,6 +23,7 @@ alias egrep='egrep --color=auto'
 # Simple swapping
 alias rm="trash"
 alias search="fd"
+alias cat="bat"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
