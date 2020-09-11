@@ -31,7 +31,7 @@ pyenv init - | source
 starship init fish | source
 
 # direnv
-direnv hook fish | source
+eval (direnv hook fish)
 
 if test -e "$HOME/.localrc"
     source "$HOME/.localrc"
