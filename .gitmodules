@@ -16,3 +16,6 @@
 [submodule "bash/basher"]
 	path = bash/basher
 	url = https://github.com/basherpm/basher.git
+[submodule "exa"]
+	path = exa
+	url = git@github.com:ogham/exa.git
