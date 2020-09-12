@@ -11,7 +11,6 @@ plugins:
   - info
   - inline
   - lastgenre
-  - originquery
   # - plexupdate
   - replaygain
 
@@ -41,8 +40,8 @@ match:
   #   track_length: medium
   #   year: medium
   preferred:
-    countries: ["US", "UK|GB", "DE", "NL"]
-    media: ["CD", "Digital Media|File"]
+    countries: ['US', 'UK|GB', 'DE', 'NL']
+    media: ['CD', 'Digital Media|File']
   strong_rec_thresh: 0.15
   medium_red_thresh: 0.25
   rec_gap_thresh: 0.25
@@ -88,22 +87,13 @@ lastgenre:
   auto: yes
   canonical: ~/.config/beets/canonical.yaml
   count: 4
-  fallback: ""
+  fallback: ''
   force: yes
   min_weight: 6
   prefer_specific: no
-  separator: "; "
+  separator: '; '
   source: album
   whitelist: ~/.config/beets/allowlist.txt
-
-originquery:
-  origin_file: origin.yaml
-  tag_patterns:
-    media: "$.Media"
-    year: '$."Edition year"'
-    label: '$."Record label"'
-    catalognum: '$."Catalog number"'
-    albumdisambig: "$.Edition"
 
 # ReplayGain plugin
 # https://beets.readthedocs.io/en/stable/plugins/replaygain.html
