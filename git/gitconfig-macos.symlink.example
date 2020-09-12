@@ -5,7 +5,7 @@
 [credential]
   helper = "osxkeychain"
 [core]
-  editor = "emacsclient -t"
+  editor = "emacsclient"
 [merge]
   tool = vscode
 [diff]
