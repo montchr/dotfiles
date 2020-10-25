@@ -81,5 +81,6 @@
 	recurseSubmodules = true
 [init]
 	templateDir = ~/.git-templates
+	defaultBranch = main
 [pull]
 	rebase = false
