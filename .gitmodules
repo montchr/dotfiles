@@ -1,9 +1,3 @@
-[submodule "vim/bundle/Vundle.vim"]
-	path = vim/bundle/Vundle.vim
-	url = git@github.com:VundleVim/Vundle.vim.git
-[submodule "swinsian/swinsian2itlxml"]
-	path = swinsian/swinsian2itlxml
-	url = https://github.com/mhite/swinsian2itlxml
 [submodule "alfred/workflows/gifs"]
 	path = alfred/workflows/gifs
 	url = git@github.com:montchr/alfred-gifs.git
