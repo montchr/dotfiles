@@ -2,5 +2,5 @@
 
 set -euo pipefail
 
-pip3 install apprise
-pip3 install betanin
+# pip3 install apprise
+# pip3 install betanin

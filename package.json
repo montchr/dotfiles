@@ -31,11 +31,11 @@
     "grunt-cli": "^1.2.0",
     "js-beautify": "^1.11.0",
     "lorem-ipsum": "^2.0.3",
+    "lsp": "^1.1.1",
     "marked": "^1.1.1",
     "prettier": "^1.19.1",
     "random-word": "^2.0.0",
     "random-word-cli": "^1.0.0",
-    "trash-cli": "^3.0.0"
-  },
-  "devDependencies": {}
+    "trash-cli": "^3.1.0"
+  }
 }
