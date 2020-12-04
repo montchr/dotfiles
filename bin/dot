@@ -18,10 +18,9 @@ cd $DOTFIlES
 set +e
 echo "> brew update"
 brew update
-
 echo "> brew bundle"
+cd $DOTFILES
 brew bundle
-
 set -e
 
 # Install software
