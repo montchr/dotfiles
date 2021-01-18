@@ -26,7 +26,6 @@ brew 'editorconfig' # For faster editorconfig in emacs.
 brew 'emacs-mac@27'
 brew 'exa'
 brew 'fd'
-brew 'fish'
 brew 'fzf'
 brew 'fzy'
 brew 'hub'
@@ -58,20 +57,16 @@ brew 'rbenv'
 brew 'rclone'
 brew 'readline'
 brew 'ripgrep' # required by doom-emacs
-brew 'scmpuff'
 brew 'shellcheck'
 brew 'speex'
 brew 'sqlite3'
-brew 'starship'
 brew 'tldr'
-brew 'tree'
 brew 'wget'
 brew 'xclip'
 brew 'xz' # pyenv
 brew 'youtube-dl'
 brew 'zlib' # pyenv
 brew 'zsh'
-brew 'zsh-syntax-highlighting'
 
 cask 'a-better-finder-rename'
 cask 'airfoil'
